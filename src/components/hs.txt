@@ -1,0 +1,51 @@
+<li><i class='bx bx-badge-check' >Creating reusable and efficient React components.</li>
+<li><i class='bx bx-badge-check' >Translating UI/UX designs into functional React components.</li>
+<li><i class='bx bx-badge-check' >Implementing state management solutions like Redux or React Context API.</li>
+<li><i class='bx bx-badge-check' >Setting up client-side routing using React Router.</li>
+<li><i class='bx bx-badge-check' >Integrating with backend services through API requests.</li>
+<li><i class='bx bx-badge-check' >Optimizing performance through code splitting and lazy loading.</li>
+<li><i class='bx bx-badge-check' >Ensuring responsiveness across devices and screen sizes.</li>
+<li><i class='bx bx-badge-check' >Implementing accessibility best practices for all users.</li>
+<li><i class='bx bx-badge-check' >Writing unit and integration tests for code reliability.</li>
+<li><i class='bx bx-badge-check' >Debugging and troubleshooting frontend issues.</li>
+<li><i class='bx bx-badge-check' >Using Git for version control and collaboration.</li>
+<li><i class='bx bx-badge-check' >Setting up CI/CD pipelines for automation.</li>
+<li><i class='bx bx-badge-check' >Profiling and optimizing application performance.</li>
+<li><i class='bx bx-badge-check' >Implementing security measures to protect against vulnerabilities.</li>
+<li><i class='bx bx-badge-check' >Creating comprehensive documentation for the codebase.</li>
+<li><i class='bx bx-badge-check' >Collaborating with backend developers and designers.</li>
+<li><i class='bx bx-badge-check' >Participating in code reviews for code quality.</li>
+<li><i class='bx bx-badge-check' >Monitoring application performance in production.</li>
+<li><i class='bx bx-badge-check' >Handling upgrades and ongoing maintenance.</li>
+<li><i class='bx bx-badge-check' >Providing responsive support for users and addres</li>
+
+
+
+
+
+
+<li><i class='bx bx-badge-check' >Conducting user research to understand the target audience.</li>
+<li><i class='bx bx-badge-check' >Creating wireframes for basic interface structure.</li>
+<li><i class='bx bx-badge-check' >Building interactive prototypes for testing and validation.</li>
+<li><i class='bx bx-badge-check' >Designing the visual elements of the user interface (UI).</li>
+<li><i class='bx bx-badge-check' >Focusing on overall user experience (UX), including navigation and accessibility.</li>
+<li><i class='bx bx-badge-check' >Structuring information for user-friendly content organization.</li>
+<li><i class='bx bx-badge-check' >Usability testing to gather feedback and improve UI/UX.</li>
+<li><i class='bx bx-badge-check' >Defining user interactions, animations, and gestures.</li>
+<li><i class='bx bx-badge-check' >Ensuring responsive design for various devices.</li>
+<li><i class='bx bx-badge-check' >Implementing accessibility standards (e.g., WCAG).</li>
+<li><i class='bx bx-badge-check' >Crafting a visually appealing and consistent design language.</li>
+<li><i class='bx bx-badge-check' >Selecting and styling fonts for readability.</li>
+<li><i class='bx bx-badge-check' >Choosing appropriate color schemes for mood and branding.</li>
+<li><i class='bx bx-badge-check' >Gathering user feedback and making data-driven improvements.</li>
+<li><i class='bx bx-badge-check' >Collaborating with cross-functional teams and stakeholders.</li>
+<li><i class='bx bx-badge-check' >Creating and maintaining design systems for consistency.</li>
+<li><i class='bx bx-badge-check' >Developing UI kits or design libraries for reuse.</li>
+<li><i class='bx bx-badge-check' >Communicating design concepts to non-design team members.</li>
+<li><i class='bx bx-badge-check' >Incorporating feedback and iterating on designs.</li>
+<li><i class='bx bx-badge-check' >Staying updated with design trends and technologies.</li>
+<li><i class='bx bx-badge-check' >Documenting designs for developers.</li>
+<li><i class='bx bx-badge-check' >Ensuring brand consistency in design.</li>
+<li><i class='bx bx-badge-check' >Conducting A/B tests for better engagement.</li>
+<li><i class='bx bx-badge-check' >Prioritizing user needs and preferences.</li>
+<li><i class='bx bx-badge-check' >Identifying design challenges and proposing solutions.</li>

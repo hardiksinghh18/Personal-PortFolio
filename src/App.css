@@ -28,6 +28,18 @@ body{
 }
 
 
+body::-webkit-scrollbar {
+    width: .5rem;               
+  
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--second-bg-color);      
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);    
+    border-radius: 1rem;       
+  }
+
 h1{
     font-size: 5.6rem;
 font-weight: 700;
@@ -77,16 +89,17 @@ section{
 
 .btn{
     background:var(--main-color) ;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     width: fit-content;
-    padding: 1rem 1rem;
+    padding: .75rem 1rem;
     border-radius: 1rem;
     color: var(--bg-color);
-    font-weight: 700;
+    font-weight: 600;
     transition: all ease .5s;
 }
 .btn:hover{
 box-shadow: 0rem 0rem 1rem var(--main-color);
+cursor: pointer;
 }
 
 
@@ -102,6 +115,7 @@ box-shadow: 0rem 0rem 1rem var(--main-color);
     justify-content: space-between;
     align-items: center;
     z-index: 100; 
+    background-color: var(--bg-color);
 }
 
 .logo{
@@ -293,7 +307,8 @@ transition: all ease .3s;
 
 
 .services{
-    gap: 8rem;
+    gap: 6rem;
+    position: relative;
 }
 .serviceHeading{
     text-align: center;
@@ -302,16 +317,99 @@ transition: all ease .3s;
 .serviceContainer{
     display: flex;
     gap: 2rem;
-   
-}
-.serviceBox{
-  gap: 2rem;
-  border: .2rem solid var(--second-bg-color);
-  border-radius: 2rem;
-  padding: 3rem;
 
 }
-.serviceBox i{
-    font-size: 8rem;
-    margin: 2rem;
+.serviceBox{
+    gap: 2rem;
+    border: .2rem solid var(--second-bg-color);
+    border-radius: 2rem;
+    padding: 3rem;
+    transition: all ease .3s;
 }
+.serviceBox:hover{
+    box-shadow: 0rem 0rem 1rem var(--main-color);
+   
+}
+.serviceBox i{
+    font-size: 5rem;
+    margin: 1rem;
+}
+.serviceBox p{
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+
+.services__modal {
+
+
+    position: fixed;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    backdrop-filter: blur(5px);
+  
+}
+.serviceModalContent{
+    position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+    width: 50rem;
+    height: 40em;
+    border-radius: 1.5rem;
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
+    box-shadow: 0rem 0rem .2rem var(--main-color);
+    overflow-y: scroll;
+    overflow-x: hidden;
+  
+}
+
+.serviceModalContent .modalClose{
+font-size: 3rem;
+text-shadow: 0rem 0rem .5rem var(--main-color);
+cursor: pointer;
+position: absolute;
+top: 0;
+right: 0;
+
+}
+
+.modalHeading{
+ text-align: center;
+ margin:2.5rem 0 0 0;
+
+ 
+}
+.modalContent{
+    padding: 2rem;
+ 
+}
+.modalContent li{
+    list-style: none;
+    padding: 0;
+    font-size: 1.4rem;
+    gap: 1rem;
+    display: flex;
+   align-items: center;
+}
+.modalContent i{
+   font-size: 1.5rem; 
+}
+
+
+
+
+.serviceModalContent::-webkit-scrollbar {
+    width: .5rem;               
+  
+  }
+  .serviceModalContent::-webkit-scrollbar-track {
+    background: var(--second-bg-color);      
+  }
+  .serviceModalContent::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);    
+    border-radius: 1rem;       
+  }

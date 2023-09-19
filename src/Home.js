@@ -6,6 +6,18 @@ import Service from './Service'
 import Skills from './Skills'
 
 const Home = () => {
+
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("header").style.top = "0";
+        document.getElementById("header").style.transition = "all ease 1s";
+      } else {
+        document.getElementById("header").style.top = "-80px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
     return (
         <div>
             <Navbar />

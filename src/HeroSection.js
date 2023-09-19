@@ -14,8 +14,8 @@ const HeroSection = () => {
 
 
           <div class="socialMedia">
-            <a href="#"><i class='bx bxl-github' ></i></a>
-            <a href="#"><i class='bx bxl-linkedin' ></i></a>
+            <a href="https://github.com/hardiksinghh18" target='_blank'><i class='bx bxl-github' ></i></a>
+            <a href="https://www.linkedin.com/in/hardik-singh-391946278/" target='_blank'><i class='bx bxl-linkedin' ></i></a>
             <a href="#"><i class='bx bxl-instagram' ></i></a>
             <a href="#"><i class='bx bxl-twitter' ></i></a>
 
