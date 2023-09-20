@@ -14,7 +14,7 @@ const Home = () => {
         document.getElementById("header").style.top = "0";
         document.getElementById("header").style.transition = "all ease 1s";
       } else {
-        document.getElementById("header").style.top = "-80px";
+        document.getElementById("header").style.top = "-130px";
       }
       prevScrollpos = currentScrollPos;
     }

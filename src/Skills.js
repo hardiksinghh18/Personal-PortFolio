@@ -2,7 +2,7 @@ import React from 'react'
 
 const Skills = () => {
     return (
-        <section id='skill'>
+        <section id='skill' className='skill'>
             <h3 className='flexrow  heading highlightHeading'>Skills</h3>
 
             <div className="skillContainer flexrow">

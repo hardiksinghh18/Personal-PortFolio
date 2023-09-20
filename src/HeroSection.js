@@ -7,7 +7,7 @@ const HeroSection = () => {
     <div>
       <section class="home" id="home">
         <div class="homeContent">
-          <h3>Hello,It's me</h3>
+          <h4>Hey there !! It's me</h4>
           <h1>Hardik Singh</h1>
           <h3>And I'm a <span class="highlightHeading"> Frontend Developer</span></h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, iure? Unde consequatur iste voluptatem, explicabo accusantium itaque sit eum ullam fugiat amet a porro aliquid! Dolorum atque nostrum repellat optio.</p>
