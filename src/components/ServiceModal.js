@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import ModalContent from './ModalContent'
 
 const ServiceModal = (props) => {
-    const{value}=props
+    const{value,data}=props
 const[showModal,setShowModal]=useState(false)
 
 const displayModal=()=>{
     setShowModal(true)
+    document.body.style.overflowY="hidden"
 }
 const hideModal=()=>{
     setShowModal(false)
@@ -15,9 +16,9 @@ const hideModal=()=>{
 
   return (
     <>
-      <button onClick={displayModal} className='btn'>Read more</button>
+      <button onClick={displayModal} className='btn2 '>Read more </button>
 
-      {showModal && <ModalContent hideModal={hideModal} value={value}/>}
+      {showModal && <ModalContent hideModal={hideModal} value={value} data={data}/>}
     </>
   )
 }

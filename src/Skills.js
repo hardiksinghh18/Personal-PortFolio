@@ -6,7 +6,7 @@ const Skills = () => {
             <h3 className='flexrow  heading highlightHeading'>Skills</h3>
 
             <div className="skillContainer flexrow">
-                <div className="skills">
+                <div className="skills"  data-aos="fade-right">
                     <h4 className='highlightHeading flexrow'>Frontend Developer</h4>
                     <div className="frontendSkills ">
                         <div className='skillBoxes'>
@@ -61,7 +61,7 @@ const Skills = () => {
                     </div>
 
                 </div>
-                <div className="skills">
+                <div className="skills"  data-aos="fade-left">
 
                     <h4 className='highlightHeading flexrow'>Backend Developer</h4>
 

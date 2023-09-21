@@ -50,15 +50,15 @@ const Service = () => {
                     Services
                 </h2>
 
-                <div class="serviceContainer flexrow" id='serviceContainer'>
-                    <div class="serviceBox flexcolumn">
+                <div class="serviceContainer flexrow"  >
+                    <div class="serviceBox flexcolumn"  data-aos="fade-right">
                         <i class='bx bx-code-alt' ></i>
                         <h4 class="highlightHeading">Frontend Developer</h4>
                         <p>As a frontend React.js developer, I craft interactive and user-friendly web interfaces. I create and optimize React components, manage state, and ensure responsive design. My goal is to deliver engaging, high-performance web applications. </p>
 
                         <ServiceModal value={"frontend"}/>
                     </div>
-                    <div class="serviceBox flexcolumn">
+                    <div class="serviceBox flexcolumn"   data-aos="fade-in">
                     <i class='bx bx-screenshot'></i>
                       <h4 class="highlightHeading">Ui/Ux Designer</h4>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto culpa pariatur laboriosam debitis cupiditate odio neque, aut ipsum, commodi, ullam ex rem recusandae ratione asperiores suscipit earum voluptatum veritatis illo?
@@ -66,7 +66,7 @@ const Service = () => {
 
                         <ServiceModal value={"ui"} />
                     </div>
-                    <div class="serviceBox flexcolumn">
+                    <div class="serviceBox flexcolumn"   data-aos="fade-left">
                     <i class='bx bxl-mongodb'></i>
                          <h4 class="highlightHeading">Backend Developer</h4>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto culpa pariatur laboriosam debitis cupiditate odio neque, aut ipsum, commodi, ullam ex rem recusandae ratione asperiores suscipit earum voluptatum veritatis illo?

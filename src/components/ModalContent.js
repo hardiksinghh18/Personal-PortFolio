@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react'
 
 const ModalContent = (props) => {
-    const { value, hideModal } = props
+    const { value, hideModal,data } = props
+
+    console.log(data)
     if (value === "frontend") {
         return (
             <>
@@ -81,6 +83,7 @@ const ModalContent = (props) => {
             </>
         )
     }
+    if(value==="backend"){
     return (
         <>
             <div className="services__modal  " >
@@ -112,6 +115,26 @@ const ModalContent = (props) => {
             </div>
 
 
+        </>
+    )
+    }
+    if (value === "project"){
+        return(
+            <div className="services__modal  " >
+
+            <div className="serviceModalContent overlay">
+                <div className="modalHeading"><h4 className='highlightHeading'>Backend Developer</h4>   <span onClick={hideModal}  ><i class='bx bx-x modalClose' ></i></span></div>
+                <div className="modalContent">
+                    <h4>{data.title}</h4>
+                </div>
+            </div>
+        </div>
+        )
+    }
+
+    return(
+        <>
+            Opps ! Nothing Here.
         </>
     )
 }

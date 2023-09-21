@@ -15,12 +15,31 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
    
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Hardik Singh Portfolio</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
  
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js">
+      
+    </script>
+    <script>
+      AOS.init({
+        once: false, 
+        offset: 50,
+        duration: 1000,
+         anchorPlacement: 'top-bottom',
+         mirror: true
+        
+      });
+      AOS.refresh();
+    </script>
   </body>
+
+
+
 </html>

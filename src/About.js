@@ -5,7 +5,7 @@ const About = () => {
     <div>
 
       <section class="about" id="about">
-        <div class="aboutContent">
+        <div class="aboutContent"  data-aos="fade-right">
           <h3 className="flexrow heading">About Me</h3>
           <h2 class="highlightHeading">Frontend Developer</h2>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab dignissimos ullam amet perspiciatis temporibus quod eligendi aspernatur tenetur quia quasi nisi architecto aut voluptatem reiciendis, minus maiores quos dolorem sunt.</p>
@@ -14,7 +14,7 @@ const About = () => {
           <a href="#" class="btn">My Services</a>
         </div>
 
-        <div class="aboutBoxContainer flexrow">
+        <div class="aboutBoxContainer flexrow"  data-aos="fade-left">
           
           <div class="aboutBox">
           <i class='bx bxs-graduation' ></i>
