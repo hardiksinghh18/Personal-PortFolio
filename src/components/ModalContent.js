@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
+import ReactPlayer from 'react-player'
 
 const ModalContent = (props) => {
-    const { value, hideModal,data } = props
+    const { value, hideModal, data } = props
 
     console.log(data)
     if (value === "frontend") {
@@ -83,56 +84,64 @@ const ModalContent = (props) => {
             </>
         )
     }
-    if(value==="backend"){
-    return (
-        <>
+    if (value === "backend") {
+        return (
+            <>
+                <div className="services__modal  " >
+
+                    <div className="serviceModalContent overlay">
+                        <div className="modalHeading"><h4 className='highlightHeading'>Backend Developer</h4>   <span onClick={hideModal}  ><i class='bx bx-x modalClose' ></i></span></div>
+                        <div className="modalContent">
+                            <ul>
+                                <li><i class='bx bx-badge-check' ></i>Backend Development using Node.js, Express.js, or similar frameworks.</li>
+                                <li><i class='bx bx-badge-check' ></i>Implementing user authentication and authorization.</li>
+                                <li><i class='bx bx-badge-check' ></i>Implementing state management solutions like Redux or React Context API.</li>
+                                <li><i class='bx bx-badge-check' ></i>Creating API documentation for frontend integration.</li>
+                                <li><i class='bx bx-badge-check' ></i>Integrating with backend services through API requests.</li>
+                                <li><i class='bx bx-badge-check' ></i>Handling error management and providing error messages.</li>
+                                <li><i class='bx bx-badge-check' ></i>Collaborating with frontend developers.</li>
+                                <li><i class='bx bx-badge-check' ></i>Continuously learning and improving skills.</li>
+                                <li><i class='bx bx-badge-check' ></i>Debugging and troubleshooting frontend issues.</li>
+                                <li><i class='bx bx-badge-check' ></i>Using Git for version control and collaboration.</li>
+                                <li><i class='bx bx-badge-check' ></i>Effective communication within the development team.</li>
+                                <li><i class='bx bx-badge-check' ></i>Profiling and optimizing application performance.</li>
+                                <li><i class='bx bx-badge-check' ></i>Implementing security measures to protect against vulnerabilities.</li>
+                                <li><i class='bx bx-badge-check' ></i>Creating comprehensive documentation for the codebase.</li>
+                                <li><i class='bx bx-badge-check' ></i>Collaborating with backend developers and designers.</li>
+                                <li><i class='bx bx-badge-check' ></i>Participating in code reviews for code quality.</li>
+                                <li><i class='bx bx-badge-check' ></i>Providing responsive support for users.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </>
+        )
+    }
+    if (value === "project") {
+        return (
             <div className="services__modal  " >
 
                 <div className="serviceModalContent overlay">
-                    <div className="modalHeading"><h4 className='highlightHeading'>Backend Developer</h4>   <span onClick={hideModal}  ><i class='bx bx-x modalClose' ></i></span></div>
-                    <div className="modalContent">
-                        <ul>
-                            <li><i class='bx bx-badge-check' ></i>Backend Development using Node.js, Express.js, or similar frameworks.</li>
-                            <li><i class='bx bx-badge-check' ></i>Implementing user authentication and authorization.</li>
-                            <li><i class='bx bx-badge-check' ></i>Implementing state management solutions like Redux or React Context API.</li>
-                            <li><i class='bx bx-badge-check' ></i>Creating API documentation for frontend integration.</li>
-                            <li><i class='bx bx-badge-check' ></i>Integrating with backend services through API requests.</li>
-                            <li><i class='bx bx-badge-check' ></i>Handling error management and providing error messages.</li>
-                            <li><i class='bx bx-badge-check' ></i>Collaborating with frontend developers.</li>
-                            <li><i class='bx bx-badge-check' ></i>Continuously learning and improving skills.</li>
-                            <li><i class='bx bx-badge-check' ></i>Debugging and troubleshooting frontend issues.</li>
-                            <li><i class='bx bx-badge-check' ></i>Using Git for version control and collaboration.</li>
-                            <li><i class='bx bx-badge-check' ></i>Effective communication within the development team.</li>
-                            <li><i class='bx bx-badge-check' ></i>Profiling and optimizing application performance.</li>
-                            <li><i class='bx bx-badge-check' ></i>Implementing security measures to protect against vulnerabilities.</li>
-                            <li><i class='bx bx-badge-check' ></i>Creating comprehensive documentation for the codebase.</li>
-                            <li><i class='bx bx-badge-check' ></i>Collaborating with backend developers and designers.</li>
-                            <li><i class='bx bx-badge-check' ></i>Participating in code reviews for code quality.</li>
-                            <li><i class='bx bx-badge-check' ></i>Providing responsive support for users.</li>
-                        </ul>
+                    <div className="modalHeading"><h3 className='highlightHeading'>{data.title}</h3>   <span onClick={hideModal}  ><i class='bx bx-x modalClose' ></i></span></div>
+                    <div className="projectVideo">
+                        <ReactPlayer width="100%" playing controls={true}
+                            height="100%" url={data.scr} />
+                    </div>
+                    <div className='projectDetailModal'>
+                        <p className='desc'>{data.desc}</p>
+                        <div className="techUsed">
+                        <div><h4>Tech Used  </h4><span><p>Html,react,</p></span></div>
+                        <div><a href='#'><i class='bx bxl-github' ></i></a></div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-
-        </>
-    )
-    }
-    if (value === "project"){
-        return(
-            <div className="services__modal  " >
-
-            <div className="serviceModalContent overlay">
-                <div className="modalHeading"><h4 className='highlightHeading'>Backend Developer</h4>   <span onClick={hideModal}  ><i class='bx bx-x modalClose' ></i></span></div>
-                <div className="modalContent">
-                    <h4>{data.title}</h4>
-                </div>
-            </div>
-        </div>
         )
     }
 
-    return(
+    return (
         <>
             Opps ! Nothing Here.
         </>

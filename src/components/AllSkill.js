@@ -29,5 +29,7 @@ export const AllSkills = [
         scr : "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-a59ea.appspot.com/o/news%20keedsw.webm?alt=media&token=dc87c9bd-5d06-4c17-bb94-1fce86829f82",
         title : "News Keeda",
         desc : "This is a news application based on React js. The news are fetched from a free news api and then displayed on the screen. The news silde gives an overview of the news and if you want to read the full news you can simply click on  the read more button."
-    },
+    }
+   
+ 
 ]

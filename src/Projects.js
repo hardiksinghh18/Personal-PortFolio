@@ -5,7 +5,7 @@ import WorkSection from './components/WorkSection'
 const Projects = () => {
   return (
     <section className='project' id='projects'>
-      <div className="projectContent">
+      
         <h2 className='flexcolumn'> My Projects </h2>
         <div className='projectContainer' >
             {AllSkills.map((element)=>{
@@ -14,7 +14,7 @@ const Projects = () => {
               )
             })}
         </div>
-      </div>
+    
     </section>
   )
 }
