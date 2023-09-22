@@ -10,7 +10,7 @@ const HeroSection = () => {
           <h4>Hey there !! It's me</h4>
           <h1>Hardik Singh </h1>
           <h3>And I'm a <span class="highlightHeading"> Frontend Developer</span></h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, iure? Unde consequatur iste voluptatem, explicabo accusantium itaque sit eum ullam fugiat amet a porro aliquid! Dolorum atque nostrum repellat optio.</p>
+          <p>I'm a passionate and innovative Front-End Web Developer with a keen focus on building dynamic user interfaces using React.js.   My proficiency in HTML, CSS, and JavaScript complements my expertise in React, allowing me to create seamless, interactive, and intuitive user experiences that captivate audiences.</p>
 
 
           <div class="socialMedia"  >

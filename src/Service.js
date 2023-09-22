@@ -61,16 +61,14 @@ const Service = () => {
                     <div class="serviceBox flexcolumn"   data-aos="fade-in">
                     <i class='bx bx-screenshot'></i>
                       <h4 class="highlightHeading">Ui/Ux Designer</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto culpa pariatur laboriosam debitis cupiditate odio neque, aut ipsum, commodi, ullam ex rem recusandae ratione asperiores suscipit earum voluptatum veritatis illo?
-                        </p>
+                        <p>As an UI/UX designer I focus on crafting intuitive, aesthetically pleasing digital interfaces. I conduct user research, wireframe designs, create prototypes, and oversee the overall user experience, ensuring usability and user satisfaction for websites, apps, or software products.</p>
 
                         <ServiceModal value={"ui"} />
                     </div>
                     <div class="serviceBox flexcolumn"   data-aos="fade-left">
                     <i class='bx bxl-mongodb'></i>
                          <h4 class="highlightHeading">Backend Developer</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto culpa pariatur laboriosam debitis cupiditate odio neque, aut ipsum, commodi, ullam ex rem recusandae ratione asperiores suscipit earum voluptatum veritatis illo?
-                        </p>
+                        <p>I'm a fundamental backend developer leveraging MongoDB. My role centers on database management, data manipulation, and server-side logic. I enable web applications to store and retrieve data, supporting their functionality and ensuring efficient data operations.</p>
 
                         <ServiceModal value={"backend"}/>
                     </div>

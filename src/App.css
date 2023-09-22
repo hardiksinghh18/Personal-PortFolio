@@ -153,8 +153,9 @@ color: var(--bg-color);
     background-color: var(--bg-color);
 }
 
+
 .logo {
-    font-size: 2.5rem;
+    font-size:2.5rem;
     color: var(--text-color);
     font-weight: 600;
     cursor: pointer;
@@ -202,7 +203,7 @@ color: var(--bg-color);
 }
 
 .homeImage img {
-    /* height: 70vh; */
+   
     width: 27vw;
 
     margin: 0;
@@ -454,14 +455,16 @@ z-index: 300;
     text-shadow: 0rem 0rem .5rem var(--main-color);
     cursor: pointer;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 1rem;
+    right: 1rem;
 
 }
 
-.modalHeading {
+
+
+.project .modalHeading {
     text-align: center;
-    margin: 2.5rem 0 0 0;
+    margin: 1rem 0;
 
 
 }
@@ -533,13 +536,27 @@ z-index: 300;
     box-shadow: 0 0 .5rem black;
     margin: 2rem 0;
     padding: 2rem;
+    transition: all ease .5s;
+    overflow: hidden;
   
+}
+.singleProject:hover{
+    box-shadow: 0 0 .2rem var(--main-color);
 }
 
 .singleProject img{
     height: 18rem;
-    border-radius: 2rem;
    
+   
+}
+.projectImage{
+    height: 16rem;
+    width: 31rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    
 }
 .singleProject h4{
     font-size: 1.75rem;
@@ -593,16 +610,19 @@ text-shadow: 0 0 2rem var(--main-color);
 
 .projectDetailModal .desc{
     font-size: 1.3rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 .modalHeading{
     margin: 0;
+    text-align: center;
 }
 .techUsed{
 display: flex;
 justify-content: space-between;
 }
-
+.techUsed p{
+    font-size: 1.5rem;
+}
 
 /* contact section  */
 
@@ -829,7 +849,7 @@ textarea {
     }
 
     .header .logo {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 
     .aboutBoxContainer p,
@@ -909,7 +929,7 @@ textarea {
         align-items: center;
         padding: 15rem 4rem 5rem 0;
         border-radius: 0 0 2rem 2rem;
-        transition: all ease .75s;
+        transition: all ease .5s;
     }
 
     .navbarActive {
@@ -962,6 +982,7 @@ textarea {
 
     .singleProject .serviceModalContent{
         width: 30rem;
+
     }
 
     .login-box {

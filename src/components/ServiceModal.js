@@ -16,7 +16,7 @@ const hideModal=()=>{
 
   return (
     <>
-      <button onClick={displayModal} className='btn2 '>Read more </button>
+      <button onClick={displayModal} className='btn2 '>View more </button>
 
       {showModal && <ModalContent hideModal={hideModal} value={value} data={data}/>}
     </>

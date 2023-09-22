@@ -16,9 +16,10 @@ const Navbar = () => {
   return (
     <div>
       <header className="header" id='header'>
-        <a href="#" className="logo">Hardik Singh</a>
+        <a href="#" className="logo">Hardik</a>
 
-     {!showNav&&   <i className='bx bx-menu menu-box' onClick={showNavBar}></i>}
+     {/* {!showNav&&   <i className='bx bx-menu menu-box' onClick={showNavBar}></i>} */}
+     {!showNav&&   <i class='bx bx-grid-alt  menu-box' onClick={showNavBar}></i>}
        {showNav&& <i className='bx bx-x crossBar' onClick={hideNavBar}></i>}
 
      <nav className={showNav?"navbar navbarActive":"navbar"} onClick={()=>setShowNav(false)}>

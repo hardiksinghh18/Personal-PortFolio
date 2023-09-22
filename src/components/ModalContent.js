@@ -123,17 +123,18 @@ const ModalContent = (props) => {
         return (
             <div className="services__modal  " >
 
-                <div className="serviceModalContent overlay">
-                    <div className="modalHeading"><h3 className='highlightHeading'>{data.title}</h3>   <span onClick={hideModal}  ><i class='bx bx-x modalClose' ></i></span></div>
+                <div className="serviceModalContent project">
+                    <div onClick={hideModal}  ><i class='bx bx-x modalClose' ></i></div>
+                    <div className="modalHeading"><h3 className='highlightHeading'>{data.title.toUpperCase()}</h3>   </div>
                     <div className="projectVideo">
                         <ReactPlayer width="100%" playing controls={true}
-                            height="100%" url={data.scr} />
+                            height="100%" url={data.vdo} />
                     </div>
                     <div className='projectDetailModal'>
                         <p className='desc'>{data.desc}</p>
                         <div className="techUsed">
-                        <div><h4>Tech Used  </h4><span><p>Html,react,</p></span></div>
-                        <div><a href='#'><i class='bx bxl-github' ></i></a></div>
+                            <div><h4>Tech Used  </h4><span><p className='highlightHeading'>{data.tech}</p></span></div>
+                            <div><a href='#'><i class='bx bxl-github' ></i></a></div>
                         </div>
                     </div>
                 </div>
