@@ -6,7 +6,7 @@ const Projects = () => {
   return (
     <section className='project' id='projects'>
       
-        <h2 className='flexcolumn highlightHeading'> My Projects </h2>
+        <h3 className='flexcolumn highlightHeading'> My Projects </h3>
         <div className='projectContainer' >
             {AllSkills.map((element)=>{
               return (

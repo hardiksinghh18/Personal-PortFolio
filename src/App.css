@@ -28,6 +28,7 @@ html {
 body {
     background: var(--bg-color);
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 
@@ -95,7 +96,7 @@ p {
 
 section {
     min-height: 100vh;
-    padding: 7rem 9%;
+    padding: 3rem 9%;
     margin: 5rem 0;
 }
 
@@ -189,7 +190,7 @@ color: var(--bg-color);
 .crossBar {
     position: absolute;
     top: 2rem;
-    right: 2rem;
+    right: 3rem;
     z-index: 200;
     display: none;
     font-size: 2.5rem;
@@ -228,7 +229,16 @@ color: var(--bg-color);
 .homeContent h3 {
     font-size: 3.2rem;
     font-weight: 700;
-    margin: .7rem;
+    margin: .7rem 0;
+}
+.homeContent h4 {
+    
+    margin: .7rem 0;
+}
+.homeContent h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin: .7rem 0;
 }
 
 .homeContent h1 {
@@ -351,7 +361,7 @@ color: var(--bg-color);
 
 .frontendSkills {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 2rem;
 
 
@@ -884,6 +894,7 @@ textarea {
     .serviceModalContent {
         width: 60rem;
         height: 60rem;
+        /* height: fit-content; */
     }
 
 }
@@ -896,16 +907,17 @@ textarea {
     .menu-box {
         position: absolute;
         top: 2rem;
-        right: 2rem;
+        right: 3rem;
         z-index: 200;
-        display: block;
-        font-size: 2.5rem;
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
     }
 
     .crossBar {
         position: absolute;
         top: 2rem;
-        right: 2rem;
+        right: 3rem;
         z-index: 200;
         display: block;
         font-size: 2.5rem;
@@ -981,10 +993,24 @@ textarea {
 
 
     .singleProject .serviceModalContent{
-        width: 30rem;
+        width: 33rem;
+        height: fit-content;
 
     }
-
+    .singleProject .serviceModalContent h3{
+        font-size: 1.75rem;
+    }
+.techUsed{
+    display: flex;
+   
+}
+    .techUsed h4{
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    .techUsed p{
+        font-size: 1rem;
+    }
     .login-box {
         width: 35rem;
     }
