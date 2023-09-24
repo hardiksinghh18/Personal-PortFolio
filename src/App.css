@@ -281,7 +281,7 @@ color: var(--bg-color);
 
 /* about */
 .heading {
-    margin: 0 0 4rem 0;
+    margin: 0 0 3rem 0;
 
 }
 
@@ -317,8 +317,23 @@ color: var(--bg-color);
 .aboutBox:hover {
     box-shadow: 0rem 0rem 1rem var(--main-color);
 }
-
-
+.about h4{
+    margin: .5rem 0;
+}
+.about h5{
+    margin: .5rem 0;
+    font-size: 1.5rem;
+}
+.whatIdo div{
+   
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.aboutsecButtons{
+    display: flex;
+    gap: 3rem;
+}
 
 
 /* skills  */
@@ -381,6 +396,7 @@ color: var(--bg-color);
 
 .skillContainer {
     gap: 4rem;
+    margin: 8rem 0;
 }
 
 
@@ -948,7 +964,40 @@ textarea {
         transform: translateY(0)
     }
 
-
+    .about h4{
+        margin: .5rem 0;
+        font-size: 2rem;
+    }
+    .whatIdo div{
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
+    }
+    .about h5{
+        margin: .5rem 0;
+        font-size: 1.25rem;
+    }
+    .about p{
+        margin: .5rem 0;
+        font-size: 1.25rem;
+        text-align: left;
+    }
+    .aboutBox{
+        width: 10rem;
+    }
+    .aboutBox i{
+        font-size: 2rem;
+    }
+    .aboutBox p{
+        font-size: 1rem;
+    }
+    .aboutBoxContainer{
+        margin: 5rem 1rem;
+    }
+     
+    .aboutBox h4{
+        font-size: 1rem;
+    }
     .skillContainer {
         flex-direction: column;
 

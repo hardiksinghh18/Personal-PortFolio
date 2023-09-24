@@ -46,7 +46,7 @@ const Service = () => {
         <div>
 
             <section className="services flexcolumn" id="services">
-                <h2 className="serviceHeading">
+                <h2 className="serviceHeading highlightHeading">
                     Services
                 </h2>
 
