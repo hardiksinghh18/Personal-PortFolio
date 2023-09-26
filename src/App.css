@@ -130,8 +130,8 @@ section {
 }
 
 .btn2:hover {
-background-color: var(--main-color);
-color: var(--bg-color);
+    background-color: var(--main-color);
+    color: var(--bg-color);
     cursor: pointer;
     box-shadow: 0 0 .5rem var(--main-color);
 }
@@ -156,7 +156,7 @@ color: var(--bg-color);
 
 
 .logo {
-    font-size:2.5rem;
+    font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 600;
     cursor: pointer;
@@ -204,7 +204,7 @@ color: var(--bg-color);
 }
 
 .homeImage img {
-   
+
     width: 27vw;
 
     margin: 0;
@@ -231,10 +231,12 @@ color: var(--bg-color);
     font-weight: 700;
     margin: .7rem 0;
 }
+
 .homeContent h4 {
-    
+
     margin: .7rem 0;
 }
+
 .homeContent h3 {
     font-size: 3.2rem;
     font-weight: 700;
@@ -317,20 +319,24 @@ color: var(--bg-color);
 .aboutBox:hover {
     box-shadow: 0rem 0rem 1rem var(--main-color);
 }
-.about h4{
+
+.about h4 {
     margin: .5rem 0;
 }
-.about h5{
+
+.about h5 {
     margin: .5rem 0;
     font-size: 1.5rem;
 }
-.whatIdo div{
-   
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
+
+.whatIdo div {
+
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
-.aboutsecButtons{
+
+.aboutsecButtons {
     display: flex;
     gap: 3rem;
 }
@@ -453,7 +459,7 @@ color: var(--bg-color);
     right: 0;
     backdrop-filter: blur(5px);
 
-z-index: 300;
+    z-index: 300;
 }
 
 .serviceModalContent {
@@ -535,14 +541,14 @@ z-index: 300;
 
 /* Project Sectioin  */
 
-.project{
+.project {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.projectContainer{
+.projectContainer {
     display: flex;
     flex-wrap: wrap;
     max-width: 90rem;
@@ -551,102 +557,121 @@ z-index: 300;
     justify-content: space-around;
 }
 
-.singleProject{
+.singleProject {
     width: 35rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: .2rem solid var(--second-bg-color) ;
+    border: .2rem solid var(--second-bg-color);
     border-radius: 2rem;
     box-shadow: 0 0 .5rem black;
     margin: 2rem 0;
     padding: 2rem;
     transition: all ease .5s;
     overflow: hidden;
-  
+
 }
-.singleProject:hover{
+
+.singleProject:hover {
     box-shadow: 0 0 .2rem var(--main-color);
 }
 
-.singleProject img{
+.singleProject img {
     height: 18rem;
-   
-   
+
+
 }
-.projectImage{
+
+.projectImage {
     height: 16rem;
     width: 31rem;
     overflow: hidden;
     border-radius: 1rem;
     display: flex;
     justify-content: center;
-    
+
 }
-.singleProject h4{
+
+.singleProject h4 {
     font-size: 1.75rem;
     margin: 0;
-  
+
 }
-.singleProject .btn2{
+
+.singleProject .btn2 {
     font-size: 1rem;
 }
-.projectDetail{
+
+.projectDetail {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    padding: 1rem 1rem 0 1rem ;
+    padding: 1rem 0 0 0;
 }
-.projectName{
+
+.projectName {
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-top: 1rem;
     align-items: center;
 }
-.project a{
-font-size: 2.4rem;
-color: var(--text-color);
-}
-.project a:hover{
-font-size: 2.4rem;
-text-shadow: 0 0 2rem var(--main-color);
 
+.project .githublink {
+    font-size: 2.4rem;
+    color: var(--text-color);
 }
 
+.project .githublink:hover {
 
-.singleProject .serviceModalContent{
+    text-shadow: 0 0 2rem var(--main-color);
+
+}
+.linkButton{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top:.5rem 0 0 0;
+   
+}
+
+
+.singleProject .serviceModalContent {
     width: 50rem;
     height: 53rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    padding: 2.5rem  ;
- 
+    padding: 2.5rem;
+
 }
-.serviceModalContent h3{
+
+.serviceModalContent h3 {
 
     font-size: 2rem;
 }
 
 /* project modal  */
 
-.projectDetailModal .desc{
+.projectDetailModal .desc {
     font-size: 1.3rem;
     margin: 2rem 0;
 }
-.modalHeading{
+
+.modalHeading {
     margin: 0;
     text-align: center;
 }
-.techUsed{
-display: flex;
-justify-content: space-between;
+
+.techUsed {
+    display: flex;
+    justify-content: space-between;
 }
-.techUsed p{
+
+.techUsed p {
     font-size: 1.5rem;
 }
 
@@ -964,40 +989,48 @@ textarea {
         transform: translateY(0)
     }
 
-    .about h4{
+    .about h4 {
         margin: .5rem 0;
         font-size: 2rem;
     }
-    .whatIdo div{
+
+    .whatIdo div {
         flex-direction: column;
         gap: 0;
         align-items: flex-start;
     }
-    .about h5{
+
+    .about h5 {
         margin: .5rem 0;
         font-size: 1.25rem;
     }
-    .about p{
+
+    .about p {
         margin: .5rem 0;
         font-size: 1.25rem;
         text-align: left;
     }
-    .aboutBox{
+
+    .aboutBox {
         width: 10rem;
     }
-    .aboutBox i{
+
+    .aboutBox i {
         font-size: 2rem;
     }
-    .aboutBox p{
+
+    .aboutBox p {
         font-size: 1rem;
     }
-    .aboutBoxContainer{
+
+    .aboutBoxContainer {
         margin: 5rem 1rem;
     }
-     
-    .aboutBox h4{
+
+    .aboutBox h4 {
         font-size: 1rem;
     }
+
     .skillContainer {
         flex-direction: column;
 
@@ -1041,27 +1074,31 @@ textarea {
     }
 
 
-    .singleProject .serviceModalContent{
+    .singleProject .serviceModalContent {
         width: 33rem;
         height: fit-content;
 
     }
-    .singleProject .serviceModalContent h3{
+
+    .singleProject .serviceModalContent h3 {
         font-size: 1.75rem;
     }
-.techUsed{
-    display: flex;
-   
-}
-    .techUsed h4{
+
+    .techUsed {
+        display: flex;
+
+    }
+
+    .techUsed h4 {
         font-size: 1.5rem;
         margin: 0;
     }
-    .techUsed p{
+
+    .techUsed p {
         font-size: 1rem;
     }
+
     .login-box {
         width: 35rem;
     }
 }
-

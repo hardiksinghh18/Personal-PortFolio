@@ -6,7 +6,7 @@ export const AllSkills = [
         title: "E-Commerce - hstore",
         desc: "This is an E-Commerce Website which is based on Reactjs.It has multiple functionalities like User authentication,User Login,Add to Cart,Filtering products,Browsing Each Product etc.",
         tech: "HTML,CSS,Reactjs",
-        link:""
+        link: ""
     },
     {
         id: 1,
@@ -15,8 +15,7 @@ export const AllSkills = [
         title: "Personal Portfolio",
         tech: "HTML,CSS,Reactjs",
         desc: "This is my Personal Portfolio website which is completely based on Reactjs. It displays all the required information about me which includes my skills,projects,services etc.",
-        link:"",
-        github:"https://github.com/hardiksinghh18/Personal-PortFolio"
+        link: ""
     },
     {
         id: 2,
@@ -26,8 +25,7 @@ export const AllSkills = [
         title: "NewsPedia",
         tech: "HTML,CSS,Reactjs",
         desc: "This is a website based on Reactjs which is used to display latest news across the globe . Users can browse through multiple news categories via the navbar and they can go through a particular news in detail by clicking the read more button .",
-        link:"",
-        github:"https://github.com/hardiksinghh18/newsApp"
+        link: ""
     },
     {
         id: 3,
@@ -37,7 +35,7 @@ export const AllSkills = [
         title: "Text-Utils",
         tech: "HTML,CSS,Reactjs",
         desc: "This is a very basic Reactjs webapp that can be used to convert a given input text into upper case,lower case,copy and clear text.Main aim of building this was to get started through Reactjs.",
-        link:""
+        link: ""
     },
     {
         id: 4,
@@ -47,9 +45,7 @@ export const AllSkills = [
         title: "To-do-list",
         tech: "HTML,CSS,Javascript",
         desc: "This is a webapp made by using javascript.Users can add a particular task and save it.Saved tasks can also be edited and you can also delete it when it is no longer needed.",
-        link:"https://hardiksinghh18.github.io/ToDo-List/",
-        github:"https://github.com/hardiksinghh18/ToDo-List"
-        
+        link: ""
     },
     {
         id: 5,
@@ -59,7 +55,7 @@ export const AllSkills = [
         title: "Netflix Frontend Clone",
         tech: "HTML,CSS,Javascript",
         desc: "This is a Netflix frontend Clone which is completely based on Javascript only. It displays trending movies , movies by category.Users can also see the details about their profile. Will add more functionalities to this.",
-        link:""
+        link: ""
     },
     {
         id: 6,
@@ -69,8 +65,7 @@ export const AllSkills = [
         title: "Calculator",
         tech: "HTML,CSS,Javascript",
         desc: "This is a very basic calculator made using Javascript. It takes an input value and evaluates and displays the result.",
-        link:"https://hardiksinghh18.github.io/calculator/",
-        github:"https://github.com/hardiksinghh18/calculator"
+        link: ""
     },
     {
         id: 7,
@@ -80,8 +75,7 @@ export const AllSkills = [
         title: "Weather App",
         tech: "HTML,CSS,Bootstrap,Javascript",
         desc: "This app is based on Javascript . It uses weather api to fetch the weather updates and then displays all the required information",
-        link:"https://hardiksinghh18.github.io/weather-app/",
-        github:"https://github.com/hardiksinghh18/weather-app"
+        link: ""
     },
     {
         id: 8,
@@ -91,8 +85,7 @@ export const AllSkills = [
         title: "Contest Finder",
         tech: "HTML,CSS,Bootsrap,Javascript",
         desc: "This app is based on Javascript. The users can see all the available contest in the form of cards.They can also visit the page of that contest by clicking the visit now button. ",
-        link:"",
-        github:'https://github.com/hardiksinghh18/contest-app'
+        link: ""
     },
     {
         id: 9,
@@ -102,8 +95,7 @@ export const AllSkills = [
         title: "Usability hub clone",
         tech: "HTML,CSS",
         desc: "This is a frontent clone of a website called Usability Hub.The Project is made using CSS.My main aim was to sharpen my css skills.",
-        link:""
-
+        link: ""
     },
     {
         id: 10,
@@ -113,9 +105,6 @@ export const AllSkills = [
         title: "Zwigato",
         tech: "HTML,CSS",
         desc: "This is an app that uses CSS.I made this app to get command on my css skills.",
-        link:"",
-        github:"https://github.com/hardiksinghh18/Zwigato"
+        link: ""
     },
-
-
-]
+];
