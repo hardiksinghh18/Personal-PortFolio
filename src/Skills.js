@@ -3,7 +3,7 @@ import React from 'react'
 const Skills = () => {
     return (
         <section id='skill' className='skill'>
-            <h3 className='flexrow  heading highlightHeading'>Skills</h3>
+            <h3 className='flexrow  heading highlightHeading' data-aos="fade-left">Skills</h3>
 
             <div className="skillContainer flexrow">
                 <div className="skills"  data-aos="fade-right">
@@ -85,7 +85,7 @@ const Skills = () => {
                             <div className='skillBox'>
                                 <div className="flexrow"><i className='bx bx-badge-check' ></i></div>
                                 <div className='skillDetail'>
-                                    <h5>Express.js</h5>
+                                    <h5>Nodejs</h5>
                                     <p>Basic</p>
                                 </div>
                             </div>

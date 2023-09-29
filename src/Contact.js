@@ -3,7 +3,7 @@ import React from 'react'
 const Contact = () => {
     return (
         <div className='contact flexcolumn' id='contact'>
-            <h2 className='highlightHeading'>Contact Me</h2>
+            <h3 className='highlightHeading' data-aos="fade-left">Contact Me</h3>
             <div>
                 <div className="login-box" data-aos="fade-right">
 

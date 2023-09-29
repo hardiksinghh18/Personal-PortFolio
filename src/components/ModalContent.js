@@ -136,7 +136,7 @@ const ModalContent = (props) => {
                             <div>
                                 <h4>Tech Used  </h4><span><p className='highlightHeading'>{data.tech}</p></span>
                             </div>
-                            <div><a href='#'><i className='bx bxl-github' ></i></a></div>
+                            <div><a href={data.github}><i className='bx bxl-github' ></i></a></div>
                         </div>
                     </div>
                 </div>

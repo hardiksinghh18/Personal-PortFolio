@@ -205,9 +205,9 @@ section {
 
 .homeImage img {
 
-    width: 27vw;
+    width: 30vw;
 
-    margin: 0;
+ 
     filter: drop-shadow(1rem 1rem 1rem var(--main-color));
 
 }
@@ -378,6 +378,7 @@ section {
 .skillBox {
     display: flex;
     justify-content: space-between;
+    width: fit-content;
 }
 
 .frontendSkills {
@@ -402,7 +403,7 @@ section {
 
 .skillContainer {
     gap: 4rem;
-    margin: 8rem 0;
+    margin: 5rem 0;
 }
 
 
@@ -430,6 +431,8 @@ section {
     border: .2rem solid var(--second-bg-color);
     border-radius: 2rem;
     padding: 3rem;
+    height: 450px;
+    /* width: 325px; */
     transition: all ease .3s;
 }
 
@@ -552,8 +555,8 @@ section {
     display: flex;
     flex-wrap: wrap;
     max-width: 90rem;
-    padding: 3rem 3rem;
-    margin: 5rem;
+    padding: 2rem 3rem;
+    margin: 0rem;
     justify-content: space-around;
 }
 
@@ -660,10 +663,20 @@ section {
     font-size: 1.3rem;
     margin: 2rem 0;
 }
+.projectDetailModal a {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+}
+.projectDetailModal a:hover {
+   text-shadow: o o .5rem var(--main-color);
+}
 
 .modalHeading {
-    margin: 0;
+    margin: 3rem 0 0 0;
     text-align: center;
+    
 }
 
 .techUsed {
@@ -698,7 +711,7 @@ body {
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
     border-radius: 10px;
-    margin: 10rem 0;
+    margin: 5rem 0;
 }
 
 .login-box h2 {
@@ -865,6 +878,26 @@ textarea {
     outline: inherit;
 }
 
+
+/* footer  */
+
+
+.footer{
+    background: rgba(0, 0, 0, .5);
+    margin: 5rem 0 0 0;
+    padding: 8rem 0;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+}
+.footerLinks{
+    display: flex;
+   gap: 3rem;
+    font-size: 2rem;
+    padding: 2rem;
+}
+.footerLinks a{
+   
+    color: var(--main-color);
+}
 
 
 @media screen and (max-width: 1080px) {
@@ -1037,7 +1070,7 @@ textarea {
     }
 
     .skills {
-        padding: 1rem 3rem 2rem 2rem;
+        padding: 3rem 3rem;
     }
 
     .skills p {
@@ -1045,7 +1078,7 @@ textarea {
     }
 
     .skills h4 {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         margin: 1rem 0 4rem 0;
     }
 
@@ -1057,6 +1090,10 @@ textarea {
         font-size: 1.5rem;
         margin: 0 1rem;
 
+    }
+
+    .serviceContainer h4{
+        font-size: 2rem;
     }
 
     .serviceModalContent {
@@ -1073,7 +1110,14 @@ textarea {
         font-size: 1rem;
     }
 
-
+    .serviceModalContent .modalClose{
+        top: 0;
+        right: 0;
+    }
+    .project .modalClose{
+        top: 1rem;
+        right: 1rem;
+    }
     .singleProject .serviceModalContent {
         width: 33rem;
         height: fit-content;

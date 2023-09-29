@@ -6,6 +6,7 @@ import Service from './Service'
 import Skills from './Skills'
 import Contact from './Contact'
 import Projects from './Projects'
+import Footer from './components/Footer'
 
 const Home = () => {
 
@@ -29,6 +30,7 @@ const Home = () => {
             <Service/>
             <Projects/>
             <Contact/>
+            <Footer/>
         </div>
     )
 }

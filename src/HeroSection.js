@@ -16,7 +16,7 @@ const HeroSection = () => {
           <p>I'm a passionate and innovative Front-End Web Developer with a keen focus on building dynamic user interfaces using React.js.   My proficiency in HTML, CSS, and JavaScript complements my expertise in React, allowing me to create seamless, interactive, and intuitive user experiences that captivate audiences.</p>
 
 
-          <div className="socialMedia"  >
+          <div className="socialMedia" data-aos="fade-left" >
             <a href="https://github.com/hardiksinghh18" target='_blank'  ><i className='bx bxl-github' ></i></a>
             <a href="https://www.linkedin.com/in/hardik-singh-391946278/" target='_blank'  ><i className='bx bxl-linkedin' ></i></a>
             <a href="https://www.instagram.com/hardiksingh18_/" target='_blank'><i className='bx bxl-instagram' ></i></a>

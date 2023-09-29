@@ -3,52 +3,14 @@ import ServiceModal from './components/ServiceModal'
 
 const Service = () => {
 
-    // const openModal1 = () => {
-    //     let modal = document.getElementById('services__modal1')
-    //     modal.classList.add('active-modal')
 
-
-    // }
-
-    // const closeModal1 = () => {
-    //     let modal = document.getElementById('services__modal1')
-    //     modal.classList.remove('active-modal')
-    //     let serviceContainer = document.getElementById('serviceContainer')
-    //     serviceContainer.style.opacity = '1'
-    // }
-    // const openModal2 = () => {
-    //     let modal = document.getElementById('services__modal2')
-    //     modal.classList.add('active-modal')
-    //     let serviceContainer = document.getElementById('serviceContainer')
-
-    // }
-
-    // const closeModal2 = () => {
-    //     let modal = document.getElementById('services__modal2')
-    //     modal.classList.remove('active-modal')
-    //     let serviceContainer = document.getElementById('serviceContainer')
-    //     serviceContainer.style.opacity = '1'
-    // }
-    // const openModal3 = () => {
-    //     let modal = document.getElementById('services__modal3')
-    //     modal.classList.add('active-modal')
-    //     let serviceContainer = document.getElementById('serviceContainer')
-
-    // }
-
-    // const closeModal3 = () => {
-    //     let modal = document.getElementById('services__modal3')
-    //     modal.classList.remove('active-modal')
-    //     let serviceContainer = document.getElementById('serviceContainer')
-    //     serviceContainer.style.opacity = '1'
-    // }
     return (
         <div>
 
             <section className="services flexcolumn" id="services">
-                <h2 className="serviceHeading highlightHeading">
+                <h3 className="serviceHeading highlightHeading" data-aos="fade-right">
                     Services
-                </h2>
+                </h3>
 
                 <div className="serviceContainer flexrow"  >
                     <div className="serviceBox flexcolumn"  data-aos="fade-right">
