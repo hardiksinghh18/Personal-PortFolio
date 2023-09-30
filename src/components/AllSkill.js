@@ -6,7 +6,7 @@ export const AllSkills = [
         title: "E-Commerce - hstore",
         desc: "This is an E-Commerce Website which is based on Reactjs.It has multiple functionalities like User authentication,User Login,Add to Cart,Filtering products,Browsing Each Product etc.",
         tech: "HTML,CSS,Reactjs",
-        link:"",
+        link:"https://ecommerce-hstore.web.app",
         github:"https://github.com/hardiksinghh18/E-commerce-hstore"
     },
     {
@@ -16,7 +16,7 @@ export const AllSkills = [
         title: "Personal Portfolio",
         tech: "HTML,CSS,Reactjs",
         desc: "This is my Personal Portfolio website which is completely based on Reactjs. It displays all the required information about me which includes my skills,projects,services etc.",
-        link:"",
+        link:"https://personal-portfolio-e780a.web.app",
         github:"https://github.com/hardiksinghh18/Personal-PortFolio"
     },
     {
