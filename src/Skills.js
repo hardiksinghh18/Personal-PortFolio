@@ -63,6 +63,57 @@ const Skills = () => {
                 </div>
                 <div className="skills"  data-aos="fade-left">
 
+                    <h4 className='highlightHeading flexrow'>Miscellaneous Skills</h4>
+
+                    <div className="frontendSkills ">
+                        <div className='skillBoxes'>
+                            <div className='skillBox'>
+                                <div  className="flexrow"><i className='bx bx-badge-check' ></i></div>
+                                <div className='skillDetail'>
+                                    <h5>Tailwind CSS</h5>
+                                    <p>Intermediate</p>
+                                </div>
+                            </div>
+
+                            <div className='skillBox'>
+                                <div className="flexrow"><i className='bx bx-badge-check' ></i></div>
+                                <div className='skillDetail'>
+                                    <h5>Firebase</h5>
+                                    <p>Intermediate</p>
+                                </div>
+                            </div>
+                            <div className='skillBox'>
+                                <div className="flexrow"><i className='bx bx-badge-check' ></i></div>
+                                <div className='skillDetail'>
+                                    <h5>Open Source</h5>
+                                    <p>Intermediate</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div className='skillBoxes'>
+                            <div className='skillBox'>
+                                <div className="flexrow"><i className='bx bx-badge-check' ></i></div>
+                                <div className='skillDetail'>
+                                    <h5>Ui/Ux</h5>
+                                    <p>Intermediate</p>
+                                </div>
+                            </div>
+                          
+                            {/* <div className='skillBox'>
+                                <div className="flexrow"><i className='bx bx-badge-check' ></i></div>
+                                <div className='skillDetail'>
+                                    <h5>Git</h5>
+                                    <p>Intermediate</p>
+                                </div>
+                            </div> */}
+                        </div>
+
+
+
+                    </div>
+                {/* <div className="skills"  data-aos="fade-left">
+
                     <h4 className='highlightHeading flexrow'>Backend Developer</h4>
 
                     <div className="frontendSkills ">
@@ -111,7 +162,7 @@ const Skills = () => {
 
 
 
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

@@ -24,7 +24,7 @@ const HeroSection = () => {
 
           </div>
 
-          <a href="#" className="btn">Download Resume</a>
+          <a href="#"   className="btn">Download Resume</a>
         </div>
 
         <div className="homeImage" data-aos="fade-left">

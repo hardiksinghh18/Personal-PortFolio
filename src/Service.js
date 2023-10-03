@@ -27,13 +27,13 @@ const Service = () => {
 
                         <ServiceModal value={"ui"} />
                     </div>
-                    <div className="serviceBox flexcolumn"   data-aos="fade-left">
+                    {/* <div className="serviceBox flexcolumn"   data-aos="fade-left">
                     <i className='bx bxl-mongodb'></i>
                          <h4 className="highlightHeading">Backend Developer</h4>
                         <p>I'm a fundamental backend developer leveraging MongoDB. My role centers on database management, data manipulation, and server-side logic. I enable web applications to store and retrieve data, supporting their functionality and ensuring efficient data operations.</p>
 
                         <ServiceModal value={"backend"}/>
-                    </div>
+                    </div> */}
                 </div>
 
 

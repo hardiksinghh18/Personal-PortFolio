@@ -650,12 +650,13 @@ section {
     flex-direction: column;
     padding: 2.5rem;
 
-}
-
+} 
 .serviceModalContent h3 {
-
     font-size: 2rem;
 }
+
+
+  
 
 /* project modal  */
 
@@ -1097,8 +1098,8 @@ textarea {
     }
 
     .serviceModalContent {
-        width: 30rem;
-        height: 40rem;
+        width: 35rem;
+        max-height: 55rem;
         padding: 1rem 0;
     }
 

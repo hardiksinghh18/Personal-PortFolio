@@ -38,7 +38,7 @@ export const AllSkills = [
         title: "Text-Utils",
         tech: "HTML,CSS,Reactjs",
         desc: "This is a very basic Reactjs webapp that can be used to convert a given input text into upper case,lower case,copy and clear text.Main aim of building this was to get started through Reactjs.",
-        link:"",
+        link:"https://text-utils-5331c.web.app",
         github:"https://github.com/hardiksinghh18/Text-utils"
     },
     {
