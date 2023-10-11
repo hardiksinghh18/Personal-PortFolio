@@ -20,11 +20,11 @@ const HeroSection = () => {
             <a href="https://github.com/hardiksinghh18" target='_blank'  ><i className='bx bxl-github' ></i></a>
             <a href="https://www.linkedin.com/in/hardik-singh-391946278/" target='_blank'  ><i className='bx bxl-linkedin' ></i></a>
             <a href="https://www.instagram.com/hardiksingh18_/" target='_blank'><i className='bx bxl-instagram' ></i></a>
-            <a href="https://twitter.com/hardiksingh18_" target='_blank'><i className='bx bxl-twitter' ></i></a>
+            <a href="#contact" ><i class='bx bx-envelope'></i></a>
 
           </div>
 
-          <a href="#"   className="btn">Download Resume</a>
+          <a href="https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/Hardik_Singh_Frontend_Resume.pdf?alt=media&token=0ea8f84a-6d16-4151-ae51-3c7ed0158d71" download target='_blank'  className="btn">Download Resume</a>
         </div>
 
         <div className="homeImage" data-aos="fade-left">

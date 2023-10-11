@@ -5,7 +5,7 @@ export const AllSkills = [
         vdo: "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/project-videos%2F.hstore%20-%20Google%20Chrome%202023-09-27%2020-10-39.mp4?alt=media&token=12fab99f-9d53-4642-810a-9105315888e5",
         title: "E-Commerce - hstore",
         desc: "This is an E-Commerce Website which is based on Reactjs.It has multiple functionalities like User authentication,User Login,Add to Cart,Filtering products,Browsing Each Product etc.",
-        tech: "HTML,CSS,Reactjs",
+        tech: "HTML,CSS,Reactjs,React Context API",
         link:"https://ecommerce-hstore.web.app",
         github:"https://github.com/hardiksinghh18/E-commerce-hstore"
     },
@@ -22,6 +22,17 @@ export const AllSkills = [
     {
         id: 2,
 
+        img: "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/Project_thumbnail%2Fnetflix.jpg?alt=media&token=a1a08bbc-fcd7-46d6-b11b-d862a6e81c0b",
+        vdo: "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/project-videos%2FNetflix%20-%20Google%20Chrome%202023-09-28%2012-25-35.mp4?alt=media&token=e48061a1-8f01-4a90-b8a0-89922d155d3c",
+        title: "Netflix Frontend Clone",
+        tech: "HTML,CSS,Reactjs",
+        desc: "This is a Netflix frontend Clone which is made with Reactjs. It displays trending movies , movies by category.Users can also see the details of the movies and watch their trailers which is fetched from youtube api. Will add more functionalities to this.",
+        link:"https://netflix-clone-f3502.web.app",
+        github:"https://github.com/hardiksinghh18/netflix-clone-react"
+    },
+    {
+        id: 3,
+
         img: "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/Project_thumbnail%2Fnewspedia.jpg?alt=media&token=fcc29ba1-56d9-435c-a82f-f2d9c633a2d6",
         vdo: "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/project-videos%2FNewsPedia-%20Keeps%20you%20updated%20everytime%20!!%20-%20Google%20Chrome%202023-08-27%2014-41-59.mp4?alt=media&token=b380a53a-60c5-485f-b9a1-f458cbbd7d74",
         title: "NewsPedia",
@@ -31,7 +42,7 @@ export const AllSkills = [
         github:"https://github.com/hardiksinghh18/newsApp"
     },
     {
-        id: 3,
+        id: 4,
 
         img: "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/Project_thumbnail%2Ftext_utils.jpg?alt=media&token=d1a48489-7e9b-44e1-8cb9-be90a329d309",
         vdo: "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/project-videos%2FText%20Analyser%20-%20Google%20Chrome%202023-09-28%2012-30-37.mp4?alt=media&token=4f9fefe7-29a6-4deb-a835-6a46cb32f4d0",
@@ -42,7 +53,7 @@ export const AllSkills = [
         github:"https://github.com/hardiksinghh18/Text-utils"
     },
     {
-        id: 4,
+        id: 5,
 
         img: "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/Project_thumbnail%2Ftodo_list.jpg?alt=media&token=f4cd1eca-4dd3-4e4d-b22a-4c46b118f305",
         vdo: "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/project-videos%2FToDo%20List%20-%20Google%20Chrome%202023-09-28%2000-23-55.mp4?alt=media&token=a3d9a4a1-c407-4336-aee8-8e2a4c198a63",
@@ -53,17 +64,7 @@ export const AllSkills = [
         github:"https://github.com/hardiksinghh18/ToDo-List"
         
     },
-    {
-        id: 5,
-
-        img: "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/Project_thumbnail%2Fnetflix.jpg?alt=media&token=a1a08bbc-fcd7-46d6-b11b-d862a6e81c0b",
-        vdo: "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/project-videos%2FNetflix%20-%20Google%20Chrome%202023-09-28%2012-25-35.mp4?alt=media&token=e48061a1-8f01-4a90-b8a0-89922d155d3c",
-        title: "Netflix Frontend Clone",
-        tech: "HTML,CSS,Javascript",
-        desc: "This is a Netflix frontend Clone which is completely based on Javascript only. It displays trending movies , movies by category.Users can also see the details about their profile. Will add more functionalities to this.",
-        link:"https://hardiksinghh18.github.io/Netflix-Clone/",
-        github:"https://github.com/hardiksinghh18/Netflix-Clone"
-    },
+   
     {
         id: 6,
 

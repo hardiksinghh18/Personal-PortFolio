@@ -50,7 +50,7 @@ const Skills = () => {
                             <div className='skillBox'>
                                 <div className="flexrow"><i className='bx bx-badge-check' ></i></div>
                                 <div className='skillDetail'>
-                                    <h5>Git</h5>
+                                    <h5>Git/Github</h5>
                                     <p>Intermediate</p>
                                 </div>
                             </div>
@@ -70,7 +70,7 @@ const Skills = () => {
                             <div className='skillBox'>
                                 <div  className="flexrow"><i className='bx bx-badge-check' ></i></div>
                                 <div className='skillDetail'>
-                                    <h5>Tailwind CSS</h5>
+                                    <h5>Firebase</h5>
                                     <p>Intermediate</p>
                                 </div>
                             </div>
@@ -78,8 +78,8 @@ const Skills = () => {
                             <div className='skillBox'>
                                 <div className="flexrow"><i className='bx bx-badge-check' ></i></div>
                                 <div className='skillDetail'>
-                                    <h5>Firebase</h5>
-                                    <p>Intermediate</p>
+                                    <h5>MySQL</h5>
+                                    <p>Beginner</p>
                                 </div>
                             </div>
                             <div className='skillBox'>
@@ -95,18 +95,25 @@ const Skills = () => {
                             <div className='skillBox'>
                                 <div className="flexrow"><i className='bx bx-badge-check' ></i></div>
                                 <div className='skillDetail'>
-                                    <h5>Ui/Ux</h5>
+                                    <h5>Redux</h5>
                                     <p>Intermediate</p>
                                 </div>
                             </div>
                           
-                            {/* <div className='skillBox'>
+                            <div className='skillBox'>
                                 <div className="flexrow"><i className='bx bx-badge-check' ></i></div>
                                 <div className='skillDetail'>
-                                    <h5>Git</h5>
+                                    <h5>Tailwind CSS</h5>
                                     <p>Intermediate</p>
                                 </div>
-                            </div> */}
+                            </div>
+                            <div className='skillBox'>
+                                <div className="flexrow"><i className='bx bx-badge-check' ></i></div>
+                                <div className='skillDetail'>
+                                    <h5>Ui/Ux</h5>
+                                    <p>Beginner</p>
+                                </div>
+                            </div>
                         </div>
 
 

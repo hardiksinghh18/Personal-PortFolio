@@ -43,7 +43,7 @@ const About = () => {
           </div>
           <div className="aboutBox">
             <i className='bx bx-code-alt' ></i>
-            <p>15+ Projects</p>
+            <p>10+ Projects</p>
             <h4>Completed</h4>
           </div>
           <div className="aboutBox">
