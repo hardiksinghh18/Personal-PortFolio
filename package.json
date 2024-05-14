@@ -13,7 +13,7 @@
     "react-router-dom": "^6.16.0",
     "react-scripts": "5.0.1",
     "react-tsparticles": "^2.12.2",
-    "react-typed": "^1.2.0",
+    "react-typed": "^2.0.12",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
