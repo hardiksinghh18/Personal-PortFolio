@@ -12,10 +12,15 @@
 }
 
 :root {
-    --bg-color: #1f242d;
-    --second-bg-color: #323946;
+    /* --bg-color: #1f242d; */
+    /* --bg-color: #161513; */
+    --bg-color: #000000;
+    --second-bg-color: rgba(255, 255, 255, 0.105);
+    --third-bg-color: rgb(25, 32, 40);
     --text-color: #fff;
-    --main-color: #0ef;
+    --green-color: rgb(2, 239, 99);
+    --main-color: #fd5f6a;
+    --main-color-gradient: #fea04f;
 
 }
 
@@ -55,19 +60,19 @@ h1 {
 h2 {
     font-size: 4.6rem;
     font-weight: 700;
-    line-height: 1.3rem;
+    /* line-height: 3.3rem; */
 }
 
 h3 {
     font-size: 3.2rem;
     font-weight: 700;
-    margin: .7rem;
+    /* margin: .7rem; */
 }
 
 h4 {
     font-size: 2.2rem;
     font-weight: 700;
-    margin: .7rem;
+    /* margin: .7rem; */
 }
 
 h5 {
@@ -93,21 +98,112 @@ p {
     align-items: center;
 }
 
+.textGradient {
+
+    background-image: linear-gradient(to right, var(--main-color), var(--main-color-gradient));
+    background-clip: text;
+    color: transparent;
+
+}
 
 section {
-    min-height: 100vh;
-    padding: 3rem 9%;
-    margin: 5rem 0;
+    /* min-height: 100vh; */
+    padding: 0rem 9%;
+    margin: 2rem 0;
+}
+
+.linkFlags {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-right: 2rem;
+    position: fixed;
+    bottom: 0;
+    left: 30px;
+    align-items: center;
+    z-index: 20;
+}
+
+.linkFlags i {
+    font-size: 3rem;
+    color: white;
+}
+
+@keyframes floatUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes bounceUpDown {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+
+.linkFlags i:hover {
+    animation: floatUpDown 1s ease-in-out infinite;
+
+}
+
+.linkFlags .bxl-github:hover {
+    color: var(--main-color-gradient);
+}
+
+.linkFlags .bxl-linkedin:hover {
+
+    color: rgb(0, 118, 179);
+}
+
+.linkFlags .bxl-instagram:hover {
+    color: rgb(245, 32, 154);
+}
+
+.linkFlags .bxl-twitter:hover {
+    color: rgb(0, 140, 255);
+}
+
+.linkFlags .bxl-gmail:hover {
+    color: rgb(12, 255, 12);
+}
+
+.linkFlags div {
+    border-left: .1px solid white;
+    /* background-color: white; */
+    height: 200px;
+    width: 0;
 }
 
 .btn {
-    background: var(--main-color);
+
+    background: linear-gradient(to right, var(--main-color), var(--main-color-gradient));
     font-size: 1.3rem;
     width: fit-content;
     padding: .75rem 1rem;
     border-radius: 1rem;
     color: var(--bg-color);
-    font-weight: 600;
+
+    font-weight: 700;
     transition: all ease .5s;
 }
 
@@ -116,7 +212,7 @@ section {
     cursor: pointer;
 }
 
-.btn2 {
+/* .btn2 {
     background: var(--bg-color);
     font-size: 1.3rem;
     width: fit-content;
@@ -127,13 +223,24 @@ section {
     font-weight: 500;
     border: .1rem solid var(--main-color);
     transition: all ease .5s;
+} */
+.btn2 i {
+    background: var(--bg-color);
+    font-size: 2rem;
+    /* width: fit-content; */
+
+
+    color: white;
+    font-weight: 500;
+
+    transition: all ease .5s;
 }
 
-.btn2:hover {
-    background-color: var(--main-color);
-    color: var(--bg-color);
+.btn2 i:hover {
+
+
     cursor: pointer;
-    box-shadow: 0 0 .5rem var(--main-color);
+    text-shadow: 0 0 .5rem var(--main-color);
 }
 
 
@@ -146,12 +253,15 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 9%;
+    padding: 1rem 9%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    background-color: var(--bg-color);
+    background:transparent;
+    backdrop-filter: blur(15px);
+
+
 }
 
 
@@ -175,7 +285,7 @@ section {
 
 .navbar a:hover,
 .navbar a.active {
-    color: var(--main-color);
+    color: var(--main-color-gradient);
 }
 
 .menu-box {
@@ -197,7 +307,7 @@ section {
 }
 
 .homeImage {
-    border-bottom: 10px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
     width: fit-content;
     padding: 0;
 
@@ -207,40 +317,38 @@ section {
 
     width: 30vw;
 
- 
-    filter: drop-shadow(1rem 1rem 1rem var(--main-color));
+
+    filter: drop-shadow(.5rem .5rem .5rem var(--main-color-gradient));
 
 }
 
 .home {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    margin: 10rem 0;
 }
 
 .homeContent {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding: 5rem 0;
+    gap: .5rem;
+    padding: 0rem 0;
 
+}
+
+.homeContent .btn {
+    margin-top: 5rem !important;
 }
 
 .homeContent h3 {
-    font-size: 3.2rem;
+    font-size: 2rem;
     font-weight: 700;
-    margin: .7rem 0;
+
 }
 
-.homeContent h4 {
-
-    margin: .7rem 0;
-}
-
-.homeContent h3 {
-    font-size: 3.2rem;
-    font-weight: 700;
-    margin: .7rem 0;
+.resumeBtn {
+    margin-top: 2.5rem;
 }
 
 .homeContent h1 {
@@ -249,54 +357,112 @@ section {
     line-height: 1.3rem;
 }
 
+.homeContent .mainLine {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    color: rgb(150, 150, 150);
+}
+
 .homeContent p {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    color: rgb(150, 150, 150);
+    /* font-weight: 600; */
+}
+
+.homeContent .code {
+    color: var(--green-color);
 }
 
 .highlightHeading {
-    color: var(--main-color);
+    color: var(--main-color-gradient);
     text-shadow: 0rem 0rem .3rem var(--main-color);
 }
 
-.socialMedia{
-    margin: 3rem 0;
-}
 .socialMedia a {
-    display: inline-flex;
+    /* display: inline-flex; */
+    display: none;
     justify-content: center;
     align-items: center;
     width: 3rem;
     height: 3rem;
     background: transparent;
-    border: 0.2rem solid var(--main-color);
+    border: 0.1rem solid var(--main-color);
     border-radius: 50%;
     font-size: 2rem;
     color: var(--main-color);
-   margin: 0 1.5rem;
-   
+    margin: 1.5rem 1.5rem 1.5rem 0;
     /* margin: 1rem; */
     transition: all ease .5s;
 }
 
 .socialMedia a:hover {
     color: var(--bg-color);
-    background-color: var(--main-color);
+    background-color: var(--main-color-gradient);
     box-shadow: .1rem .1rem 1rem var(--main-color);
 }
 
 
 /* about */
-.heading {
-    margin: 0 0 3rem 0;
 
+
+.headingPosition {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10rem;
+    padding-bottom: 10rem;
+    position: relative;
+    top: 5rem;
+    width: 80vw;
 }
+
+.heading {
+    margin: 0;
+    -webkit-text-stroke: 2px var(--main-color-gradient);
+    color: transparent;
+    font-size: 8rem;
+    position: absolute;
+
+    text-align: center;
+    /* Center text horizontally */
+}
+
+.headingBottom {
+    font-size: 10rem;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    text-align: center;
+    /* Center text horizontally */
+}
+
+/* .projectVideo img {
+    height: 25rem;
+    margin: .5rem;
+} */
 
 .aboutContent {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+
 }
 
+.aboutContentNew p {
+    color: rgb(150, 150, 150);
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 5rem;
+    width: 80%;
+}
+
+.homepage {
+    display: flex;
+    gap: 10rem;
+    flex-direction: column;
+}
 
 .aboutBoxContainer {
     gap: 3rem;
@@ -432,7 +598,8 @@ section {
 
 .serviceBox {
     gap: 2rem;
-    border: .2rem solid var(--second-bg-color);
+    /* border: .2rem solid var(--second-bg-color); */
+    border: 1px solid var(--main-color);
     border-radius: 2rem;
     padding: 3rem;
     height: 450px;
@@ -477,7 +644,7 @@ section {
     width: 60rem;
     height: 45rem;
     border-radius: 1.5rem;
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
     color: var(--text-color);
     box-shadow: 0rem 0rem 1rem black;
     border-radius: 2rem;
@@ -564,30 +731,91 @@ section {
     justify-content: space-around;
 }
 
+.circles{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: .5rem;
+    /* padding-left: .25rem; */
+    padding-bottom: .25rem;
+}
+.circles>div{
+    /* background-color: white; */
+    height: 1rem ;
+    width: 1rem;
+    
+    border-radius: 1rem;
+}
+.circle1{
+    background-color: var(--main-color);
+}
+.circle2{
+    background-color: var(--green-color);
+}
+.circle3{
+    background-color: var(--main-color-gradient);
+}
+.singleProject .line{
+    width: 100%;
+   background:rgb(200, 200, 200);
+   /* border:  .1rem solid white; */
+   height: .2px;
+   margin-bottom: 1.5rem;
+}
 .singleProject {
     width: 35rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: .2rem solid var(--second-bg-color);
+    border: 1px solid rgb(155, 155, 155);
     border-radius: 2rem;
     box-shadow: 0 0 .5rem black;
     margin: 2rem 0;
-    padding: 2rem;
+    padding:1rem 2rem 2rem 2rem;
     transition: all ease .5s;
-    overflow: hidden;
+    /* overflow: hidden; */
+
+
+/* From https://css.glass */
+background: rgb(25, 26, 27);
+border-radius: 16px;
+
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(15px);
+/* border: 1px solid rgba(91, 91, 91, 0.3); */
+
+
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .8;
+    }
 
 }
 
 .singleProject:hover {
-    box-shadow: 0 0 .2rem var(--main-color);
+    border: 1px solid var(--green-color);
+    animation: blink 2s ease-in-out infinite;
 }
 
 .singleProject img {
-    height: 18rem;
+    height: 20rem;
+    border-radius: 1rem;
 
+}
 
+.singleProject img:hover {
+    box-shadow: 0 0 .5rem var(--second-bg-color);
 }
 
 .projectImage {
@@ -616,14 +844,39 @@ section {
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    padding: 1rem 0 0 0;
+    /* margin: 0 0 2rem 0; */
+    gap: 1.5rem;
+
+}
+
+.linkProject {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+
+
+
+.linkProject i {
+    font-size: 2rem;
+    margin: .25rem;
+
+}
+
+.viewMore {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+
 }
 
 .projectName {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    margin-top: 1rem;
+    /* width: 100%; */
+    /* margin-top: 1rem; */
     align-items: center;
 }
 
@@ -634,17 +887,34 @@ section {
 
 .project .githublink:hover {
 
-    text-shadow: 0 0 2rem var(--main-color);
+    text-shadow: 0 0 2rem var(--main-color-gradient);
 
 }
-.linkButton{
+
+.linkButton {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     width: 100%;
-    margin-top:.5rem 0 0 0;
-   
+    margin: .5rem 0 0 .2rem;
+    gap: .35rem;
+    flex-wrap: wrap;
+
 }
 
+.linkButton p {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.techStackBorder{
+    border: 1px solid var(--second-bg-color);
+    background-color:var(--second-bg-color);
+    box-shadow: var(--third-bg-color) 1px 1px 10px;
+    border-radius: 5px;
+    padding: .35rem .55rem;
+}
+.techStackBorder p{
+    font-size: 10px;
+}
 
 .singleProject .serviceModalContent {
     width: 50rem;
@@ -654,34 +924,39 @@ section {
     flex-direction: column;
     padding: 2.5rem;
 
-} 
+}
+
 .serviceModalContent h3 {
     font-size: 2rem;
 }
 
 
-  
+
 
 /* project modal  */
+
+
 
 .projectDetailModal .desc {
     font-size: 1.3rem;
     margin: 2rem 0;
 }
+
 .projectDetailModal a {
     font-size: 2.5rem;
     display: flex;
     align-items: center;
     color: var(--text-color);
 }
+
 .projectDetailModal a:hover {
-   text-shadow: o o .5rem var(--main-color);
+    text-shadow: o o .5rem var(--second-bg-color);
 }
 
 .modalHeading {
     margin: 3rem 0 0 0;
     text-align: center;
-    
+
 }
 
 .techUsed {
@@ -691,6 +966,17 @@ section {
 
 .techUsed p {
     font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.modalLink a {
+    margin: 0rem .75rem;
+
+}
+
+.modalLink a:hover {
+    color: var(--main-color-gradient);
+    /* text-shadow: 2px 2px 10px var(--main-color-gradient) ; */
 }
 
 /* contact section  */
@@ -712,11 +998,11 @@ body {
 
     width: 40rem;
     padding: 40px;
-    background: rgba(0, 0, 0, .5);
+    background: var(--second-bg-color);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
     border-radius: 10px;
-    margin: 3rem 0 5rem 0;
+    margin: 3rem 0;
 }
 
 .login-box h2 {
@@ -759,7 +1045,7 @@ textarea {
 .login-box .user-box textarea:valid~label {
     top: -20px;
     left: 0;
-    color: #03e9f4;
+    color: var(--main-color);
     font-size: 12px;
 }
 
@@ -767,7 +1053,7 @@ textarea {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
-    color: #03e9f4;
+    color: var(--main-color);
     font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
@@ -778,7 +1064,7 @@ textarea {
 }
 
 .login-box .submitOutline:hover {
-    background: #03e9f4;
+    background: var(--main-color);
     color: var(--bg-color);
     border-radius: 5px;
     box-shadow: 0 0 1rem var(--main-color);
@@ -795,7 +1081,7 @@ textarea {
     left: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #03e9f4);
+    background: linear-gradient(90deg, transparent, var(--main-color-gradient));
     animation: btn-anim1 1s linear infinite;
 }
 
@@ -815,7 +1101,7 @@ textarea {
     right: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(180deg, transparent, #03e9f4);
+    background: linear-gradient(180deg, transparent, var(--main-color));
     animation: btn-anim2 1s linear infinite;
     animation-delay: .25s
 }
@@ -836,7 +1122,7 @@ textarea {
     right: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(270deg, transparent, #03e9f4);
+    background: linear-gradient(270deg, transparent, var(--main-color));
     animation: btn-anim3 1s linear infinite;
     animation-delay: .5s
 }
@@ -857,7 +1143,7 @@ textarea {
     left: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(360deg, transparent, #03e9f4);
+    background: linear-gradient(360deg, transparent, var(--main-color));
     animation: btn-anim4 1s linear infinite;
     animation-delay: .75s
 }
@@ -887,23 +1173,194 @@ textarea {
 /* footer  */
 
 
-.footer{
+.footer {
     background: rgba(0, 0, 0, .5);
     margin: 5rem 0 0 0;
     padding: 8rem 0;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    z-index: 100;
 }
-.footerLinks{
+
+.footerLinks {
     display: flex;
-   gap: 3rem;
+    gap: 3rem;
     font-size: 2rem;
     padding: 2rem;
 }
-.footerLinks a{
-   
+
+.footerLinks a {
+
     color: var(--main-color);
 }
 
+
+.aboutNew {
+    flex-direction: column;
+    height: fit-content !important;
+    margin: 0 10rem;
+    border: 1px solid rgb(165, 165, 165);
+    border-radius: 2rem;
+    overflow: hidden;
+    justify-content: flex-start;
+    position: relative;
+    align-items: flex-start;
+}
+
+.aboutNew .aboutSelect {
+
+    display: flex;
+    width: 100%;
+    /* flex-direction: column; */
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+}
+
+.aboutNew .aboutSelect div {
+    padding: 1rem .5rem;
+
+    /* border: 1px solid rgb(150, 150, 150); */
+    width: 33.4%;
+    display: flex;
+    justify-content: center;
+
+    color: rgb(150, 150, 150);
+    transition: all ease .5s;
+}
+
+.aboutSelect div p {
+    font-weight: 600;
+    font-size: 1.5rem;
+
+}
+
+.aboutSelect div:hover {
+    cursor: pointer;
+    color: #ffffff;
+    /* border: 1px solid white; */
+    background-color: rgba(255, 255, 255, 0.105);
+}
+
+.aboutNew .aboutDetail {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+
+}
+
+.aboutDetail .abtTitle {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(150, 150, 150);
+}
+
+.activeItem {
+
+    border-bottom: 1px solid var(--green-color);
+    background-color: rgba(255, 255, 255, 0.105);
+}
+
+.activeItem p {
+    color: rgb(2, 239, 99);
+
+
+}
+
+.aboutDetail .abtDesc>div {
+
+    padding: 1.5rem 2rem 1.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0 0 0;
+    gap: 1.5rem;
+    border-radius: 1rem;
+    font-size: 1.25rem;
+}
+
+.aboutDetail .abtDesc>div li {
+    color: rgb(165, 165, 165);
+}
+
+.aboutSkills {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.aboutSkills img {
+    height: 3rem;
+}
+
+.aboutSkills h3 {
+
+    font-size: 2rem;
+    margin: 1rem 0;
+    color: var(--green-color);
+}
+
+.abtDesc h5 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: var(--green-color);
+}
+
+.abtDesc p {
+
+
+    color: rgb(165, 165, 165);
+}
+
+.aboutSkills .skillLogos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+}
+
+.aboutSkills .skillLogos p {
+    font-size: 1rem;
+
+}
+
+.aboutSkills .skillLogos>div {
+    background-color: var(--second-bg-color);
+    padding: 1.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: .5rem;
+    max-width: 8.5rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.aboutSkills .skillLogos>div:hover {
+    box-shadow: 2px 2px 5px black;
+}
+
+.aboutDetail .abtDesc>div {
+    padding: 0;
+    margin: 0;
+}
+
+.aboutDetail .abtDesc>div p {
+    font-size: 1.25rem;
+}
+
+.skillMain {
+    margin: 2rem 15em;
+}
+
+.skillMain .headingPosition {
+    width: auto;
+}
 
 @media screen and (max-width: 1080px) {
 
@@ -915,14 +1372,31 @@ textarea {
         width: 30rem;
     }
 
+    .homeContent {
+        gap: .1rem;
+    }
+
     .homeContent h3 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    .homeContent h2 {
+        font-size: 3rem;
         margin: 0;
     }
 
     .homeContent h4 {
         font-size: 1.3rem;
         margin: 0;
+    }
+
+    .socialMedia a {
+        display: inline-flex;
+    }
+
+    .linkFlags {
+        display: none;
     }
 
     .homeContent h1 {
@@ -933,12 +1407,82 @@ textarea {
         margin: 3rem 0 0 0;
     }
 
+    .homeContent .mainLine {
+        font-size: 1.5rem;
+    }
+
+    .homeContent p {
+        font-size: 1.2rem;
+    }
+
+
+    .headingPosition {
+
+        margin-bottom: 5rem;
+        padding-bottom: 5rem;
+        position: relative;
+        top: 1rem;
+
+        width: 85vw;
+    }
+
+    .heading {
+        margin: 0;
+        font-size: 5rem;
+        text-align: center;
+        /* Center text horizontally */
+    }
+
+    .headingBottom {
+        font-size: 5rem;
+
+        top: 20px;
+        width: 100%;
+    }
+
+    .singleProject img {
+        height: 20rem;
+        border-radius: 1rem;
+
+    }
+
+    .aboutContentNew p {
+
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0;
+        width: 100%;
+    }
+
+    .skillMain {
+        margin: 2rem 0;
+    }
+
+    .aboutNew {
+        margin: 3rem 0;
+
+    }
+
     .about h2 {
         font-size: 2rem;
     }
 
     .header .logo {
         font-size: 1.75rem;
+    }
+
+    section {
+        margin: 0;
+    }
+
+    .aboutContentNew p {
+        margin: .25rem;
+        padding: 0;
+    }
+    .aboutSelect div p {
+        font-weight: 600;
+        font-size: 1.25rem;
+    
     }
 
     .aboutBoxContainer p,
@@ -955,6 +1499,10 @@ textarea {
         padding: 1rem;
     }
 
+    .projectVideo img {
+        height: 13rem;
+        margin: .5rem;
+    }
 
     .skillContainer {
         gap: 1.5rem;
@@ -977,6 +1525,10 @@ textarea {
     }
 
 }
+
+
+
+
 
 
 @media screen and (max-width: 900px) {
@@ -1011,7 +1563,8 @@ textarea {
 
         gap: 2rem;
         z-index: 100;
-        background-color: var(--second-bg-color);
+        background-color: var(--bg-color);
+
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -1097,7 +1650,7 @@ textarea {
 
     }
 
-    .serviceContainer h4{
+    .serviceContainer h4 {
         font-size: 2rem;
     }
 
@@ -1115,14 +1668,16 @@ textarea {
         font-size: 1rem;
     }
 
-    .serviceModalContent .modalClose{
+    .serviceModalContent .modalClose {
         top: 0;
         right: 0;
     }
-    .project .modalClose{
+
+    .project .modalClose {
         top: 1rem;
         right: 1rem;
     }
+
     .singleProject .serviceModalContent {
         width: 33rem;
         height: fit-content;

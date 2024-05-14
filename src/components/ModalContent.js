@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import ReactPlayer from 'react-player'
+import { NavLink } from 'react-router-dom'
 
 const ModalContent = (props) => {
     const { value, hideModal, data } = props
@@ -125,18 +126,25 @@ const ModalContent = (props) => {
 
                 <div className="serviceModalContent project">
                     <div onClick={hideModal}  ><i className='bx bx-x modalClose' ></i></div>
-                    <div className="modalHeading"><h3 className='highlightHeading'>{data.title.toUpperCase()}</h3>   </div>
-                    <div className="projectVideo">
+                    <div className="modalHeading"><h3 className='textGradient'>{data.title.toUpperCase()}</h3>   </div>
+                    {/* <div className="projectVideo">
                         <ReactPlayer width="100%" playing controls={true}
                             height="100%" url={data.vdo} />
-                    </div>
+                    </div> */}
+
+                    <a href={data.link} target='_blank' className="projectVideo">
+                        <img src={data.img} alt="" />
+                    </a>
                     <div className='projectDetailModal'>
                         <p className='desc'>{data.desc}</p>
                         <div className="techUsed">
                             <div>
-                                <h4>Tech Used  </h4><span><p className='highlightHeading'>{data.tech}</p></span>
+                                <h4>Tech Used  </h4><span><p className='textGradient'>{data.tech}</p></span>
                             </div>
-                            <div><a href={data.github}><i className='bx bxl-github' ></i></a></div>
+                            {/* <div className='flex modalLink'>
+                                <a href={data.github}><i className='bx bx-link-external'></i></a>
+                                <a href={data.github}><i className='bx bxl-github' ></i></a>
+                            </div> */}
                         </div>
                     </div>
                 </div>

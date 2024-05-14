@@ -1,16 +1,22 @@
 import React from 'react'
 
+
 const Contact = () => {
     return (
         <div className='contact flexcolumn' id='contact'>
-            <h3 className='highlightHeading' data-aos="fade-left">Contact Me</h3>
-            <div>
+           <div className='headingPosition'>
+            <h1 className='flexrow heading ' >&lt;Contact /&gt;</h1>
+            <h1 className='flexrow headingBottom  ' >Say Hello 👋</h1>
+
+            </div> 
+
+             <div>
                 <div className="login-box" data-aos="fade-right">
 
                     <form className='contactForm' action="https://formspree.io/f/xeqbkkvr" method='POST'>
                         <div className="user-box">
-                            <input type="text" name="username" required />
-                            <label>Username</label>
+                            <input type="text" name="yourname" required />
+                            <label>Your Name</label>
                         </div>
                         <div className="user-box">
                             <input type="email" name="email" required />

@@ -6,11 +6,16 @@ const About = () => {
 
       <section className="about" id="about">
         <div className="aboutContent" >
-          <h3 className="flexrow heading highlightHeading " data-aos="fade-right">About Me</h3>
+          <div className='headingPosition'>
+            <h1 className="flexrow heading  " >&lt;About /&gt;</h1>
+            <h1 className="flexrow headingBottom  " >Hardik Singh</h1>
+
+          </div>
+
           <div data-aos="fade-left">
             <p> Hello, I'm Hardik, a passionate Frontend Web Developer based in Lucknow,Uttar Pradesh. I specialize in crafting immersive web experiences that not only look great but also function flawlessly.I believe in the power of collaboration. I work closely with designers and clients to bring their visions to life. I'm not just a developer; I'm a problem solver who enjoys tackling challenges head-on and finding elegant solutions.
-            </p> 
-             </div>
+            </p>
+          </div>
           <div data-aos="fade-right">
             <h4 className='highlightHeading'>My Journey</h4>
             <p> I've been on a quest to turn ideas into interactive, pixel-perfect realities. I've had the privilege of working on a diverse range of projects, from very basic css and javascript projets to advance Reactjs projects, and I've loved every moment of it.

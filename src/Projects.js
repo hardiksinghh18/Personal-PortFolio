@@ -6,8 +6,11 @@ const Projects = () => {
   return (
     <section className='project' id='projects'>
       
-        <h3 className='flexcolumn highlightHeading' data-aos="fade-left"> My Projects </h3>
-        <div className='projectContainer' >
+      <div className='headingPosition'>
+            <h1 className='flexrow heading ' >&lt;Projects /&gt;</h1>
+            <h1 className='flexrow headingBottom  ' >Featured</h1>
+
+            </div>  <div className='projectContainer' >
             {AllSkills.map((element)=>{
               return (
                 <WorkSection  key={element.id} data={element}></WorkSection>

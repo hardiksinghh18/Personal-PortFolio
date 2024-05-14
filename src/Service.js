@@ -8,9 +8,11 @@ const Service = () => {
         <div>
 
             <section className="services flexcolumn" id="services">
-                <h3 className="serviceHeading highlightHeading" data-aos="fade-right">
-                    Services
-                </h3>
+            <div className='headingPosition'>
+            <h1 className='flexrow heading ' >&lt;Services /&gt;</h1>
+            <h1 className='flexrow headingBottom  ' > I offer </h1>
+
+            </div>
 
                 <div className="serviceContainer flexrow"  >
                     <div className="serviceBox flexcolumn"  data-aos="fade-right">

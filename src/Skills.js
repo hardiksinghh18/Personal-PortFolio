@@ -3,7 +3,11 @@ import React from 'react'
 const Skills = () => {
     return (
         <section id='skill' className='skill'>
-            <h3 className='flexrow  heading highlightHeading' data-aos="fade-left">Skills</h3>
+            <div className='headingPosition'>
+            <h1 className='flexrow heading ' >&lt;Skills /&gt;</h1>
+            <h1 className='flexrow headingBottom  ' >I Acquire</h1>
+
+            </div>
 
             <div className="skillContainer flexrow">
                 <div className="skills"  data-aos="fade-right">
