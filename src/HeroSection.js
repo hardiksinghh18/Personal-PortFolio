@@ -1,6 +1,6 @@
 import React from 'react'
 import homeImage from './images/homeImage.png'
-import ReactTyped from 'react-typed'
+import {ReactTyped} from 'react-typed'
 import hardikAI from './images/hardikAI.png'
 import newFace from './images/newFace.png'
 
