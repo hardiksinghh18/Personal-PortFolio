@@ -25,7 +25,7 @@ const WorkSection = ({ data }) => {
           </div>
         </div>
         <div className="projectImage">
-        <a href={data.link}><img src={data.img} alt={data.title} /></a>
+        <a href={data.link} target='_blank' ><img src={data.img} alt={data.title} /></a>
        </div>
         <div className="linkButton">
           {data && data?.tech?.map((technology,index)=>{

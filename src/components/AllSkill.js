@@ -1,5 +1,26 @@
 export const AllSkills = [
     {
+        "id": 12,
+        "img": "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/Project_thumbnail%2FScreenshot%202025-01-04%20153404.png?alt=media&token=4574bdbc-f0a1-4bba-9c41-a5e91c6bd535",
+        "vdo": "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/project-videos%2Fmentorship-demo.mp4?alt=media&token=example-token",
+        "title": "Mentorship Platform",
+        "desc": "Mentorship Platform is a responsive web app allowing users to create personalized profiles as mentors or mentees, send/receive mentorship requests, and manage connections. Features include JWT-based authentication, profile discovery with filters, and real-time updates.",
+        "tech": ["Reactjs", "Nodejs", "Expressjs", "MySQL", "Tailwind CSS", "JWT"],
+        "link": "https://mentorship-matching-mu.vercel.app/",
+        "github": "https://github.com/hardiksinghh18/mentorship-frontend"
+    },
+    {
+        "id": 15,
+        "img": "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/Project_thumbnail%2FScreenshot%202025-01-04%20162551.png?alt=media&token=b0db0852-8a70-46d7-8f6b-56d0dbb6b419",
+        "vdo": "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/project-videos%2Fcoincurt-demo.mp4?alt=media&token=example-token",
+        "title": "Coincurt",
+        "desc": "Coincurt is a cryptocurrency dashboard providing real-time data on coins, exchanges, and announcements. It features an admin panel for managing updates, user profiles, and notifications, ensuring a seamless and secure user experience.",
+        "tech": ["Reactjs", "Nodejs", "Expressjs", "Appwrite", "Tailwind CSS"],
+        "link": "https://coincurt-v1.vercel.app/",
+        "github": "https://github.com/iamrajsingh/coincurt-v1"
+    }
+,    
+    {
         id: 0,
         img: "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/Project_thumbnail%2FScreenshot%202024-05-03%20161728.png?alt=media&token=c6d19bb3-6786-48c5-8269-e16acb22ea8e",
         vdo: "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/project-videos%2F.hstore%20-%20Google%20Chrome%202023-09-27%2020-10-39.mp4?alt=media&token=12fab99f-9d53-4642-810a-9105315888e5",
@@ -9,6 +30,7 @@ export const AllSkills = [
         link:"https://bloggify-mern.vercel.app/",
         github:"https://github.com/hardiksinghh18/bloggify-mern-blog"
     },
+   
     {
         id: 11,
         img: "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/Project_thumbnail%2Fhstore.jpg?alt=media&token=02251548-c79f-4694-9b98-6cbeb7f2aded",
@@ -18,6 +40,16 @@ export const AllSkills = [
         tech: ['HTML','CSS,Reactjs','React Context API','Firebase'],
         link:"https://ecommerce-hstore.web.app",
         github:"https://github.com/hardiksinghh18/E-commerce-hstore"
+    },
+    {
+        "id": 13,
+        "img": "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/Project_thumbnail%2FScreenshot%202025-01-04%20155646.png?alt=media&token=5961d321-7186-4e76-8343-9388da4d48a9",
+        "vdo": "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/project-videos%2Fbounty-tap-demo.mp4?alt=media&token=example-token",
+        "title": "Bounty Tap",
+        "desc": "Bounty Tap is a Telegram mini-app enabling organizations to announce airdrops and reward users for completing tasks. Features automated task tracking, streamlined communication, and secure data handling.",
+        "tech": ["Nodejs", "Telegram API", "MongoDB", "Expressjs"],
+        "link": "http://t.me/bountytapbot/BountyTap?startapp=NPnWnTpS",
+        "github": "https://github.com/hardiksinghh18/notcoin"
     },
     {
         id: 1,
@@ -88,7 +120,7 @@ export const AllSkills = [
     {
         id: 6,
 
-        img: "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/Project_thumbnail%2Fcalculator.jpg?alt=media&token=b61c41f0-07a8-459a-bd90-0dc2c4f88f9c",
+        img: "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/Project_thumbnail%2FScreenshot%202025-01-04%20161040.png?alt=media&token=ac9c4d7e-1c46-4ec2-b438-e0d065f3072f",
         vdo: "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/project-videos%2FCalculator%20-%20Google%20Chrome%202023-09-28%2000-22-51.mp4?alt=media&token=a9d9f748-1f02-4ef3-bd10-bdb042a8d5cc",
         title: "Calculator",
         tech: ['HTML','CSS','Javascript'],
@@ -99,13 +131,13 @@ export const AllSkills = [
     {
         id: 7,
 
-        img: "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/Project_thumbnail%2Fweather_app.jpg?alt=media&token=3db1416b-8c8f-4021-9281-f354f7de22f8",
+        img: "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/Project_thumbnail%2FScreenshot%202025-01-04%20160457.png?alt=media&token=5516307a-66be-4646-9336-6401c33efcb7",
         vdo: "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/project-videos%2FWeather%20App%20-%20Google%20Chrome%202023-09-28%2000-25-14.mp4?alt=media&token=baa4ae79-f917-490a-a36f-ff941855b35d",
         title: "Weather App",
         tech: ['HTML','CSS','Bootstrap','Javascript'],
         desc: "This app is based on Javascript . It uses weather api to fetch the weather updates and then displays all the required information",
-        link:"https://hardiksinghh18.github.io/weather-app/",
-        github:"https://github.com/hardiksinghh18/weather-app"
+        link:"https://weather-app-eight-opal-20.vercel.app/",
+        github:"https://github.com/hardiksinghh18/kraftshala-assignment"
     },
     {
         id: 8,
@@ -118,6 +150,17 @@ export const AllSkills = [
         link:"https://hardiksinghh18.github.io/contest-app/",
         github:'https://github.com/hardiksinghh18/contest-app'
     },
+    {
+        "id": 3,
+        "img": "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/Project_thumbnail%2FScreenshot%202025-01-04%20162014.png?alt=media&token=13c371b6-e56d-4aaa-a562-23cca7d4ec87",
+        "vdo": "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-e780a.appspot.com/o/project-videos%2Fbatch-system-demo.mp4?alt=media&token=example-token",
+        "title": "Batch System Frontend Assignment",
+        "desc": "The Batch System Assignment is a responsive web application for managing and organizing batches. It includes features for creating, editing, and deleting batches, tracking participants, and handling assignments efficiently.",
+        "tech": ["Reactjs", "TailwindCSS"],
+        "link": "https://batch-system-assignment-hazel.vercel.app/",
+        "github": "https://github.com/hardiksinghh18/batch-system-assignment"
+    }
+,    
     {
         id: 9,
 
