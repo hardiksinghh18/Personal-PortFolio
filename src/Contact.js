@@ -4,14 +4,14 @@ import React from 'react'
 const Contact = () => {
     return (
         <div className='contact flexcolumn' id='contact'>
-           <div className='headingPosition'>
-            <h1 className='flexrow heading ' >&lt;Contact /&gt;</h1>
-            <h1 className='flexrow headingBottom  ' >Say Hello 👋</h1>
+            <div className='headingPosition'>
+                <h1 className='flexrow heading ' >&lt; Contact /&gt;</h1>
+                <h1 className='flexrow headingBottom  ' >Say Hello 👋</h1>
 
-            </div> 
+            </div>
 
-             <div>
-                <div className="login-box" data-aos="fade-right">
+            <div>
+                <div className="login-box">
 
                     <form className='contactForm' action="https://formspree.io/f/xeqbkkvr" method='POST'>
                         <div className="user-box">
@@ -31,8 +31,8 @@ const Contact = () => {
                             <span></span>
                             <span></span>
                             <span></span>
-                        
-                            <input className='submitForm' type="submit" value="Submit "  data-aos="fade-left"/>
+
+                            <input className='submitForm' type="submit" value="Submit " />
                         </div>
                     </form>
                 </div>

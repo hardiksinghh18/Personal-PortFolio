@@ -1,14 +1,11 @@
 import React from 'react'
 import Navbar from './Navbar'
 import HeroSection from './HeroSection'
-import About from './About'
-import Service from './Service'
-import Skills from './Skills'
 import Contact from './Contact'
 import Projects from './Projects'
 import Footer from './components/Footer'
 import LinkFlag from './components/LinkFlag'
-import AboutNew from './AboutNew'
+import WorkExperience from './WorkExperience'
 import SkillsNew from './SkillsNew'
 
 const Home = () => {
@@ -27,19 +24,16 @@ const Home = () => {
   return (
     <div >
       <Navbar />
-      <LinkFlag/>
-     <div className='homepage'>
-     <HeroSection />
-      {/* <About /> */}
-      <AboutNew />
-      {/* <Skills /> */}
-      <SkillsNew/>
-      {/* <Service /> */}
-      <Projects />
-      <Contact />
-      <Footer />
-     </div>
-      
+      <LinkFlag />
+      <div className='homepage'>
+        <HeroSection />
+        <WorkExperience />
+        <SkillsNew />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
+
     </div>
   )
 }

@@ -11,13 +11,13 @@ const Projects = () => {
   return (
     <section className="project" id="projects">
       <div className="headingPosition">
-        <h1 className="flexrow heading">&lt;Projects /&gt;</h1>
-        <h1 className="flexrow headingBottom">Featured</h1>
+        <h1 className="flexrow heading">&lt; Featured /&gt;</h1>
+        <h1 className="flexrow headingBottom">Projects</h1>
       </div>
 
       <div className="projectContainer">
         {/* Map over the first 4 projects or all projects based on state */}
-        {(showAll ? AllSkills : AllSkills.slice(0, 4)).map((element) => (
+        {(showAll ? AllSkills : AllSkills.slice(0, 3)).map((element) => (
           <WorkSection key={element.id} data={element}></WorkSection>
         ))}
       </div>

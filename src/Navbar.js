@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <div>
       <header className="header" id='header'>
-        <a href="#" className="logo highlightHeading textGradient">Hardik</a>
+        <a href="#home" className="logo highlightHeading textGradient">Hardik</a>
 
         {!showNav && <i className='bx bx-menu menu-box' onClick={showNavBar}></i>}
         {/* {!showNav&&   <i className='bx bx-grid-alt  menu-box' onClick={showNavBar}></i>} */}
@@ -23,7 +23,7 @@ const Navbar = () => {
 
         <nav className={showNav ? "navbar navbarActive" : "navbar"} onClick={() => setShowNav(false)}>
           <a href="#home" className="active">Home</a>
-          <a href="#aboutNew">About</a>
+          <a href="#workExperience">Experience</a>
           <a href="#skillsNew">Skills</a>
           {/* <a href="#services">Services</a> */}
           <a href="#projects">Projects</a>
