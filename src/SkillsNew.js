@@ -3,7 +3,6 @@ import js from './images/icons/js.png'
 import ts from './images/icons/ts.png'
 import html from './images/icons/html.png'
 import css from './images/icons/css.png'
-import aws from './images/icons/aws.png'
 import express from './images/icons/express.png'
 import firebase from './images/icons/firebase.png'
 import git from './images/icons/git.png'
@@ -16,19 +15,24 @@ import redux from './images/icons/redux.png'
 import sass from './images/icons/sass.png'
 import sql from './images/icons/sql.png'
 import tailwind from './images/icons/tailwind.png'
+import figma from './images/icons/figma.svg'
+import vercel from './images/icons/vercel.png'
+import docker from './images/icons/docker.png'
+import postman from './images/icons/postman.png'
+
 const SkillsNew = () => {
     return (
         <section className='skillMain' id='skillsNew'>
 
             <div className='headingPosition'>
-                <h1 className='flexrow heading ' >&lt;Skills /&gt;</h1>
-                <h1 className='flexrow headingBottom  ' >I Acquire</h1>
+                <h1 className='flexrow heading ' >&lt; Tech /&gt;</h1>
+                <h1 className='flexrow headingBottom  ' >Stack</h1>
 
             </div>
 
             <div className='aboutSkills'>
                 <div>
-                    <h3 className='mySkills'>Frontend</h3>
+                    <h3 className='textGradient'>Frontend</h3>
                     <div className='skillLogos'>
                         <div>
                             <img src={js} alt="" />
@@ -52,7 +56,7 @@ const SkillsNew = () => {
                         </div>
                         <div>
                             <img src={sass} alt="" />
-                            <p>Saas</p>
+                            <p>SCSS</p>
                         </div>
                         <div>
                             <img src={nextjs} alt="" />
@@ -91,8 +95,6 @@ const SkillsNew = () => {
                             <img src={sql} alt="" />
                             <p>SQL</p>
                         </div>
-
-
                     </div>
                 </div>
                 <div>
@@ -107,27 +109,25 @@ const SkillsNew = () => {
                             <p>Github</p>
                         </div>
                         <div>
-                            <img src='https://www.mukulrajpoot.com/icons/figma.svg' alt="" />
+                            <img src={figma} alt="" />
                             <p>Figma</p>
                         </div>
                         <div>
-                            <img src='https://www.mukulrajpoot.com/icons/vscode.svg' alt="" />
-                            <p>VSCode</p>
-                        </div>
-                        <div>
-                            <img src='https://www.mukulrajpoot.com/icons/vercel.svg' alt="" />
+                            <img src={vercel} alt="" />
                             <p>Vercel</p>
                         </div>
                         <div>
-                            <img src='https://www.mukulrajpoot.com/icons/docker.svg' alt="" />
+                            <img src={docker} alt="" />
                             <p>Docker</p>
                         </div>
-
+                        <div>
+                            <img src={postman} alt="" />
+                            <p>Postman</p>
+                        </div>
 
                     </div>
                 </div>
             </div>
-
 
         </section>
     )

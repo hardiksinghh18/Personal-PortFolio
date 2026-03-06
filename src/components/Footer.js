@@ -4,20 +4,20 @@ const Footer = () => {
     return (
         <>
             <div className="footer flexcolumn">
-                <h3 className='highlightHeading' data-aos="fade-right">Hardik</h3>
-                <div className='footerLinks'  data-aos="fade-left">
+                <h3 className='highlightHeading'>Hardik</h3>
+                <div className='footerLinks'>
                     <a href='#about'>About </a>
                     <a href='#projects'>Projects </a>
                     <a href='#contact'>Contact </a>
                 </div>
-                <div className="socialMedia" data-aos="fade-right" >
-                    <a href="https://github.com/hardiksinghh18" target='_blank'  ><i className='bx bxl-github' ></i></a>
-                    <a href="https://www.linkedin.com/in/hardik-singh-391946278/" target='_blank'  ><i className='bx bxl-linkedin' ></i></a>
-                    <a href="https://www.instagram.com/hardiksingh18_/" target='_blank'><i className='bx bxl-instagram' ></i></a>
-                    <a href="#contact" ><i class='bx bx-envelope'></i></a>
+                <div className="socialMedia">
+                    <a href="https://github.com/hardiksinghh18" target='_blank' rel='noreferrer'><i className='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/hardik-singh-391946278/" target='_blank' rel='noreferrer'><i className='bx bxl-linkedin'></i></a>
+                    <a href="https://www.instagram.com/hardiksingh18_/" target='_blank' rel='noreferrer'><i className='bx bxl-instagram'></i></a>
+                    <a href="#contact"><i class='bx bx-envelope'></i></a>
 
                 </div>
-                <p data-aos="fade-left"> © Hardik Singh - All Rights Reserved</p>
+                <p> © Hardik Singh - All Rights Reserved</p>
             </div>
         </>
     )

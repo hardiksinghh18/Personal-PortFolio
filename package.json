@@ -14,7 +14,11 @@
     "react-scripts": "5.0.1",
     "react-tsparticles": "^2.12.2",
     "react-typed": "^2.0.12",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "@mui/material": "^5.15.0",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.0"
   },
   "scripts": {
     "start": "react-scripts start",
