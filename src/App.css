@@ -851,6 +851,24 @@ section {
 
 }
 
+.placeholderImage {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--third-bg-color), var(--bg-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    border: 1px dashed var(--border-subtle);
+}
+
+.placeholderImage span {
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    opacity: 0.3;
+}
+
 .singleProject h4 {
     font-size: 1.75rem;
     margin: 0;
@@ -1603,30 +1621,47 @@ textarea {
     }
 
     .navbar {
-
         position: fixed;
         top: 0;
-        left: 0;
-
-
-        gap: 2rem;
+        right: 0;
+        height: 100vh;
+        width: 75%;
         z-index: 100;
         background-color: var(--bg-color);
-
         display: flex;
         flex-direction: column;
-        width: 100%;
-        transform: translateY(-120%);
+        gap: 2.5rem;
+        transform: translateX(100%);
         justify-content: center;
         align-items: center;
-        padding: 15rem 4rem 5rem 0;
-        border-radius: 0 0 2rem 2rem;
+        padding: 5rem 2rem;
+        border-left: 1px solid var(--border-subtle);
+        border-radius: 2rem 0 0 2rem;
         transition: all ease .5s;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
     }
 
     .navbarActive {
-        transform: translateY(0)
+        transform: translateX(0);
     }
+
+    .navOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(5px);
+        z-index: 50;
+        pointer-events: auto;
+    }
+
+    .navbar a {
+        margin: 0;
+        font-size: 2.2rem;
+    }
+
 
     .about h4 {
         margin: .5rem 0;

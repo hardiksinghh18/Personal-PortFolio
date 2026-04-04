@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AllSkills } from './components/AllSkill';
+import { allProjects } from './components/AllProjects';
 import WorkSection from './components/WorkSection';
 
 const Projects = () => {
@@ -17,7 +17,7 @@ const Projects = () => {
 
       <div className="projectContainer">
         {/* Map over the first 4 projects or all projects based on state */}
-        {(showAll ? AllSkills : AllSkills.slice(0, 3)).map((element) => (
+        {(showAll ? allProjects : allProjects.slice(0, 3)).map((element) => (
           <WorkSection key={element.id} data={element}></WorkSection>
         ))}
       </div>
