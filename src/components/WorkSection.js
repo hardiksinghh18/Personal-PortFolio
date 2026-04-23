@@ -1,35 +1,39 @@
 import React from 'react'
+import { Tooltip } from '@mui/material';
 
 const WorkSection = ({ data }) => {
   return (
-    <div className='singleProject'>
-      <div className="projectDetail">
+    <div className='proj-card'>
+      <div className="proj-image-container">
+        {data.img ? (
+          <img src={data.img} alt={data.title} className="proj-img" />
+        ) : (
+          <div className="proj-placeholder">
+            <span>{data.title.charAt(0)}</span>
+          </div>
+        )}
+      </div>
 
-        <div className='linkProject'>
-          <div className='projectName '>
-            <h4>{data.title.toUpperCase()}</h4>
+      <div className="proj-content">
+        <div className="proj-header">
+          <h3 className="proj-title">{data.title}</h3>
+          
+          <div className="proj-links">
+            {data.link && (
+              <a href={data.link} target="_blank" rel="noreferrer" className="proj-live-badge">
+                <span className="live-dot"></span>
+                Live
+              </a>
+            )}
+            <a href={data.github} target="_blank" rel="noreferrer" className="proj-github-link">
+              <i className='bx bxl-github'></i>
+            </a>
           </div>
-          <div className='flex'>
-            {data.link && <a href={data.link} target='_blank' rel='noreferrer' className='githublink'><i className='bx bx-link-external '></i></a>}
-            <a href={data.github} target='_blank' rel='noreferrer' className='githublink'><i className='bx bxl-github' ></i></a>
-          </div>
         </div>
-        <div className="projectImage">
-          {data.img ? (
-            <a href={data.link} target='_blank' rel='noreferrer'><img src={data.img} alt={data.title} /></a>
-          ) : (
-            <div className="placeholderImage">
-              <span>{data.title.charAt(0)}</span>
-            </div>
-          )}
-        </div>
-        <div className="linkButton">
-          {data && data?.tech?.map((technology, index) => {
-            return (
-              <div key={index} className='techStackBorder'><p>{technology}</p></div>
-            )
-          })}
-        </div>
+
+        <Tooltip title={data.desc} arrow placement="bottom" enterDelay={300}>
+          <p className="proj-description">{data.desc}</p>
+        </Tooltip>
       </div>
     </div>
   )

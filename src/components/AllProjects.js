@@ -1,6 +1,7 @@
 import skillSync from '../images/projectThumbnail/skillSync.png'
 import bloggify from '../images/projectThumbnail/bloggify.png'
 import coincurt from '../images/projectThumbnail/coincurt.png'
+import huly from '../images/projectThumbnail/hulyIoClone.png'
 import hstore from '../images/projectThumbnail/hstore.png'
 import portfolio from '../images/projectThumbnail/portfolio.png'
 import netflix from '../images/projectThumbnail/netflix.png'
@@ -20,16 +21,16 @@ export const allProjects = [
         img: bloggify,
         desc: "Bloggify is a responsive blogging website with user authentication, React Quill-powered posting/editing, Cloudinary integration, MongoDB CRUD operations, and Tailwind CSS styling.",
         tech: ['Reactjs', 'Nodejs', 'Expressjs', 'MongoDB', 'Tailwind CSS'],
-        link: "https://bloggify-mern.vercel.app/",
+        link: "https://thebloggify.vercel.app/",
         github: "https://github.com/hardiksinghh18/bloggify-mern-blog"
     },
     {
         id: 2,
-        title: "Mentorship Platform",
+        title: "SkillSync",
         img: skillSync,
-        desc: "Mentorship Platform is a responsive web app allowing users to create personalized profiles as mentors or mentees, send/receive mentorship requests, and manage connections. Features include JWT-based authentication, profile discovery with filters, and real-time updates.",
+        desc: "SkillSync is a comprehensive mentorship platform designed to connect mentors and mentees seamlessly. The platform facilitates knowledge sharing and professional growth through a robust matching algorithm and intuitive interface.",
         tech: ["Reactjs", "Nodejs", "Expressjs", "MySQL", "Tailwind CSS", "JWT"],
-        link: "https://mentorship-matching-mu.vercel.app/",
+        link: "https://skillssync.vercel.app/",
         github: "https://github.com/hardiksinghh18/mentorship-frontend"
     },
     {
@@ -43,6 +44,15 @@ export const allProjects = [
     },
     {
         id: 4,
+        title: "Huly.io Clone",
+        img: huly,
+        desc: "A high-fidelity frontend clone of Huly.io, demonstrating advanced frontend capabilities including complex layouts, smooth animations with Framer Motion and GSAP, and a modern tech stack with Next.js 14 and TypeScript.",
+        tech: ["Next.js 14", "TypeScript", "GSAP", "Framer Motion", "Tailwind CSS", "Radix UI"],
+        link: "https://huly-io-clone.vercel.app/",
+        github: "https://github.com/hardiksinghh18/huly.io-clone"
+    },
+    {
+        id: 5,
         title: "E-Commerce - hstore",
         img: hstore,
         desc: "This is an E-Commerce Website which is based on Reactjs.It has multiple functionalities like User authentication,User Login,Add to Cart,Filtering products,Browsing Each Product etc.",
@@ -52,9 +62,9 @@ export const allProjects = [
     },
     {
         id: 6,
-        title: "Personal Portfolio",
+        title: "Portfolio",
         img: portfolio,
-        desc: "This is my Personal Portfolio website which is completely based on Reactjs. It displays all the required information about me which includes my skills,projects,services etc.",
+        desc: "This is my Portfolio website which is completely based on Reactjs. It displays all the required information about me which includes my skills,projects,services etc.",
         tech: ['HTML', 'CSS', 'Reactjs'],
         link: "https://hardiksingh.vercel.app/",
         github: "https://github.com/hardiksinghh18/Personal-PortFolio"

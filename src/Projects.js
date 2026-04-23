@@ -1,31 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { allProjects } from './components/AllProjects';
 import WorkSection from './components/WorkSection';
 
 const Projects = () => {
-  const [showAll, setShowAll] = useState(false);
-
-  // Toggle between showing 4 projects and all projects
-  const toggleShowAll = () => setShowAll(!showAll);
+  const navigate = useNavigate();
 
   return (
-    <section className="project" id="projects">
+    <section className="projects-section" id="projects">
       <div className="headingPosition">
         <h1 className="flexrow heading">&lt; Featured /&gt;</h1>
         <h1 className="flexrow headingBottom">Projects</h1>
       </div>
 
-      <div className="projectContainer">
-        {/* Map over the first 4 projects or all projects based on state */}
-        {(showAll ? allProjects : allProjects.slice(0, 3)).map((element) => (
+      <div className="projects-grid">
+        {allProjects.slice(0, 3).map((element) => (
           <WorkSection key={element.id} data={element}></WorkSection>
         ))}
       </div>
 
-      {/* Show All/Show Less button */}
-      <div className="showAllButtonContainer">
-        <button className="showAllButton" onClick={toggleShowAll}>
-          {showAll ? 'Show Less Projects' : 'Show All Projects'}
+      <div className="view-all-container">
+        <button className="view-all-btn-modern" onClick={() => navigate('/projects')}>
+          View All Projects 
+          <i className='bx bx-right-arrow-alt'></i>
         </button>
       </div>
     </section>
