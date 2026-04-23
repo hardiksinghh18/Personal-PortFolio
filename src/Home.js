@@ -7,6 +7,8 @@ import Footer from './components/Footer'
 import LinkFlag from './components/LinkFlag'
 import WorkExperience from './WorkExperience'
 import SkillsNew from './SkillsNew'
+import TechQuotes from './components/TechQuotes'
+import ThemeToggle from './components/ThemeToggle'
 
 const Home = () => {
 
@@ -23,6 +25,7 @@ const Home = () => {
   }
   return (
     <div >
+      <ThemeToggle />
       <Navbar />
       <LinkFlag />
       <div className='homepage'>
@@ -31,6 +34,7 @@ const Home = () => {
         <SkillsNew />
         <Projects />
         <Contact />
+        <TechQuotes />
         <Footer />
       </div>
 

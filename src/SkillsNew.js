@@ -47,7 +47,7 @@ const SkillsNew = () => {
                             <p>React</p>
                         </div>
                         <div>
-                            <img src={redux} alt="" />
+                            <img src={redux} alt="" className="light-theme-invert" />
                             <p>Redux</p>
                         </div>
                         <div>
@@ -59,7 +59,7 @@ const SkillsNew = () => {
                             <p>SCSS</p>
                         </div>
                         <div>
-                            <img src={nextjs} alt="" />
+                            <img src={nextjs} alt="" className="light-theme-invert" />
                             <p>NextJs</p>
                         </div>
                         <div>
@@ -80,7 +80,7 @@ const SkillsNew = () => {
                             <p>NodeJs</p>
                         </div>
                         <div>
-                            <img src={express} alt="" />
+                            <img src={express} alt="" className="light-theme-invert" />
                             <p>ExpressJs</p>
                         </div>
                         <div>
@@ -105,7 +105,7 @@ const SkillsNew = () => {
                             <p>Git</p>
                         </div>
                         <div>
-                            <img src={github} alt="" />
+                            <img src={github} alt="" className="light-theme-invert" />
                             <p>Github</p>
                         </div>
                         <div>
@@ -113,7 +113,7 @@ const SkillsNew = () => {
                             <p>Figma</p>
                         </div>
                         <div>
-                            <img src={vercel} alt="" />
+                            <img src={vercel} alt="" className="light-theme-invert" />
                             <p>Vercel</p>
                         </div>
                         <div>

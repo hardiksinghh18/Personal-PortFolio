@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import newFace from './images/newFace.png'
+
 const Navbar = () => {
 
   const [showNav, setShowNav] = useState(false)
@@ -34,7 +36,9 @@ const Navbar = () => {
   return (
     <div>
       <header className="header" id='header'>
-        <a href="#home" className="logo highlightHeading textGradient">Hardik</a>
+        <a href="/#home" className="logo">
+          <img src={newFace} alt="Hardik" className="nav-logo-img" />
+        </a>
 
         {!showNav && <i className='bx bx-menu menu-box' onClick={showNavBar}></i>}
         {/* {!showNav&&   <i className='bx bx-grid-alt  menu-box' onClick={showNavBar}></i>} */}
@@ -43,12 +47,10 @@ const Navbar = () => {
         {showNav && <div className="navOverlay" onClick={hideNavBar}></div>}
 
         <nav className={showNav ? "navbar navbarActive" : "navbar"} onClick={() => setShowNav(false)}>
-          <a href="#home" className="active">Home</a>
-          <a href="#workExperience">Experience</a>
-          <a href="#skillsNew">Skills</a>
-          {/* <a href="#services">Services</a> */}
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+          <a href="/#home" className="active">Home</a>
+          <a href="/#workExperience">Experience</a>
+          <a href="/#skillsNew">Skills</a>
+          <a href="/#projects">Projects</a>
 
 
         </nav>

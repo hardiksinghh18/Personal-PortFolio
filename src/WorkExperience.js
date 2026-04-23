@@ -1,14 +1,6 @@
-import React from 'react';
-import {
-    Box,
-    Typography,
-    Stepper,
-    Step,
-    StepLabel,
-    StepContent,
-    Avatar
-} from '@mui/material';
-
+import React, { useState } from 'react';
+import viLogo from './images/viLogo.png';
+import collablyLogo from './images/collablyLogo.png';
 
 const experiences = [
     {
@@ -16,7 +8,7 @@ const experiences = [
         company: "Virtual Internships",
         date: "Feb 2025 - Present",
         location: "Remote",
-        logoText: "VI",
+        logo: viLogo,
         description: [
             "Developed AI-powered resume parsing and profile completion features, increasing onboarding rates from 35% to 85% and reducing profile building time by 70%.",
             "Migrated 400 APIs from createAsyncThunk to Redux Toolkit Query (RTK Query), improving caching, data fetching performance, and frontend state management.",
@@ -30,9 +22,9 @@ const experiences = [
     {
         role: "Full Stack Developer Intern",
         company: "Collably Network",
-        date: "Aug 2024 - Dec 2024",
+        date: "Aug 2024 - Feb 2024",
         location: "Remote",
-        logoText: "CN",
+        logo: collablyLogo,
         description: [
             "Developed Coincurt using React.js, Node.js, Express.js, and MongoDB, delivering real-time cryptocurrency data with a role-based admin panel.",
             "Built Bounty Tap using Telegram Bot API, enabling automated airdrop campaigns and task tracking.",
@@ -41,94 +33,65 @@ const experiences = [
     }
 ];
 
+const ExperienceItem = ({ exp, isLatest }) => {
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    return (
+        <div 
+            className={`exp-card ${isExpanded ? 'active' : ''} ${isLatest ? 'latest' : ''}`} 
+            onClick={() => setIsExpanded(!isExpanded)}
+        >
+            <div className="exp-main">
+                <div className="exp-left">
+                    <div className="exp-logo">
+                        <img src={exp.logo} alt={exp.company} className="exp-logo-img" />
+                    </div>
+                    <div className="exp-info">
+                        <h3 className="exp-company">{exp.company}</h3>
+                        <p className="exp-role">{exp.role}</p>
+                    </div>
+                </div>
+                <div className="exp-right">
+                    <span className="exp-date">{exp.date}</span>
+                    <div className="exp-toggle">
+                        <i className='bx bx-chevron-down'></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div 
+                className="exp-details"
+                style={{ maxHeight: isExpanded ? '2000px' : '0' }}
+            >
+
+                <ul className="exp-bullets">
+                    {exp.description.map((point, i) => (
+                        <li key={i} className="exp-point">
+                            <span className="bullet"></span>
+                            {point}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </div>
+    );
+};
+
 const WorkExperience = () => {
     return (
-        <section className="workExperienceMain" id="workExperience" style={{ padding: '4rem 10%', minHeight: '100vh', backgroundColor: 'var(--bg-color)' }}>
-            <div className="headingPosition" style={{ marginBottom: '10rem' }}>
-                <h1 className="flexrow heading">&lt; My Work /&gt;</h1>
-                <h1 className="flexrow headingBottom">Experience</h1>
-            </div>
+        <section className="workExperienceMain" id="workExperience">
+            <div className="hero-main-container">
+                <div className="headingPosition">
+                    <h1 className="flexrow heading">&lt; My Work /&gt;</h1>
+                    <h1 className="flexrow headingBottom">Experience</h1>
+                </div>
 
-            <Box sx={{ margin: '0 auto' }}>
-                <Stepper orientation="vertical" sx={{
-                    '& .MuiStepConnector-line': { borderColor: 'var(--border-subtle)', minHeight: '3rem', borderWidth: '0 0 0 2px' },
-                    '& .MuiStepConnector-root': { marginLeft: { xs: '19px', sm: '29px' } }
-                }}>
+                <div className="exp-list">
                     {experiences.map((exp, index) => (
-                        <Step key={index} active={true}>
-                            <StepLabel
-                                StepIconComponent={() => (
-                                    <Avatar
-                                        sx={{
-                                            width: { xs: 40, sm: 60 },
-                                            height: { xs: 40, sm: 60 },
-                                            bgcolor: 'var(--bg-color)',
-                                            color: 'var(--text-color)',
-                                            border: '2px solid var(--border-subtle)',
-                                            fontSize: { xs: '1.2rem', sm: '2rem' },
-                                            fontWeight: 'bold',
-                                            zIndex: 2,
-                                            boxShadow: '0 0 10px var(--glow-subtle)',
-                                            position: 'relative'
-                                        }}
-                                    >
-                                        {exp.logoText}
-                                    </Avatar>
-                                )}
-                            >
-                                {/* Empty StepLabel text to let StepContent hold the card */}
-                            </StepLabel>
-                            <StepContent sx={{ borderLeft: '2px solid var(--border-subtle)', ml: { xs: '19px', sm: '29px' }, mt: { xs: '-35px', sm: '-55px' }, pb: 4 }}>
-
-                                {/* Main Content Card matching image layout */}
-                                <Box sx={{
-                                    p: { xs: 2.5, sm: 3, md: 5 },
-                                    borderRadius: 3,
-                                    border: '1px solid var(--border-subtle)',
-                                    boxShadow: '0 4px 20px rgba(0,0,0,0.5)',
-                                    ml: { xs: 2, sm: 5, md: 8 }
-                                }}>
-
-                                    {/* Details & Bullet Points */}
-                                    <Box>
-                                        <Typography variant="h3" component="h2" sx={{ color: 'var(--text-color)', fontWeight: 'bold', mb: 1.5, fontSize: { xs: '1.5rem', sm: '1.5rem' } }}>
-                                            {exp.role} <span style={{ fontWeight: 'normal', color: 'var(--text-muted)' }}>at</span> <span style={{ color: '#3b82f6' }}>{exp.company}</span>
-                                        </Typography>
-
-
-                                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 3 }}>
-                                            <Typography variant="body1" sx={{ color: 'var(--text-muted)', fontSize: '1.4rem', fontWeight: 600 }}>
-                                                {exp.date}
-                                            </Typography>
-                                            <Typography variant="body1" sx={{ color: 'var(--text-muted)', fontSize: '1.4rem', fontWeight: 600 }}>
-                                                |
-                                            </Typography>
-                                            <Typography variant="body1" sx={{ color: 'var(--text-muted)', fontSize: '1.4rem', fontWeight: 600 }}>
-                                                {exp.location}
-                                            </Typography>
-                                        </Box>
-
-                                        <Box component="ul" sx={{
-                                            color: 'var(--text-highlight)',
-                                            pl: { xs: '1.5rem', sm: '2.5rem' },
-                                            lineHeight: '1.8',
-                                            display: 'flex',
-                                            flexDirection: 'column',
-                                            gap: '1.4rem',
-                                            fontFamily: 'inherit'
-                                        }}>
-                                            {exp.description.map((item, i) => (
-                                                <Typography component="li" key={i} sx={{ fontSize: { xs: '1.2rem', sm: '1.4rem' } }}>{item}</Typography>
-                                            ))}
-                                        </Box>
-                                    </Box>
-
-                                </Box>
-                            </StepContent>
-                        </Step>
+                        <ExperienceItem key={index} exp={exp} isLatest={index === 0} />
                     ))}
-                </Stepper>
-            </Box>
+                </div>
+            </div>
         </section>
     );
 };
