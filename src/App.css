@@ -279,7 +279,7 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1rem 15%;
+    padding: 0rem 15% 0rem 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;

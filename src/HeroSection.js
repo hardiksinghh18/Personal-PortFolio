@@ -109,7 +109,7 @@ const HeroSection = () => {
                 <div className="hero-bottom-row">
                     <div className="hero-bio-block">
                         <p className="bio-text">
-                            ~ Full Stack Developer specializing in <span className="tech-link">TypeScript <i className='bx bxl-typescript' style={{ color: '#007acc' }}></i></span>, <span className="tech-link">Next.js <i className='bx bxl-react' style={{ color: '#61dafb' }}></i></span>, <span className="tech-link">Node.js <i className='bx bxl-nodejs' style={{ color: '#68a063' }}></i></span> and <span className="tech-link">Docker <i className='bx bxl-docker' style={{ color: '#2496ed' }}></i></span>.
+                            ~ Full Stack Developer specializing in <span className="tech-link">React.js <i className='bx bxl-react' style={{ color: '#61dafb' }}></i></span>, <span className="tech-link">TypeScript <i className='bx bxl-typescript' style={{ color: '#007acc' }}></i></span>, <span className="tech-link">Node.js <i className='bx bxl-nodejs' style={{ color: '#68a063' }}></i></span> and <span className="tech-link">Docker <i className='bx bxl-docker' style={{ color: '#2496ed' }}></i></span>.
                         </p>
                         <p className="bio-text">
                             ~ 2 years of experience in <span className="tech-link">optimizing performance <i className='bx bx-bolt' style={{ color: '#facc15' }}></i></span> and delivering impactful, <span className="tech-link">real-world solutions <i className='bx bx-world' style={{ color: 'var(--text-color)' }}></i></span>.

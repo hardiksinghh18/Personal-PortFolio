@@ -501,6 +501,25 @@ code {
     transition: transform 0.6s ease, opacity 0.3s ease;
 }
 
+.proj-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--second-bg-color), var(--third-bg-color));
+    font-size: 6rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    transition: transform 0.6s ease, color 0.3s ease;
+}
+
+.proj-card:hover .proj-placeholder {
+    transform: scale(1.05);
+    color: var(--text-color);
+}
+
 .proj-card:hover .proj-img {
     transform: scale(1.02);
     opacity: 1;
@@ -987,20 +1006,17 @@ code {
 
 /* Nav Logo Image Styling */
 .nav-logo-img {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    object-fit: cover;
-    background: radial-gradient(circle, rgba(255, 0, 0, 0.3) 0%, rgba(0, 0, 0, 1) 70%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 2px;
+    height: 70px;
+    width: auto;
+    object-fit: contain;
     display: block;
-    transition: transform 0.3s ease;
+    margin: -5px 0 -5px -25px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: invert(1);
 }
 
-.logo:hover .nav-logo-img {
-    transform: scale(1.1);
-    border-color: rgba(255, 255, 255, 0.3);
+:root.light .nav-logo-img {
+    filter: invert(0);
 }
 
 .freelancer-pill { 
