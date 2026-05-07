@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import newFace from './images/newFace.png'
+import signature from './images/signature.png'
 
 const Navbar = () => {
 
@@ -37,7 +37,7 @@ const Navbar = () => {
     <div>
       <header className="header" id='header'>
         <a href="/#home" className="logo">
-          <img src={newFace} alt="Hardik" className="nav-logo-img" />
+          <img src={signature} alt="Hardik" className="nav-logo-img" />
         </a>
 
         {!showNav && <i className='bx bx-menu menu-box' onClick={showNavBar}></i>}

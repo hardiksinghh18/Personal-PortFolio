@@ -5,9 +5,9 @@ import huly from '../images/projectThumbnail/hulyIoClone.png'
 import hstore from '../images/projectThumbnail/hstore.png'
 import portfolio from '../images/projectThumbnail/portfolio.png'
 import netflix from '../images/projectThumbnail/netflix.png'
-import findCa from '../images/projectThumbnail/findCa.png'
+// import findCa from '../images/projectThumbnail/findCa.png'
 import textUtils from '../images/projectThumbnail/textUtils.png'
-import todoList from '../images/projectThumbnail/todoList.png'
+import todoApp from '../images/projectThumbnail/todoApp.png'
 import calculator from '../images/projectThumbnail/calculator.png'
 import weather from '../images/projectThumbnail/weather.png'
 import batchSystem from '../images/projectThumbnail/batchSystem.png'
@@ -87,15 +87,15 @@ export const allProjects = [
         link: "",
         github: "https://github.com/hardiksinghh18/newsApp"
     },
-    {
-        id: 9,
-        title: "Find Ur CA",
-        img: findCa,
-        desc: "This is a sample project in which a user can search any specific name and the website fetches details of that specific CA.",
-        tech: ['HTML', 'CSS', 'Reactjs', 'Tailwind'],
-        link: "https://findyourca-b1f0b.web.app/",
-        github: "https://github.com/hardiksinghh18/ca-finder"
-    },
+    // {
+    //     id: 9,
+    //     title: "Find Ur CA",
+    //     img: findCa,
+    //     desc: "This is a sample project in which a user can search any specific name and the website fetches details of that specific CA.",
+    //     tech: ['HTML', 'CSS', 'Reactjs', 'Tailwind'],
+    //     link: "https://findyourca-b1f0b.web.app/",
+    //     github: "https://github.com/hardiksinghh18/ca-finder"
+    // },
     {
         id: 10,
         title: "Text-Utils",
@@ -108,7 +108,7 @@ export const allProjects = [
     {
         id: 11,
         title: "To-do-list",
-        img: todoList,
+        img: todoApp,
         desc: "This is a webapp made by using javascript.Users can add a particular task and save it.Saved tasks can also be edited and you can also delete it when it is no longer needed.",
         tech: ['HTML', 'CSS', 'Javascript'],
         link: "https://hardiksinghh18.github.io/ToDo-List/",
@@ -132,15 +132,15 @@ export const allProjects = [
         link: "https://weather-app-eight-opal-20.vercel.app/",
         github: "https://github.com/hardiksinghh18/kraftshala-assignment"
     },
-    {
-        id: 14,
-        title: "Contest Finder",
-        img: null,
-        desc: "This app is based on Javascript. The users can see all the available contest in the form of cards.They can also visit the page of that contest by clicking the visit now button. ",
-        tech: ['HTML', 'CSS', 'Bootsrap', 'Javascript'],
-        link: "https://hardiksinghh18.github.io/contest-app/",
-        github: 'https://github.com/hardiksinghh18/contest-app'
-    },
+    // {
+    //     id: 14,
+    //     title: "Contest Finder",
+    //     img: null,
+    //     desc: "This app is based on Javascript. The users can see all the available contest in the form of cards.They can also visit the page of that contest by clicking the visit now button. ",
+    //     tech: ['HTML', 'CSS', 'Bootsrap', 'Javascript'],
+    //     link: "https://hardiksinghh18.github.io/contest-app/",
+    //     github: 'https://github.com/hardiksinghh18/contest-app'
+    // },
     {
         id: 15,
         title: "Batch System Frontend Assignment",
