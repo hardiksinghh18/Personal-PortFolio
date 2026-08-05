@@ -83,13 +83,19 @@ const HeroSection = () => {
 
                         </h1>
 
-                        {/* Desktop: Resume Button ONLY */}
+                        {/* Desktop: Action Buttons */}
                         <div className="hero-desktop-action hero-desktop-only">
-                            <a href="https://drive.google.com/file/d/14FWIuOW7keoyDBm6veKKbxZv3kTlCFbZ/view?usp=sharing" 
+                            <a href="https://drive.google.com/file/d/13VNxEr2QN2Yiy6C-XQgP2CsGYGGQzxmp/view" 
                                target='_blank' 
                                rel='noreferrer' 
                                className="hero-resume-btn">
-                                Resume <i className='bx bx-right-arrow-alt'></i>
+                                Resume <i className='bx bx-link-external'></i>
+                            </a>
+                            <a href="https://thebloggify.vercel.app/" 
+                               target='_blank' 
+                               rel='noreferrer' 
+                               className="hero-blog-btn">
+                                Visit Bloggify <i className='bx bx-link-external'></i>
                             </a>
                         </div>
 
@@ -98,7 +104,7 @@ const HeroSection = () => {
                             <a href="https://github.com/hardiksinghh18" target='_blank' rel='noreferrer'><i className='bx bxl-github'></i></a>
                             <a href="https://twitter.com/hardiksingh18_" target='_blank' rel='noreferrer'><i className='bx bxl-twitter' ></i></a>
                             <a href="https://www.linkedin.com/in/hardik-singh-391946278/" target='_blank' rel='noreferrer'><i className='bx bxl-linkedin'></i></a>
-                            <a href="https://drive.google.com/file/d/14FWIuOW7keoyDBm6veKKbxZv3kTlCFbZ/view?usp=sharing" target='_blank' rel='noreferrer'><i className='bx bx-file'></i></a>
+                            <a href="https://drive.google.com/file/d/13VNxEr2QN2Yiy6C-XQgP2CsGYGGQzxmp/view" target='_blank' rel='noreferrer'><i className='bx bx-file'></i></a>
                             <a href="mailto:hardiksingh950@gmail.com" target='_blank' rel='noreferrer'><i className='bx bxl-gmail'></i></a>
                         </div>
                     </div>

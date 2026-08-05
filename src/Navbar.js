@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import signature from './images/signature.png'
+import { useLenis } from 'lenis/react'
 
 const Navbar = () => {
 
   const [showNav, setShowNav] = useState(false)
+  const lenis = useLenis()
 
   useEffect(() => {
     if (showNav) {
@@ -32,11 +34,27 @@ const Navbar = () => {
     setShowNav(false)
   }
 
+  const handleScroll = (e, id) => {
+    e.preventDefault();
+    if (window.location.pathname !== "/") {
+      window.location.href = `/${id}`;
+      return;
+    }
+    if (lenis) {
+      lenis.scrollTo(id, { offset: -100 });
+    } else {
+      const element = document.querySelector(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    setShowNav(false);
+  };
 
   return (
     <div>
       <header className="header" id='header'>
-        <a href="/#home" className="logo">
+        <a href="/#home" onClick={(e) => handleScroll(e, "#home")} className="logo">
           <img src={signature} alt="Hardik" className="nav-logo-img" />
         </a>
 
@@ -46,13 +64,12 @@ const Navbar = () => {
 
         {showNav && <div className="navOverlay" onClick={hideNavBar}></div>}
 
-        <nav className={showNav ? "navbar navbarActive" : "navbar"} onClick={() => setShowNav(false)}>
-          <a href="/#home" className="active">Home</a>
-          <a href="/#workExperience">Experience</a>
-          <a href="/#skillsNew">Skills</a>
-          <a href="/#projects">Projects</a>
-
-
+        <nav className={showNav ? "navbar navbarActive" : "navbar"}>
+          <a href="#home" onClick={(e) => handleScroll(e, "#home")} className="active">Home</a>
+          <a href="#workExperience" onClick={(e) => handleScroll(e, "#workExperience")}>Experience</a>
+          <a href="#skillsNew" onClick={(e) => handleScroll(e, "#skillsNew")}>Skills</a>
+          <a href="#projects" onClick={(e) => handleScroll(e, "#projects")}>Projects</a>
+          <a href="#blogs" onClick={(e) => handleScroll(e, "#blogs")}>Blogs</a>
         </nav>
       </header>
     </div>

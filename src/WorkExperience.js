@@ -4,27 +4,46 @@ import collablyLogo from './images/collablyLogo.png';
 
 const experiences = [
     {
-        role: "Full Stack Developer Intern",
         company: "Virtual Internships",
-        date: "Feb 2025 - Present",
         location: "Remote",
         logo: viLogo,
+        roles: [
+            {
+                title: "Associate Software Engineer",
+                date: "Aug 2025 - Present"
+            },
+            {
+                title: "Full Stack Developer Intern",
+                date: "Feb 2025 - Jul 2025"
+            }
+        ],
         description: [
-            "Developed AI-powered resume parsing and profile completion features, increasing onboarding rates from 35% to 85% and reducing profile building time by 70%.",
-            "Migrated 400 APIs from createAsyncThunk to Redux Toolkit Query (RTK Query), improving caching, data fetching performance, and frontend state management.",
-            "Built and optimized RESTful APIs, implementing validation and structured error handling.",
-            "Designed and scheduled Cron jobs in Node.js for automated email notifications and alerts to interns and company users.",
-            "Engineered AI-assisted job description generation and developed a new batch creation workflow to streamline internal operations.",
-            "Designed and developed an internal reusable React.js library vi-filter with include/exclude filters, infinite scroll, and list virtualization for large datasets.",
-            "Improved frontend performance by optimizing Core Web Vitals (LCP, CLS, INP), reducing page load time by 45% through lazy loading, code splitting, and asset optimization."
+            "Shipped AI resume parsing, boosting onboarding rates from 35% to 85% and cutting profile setup time by 70%.",
+            "Engineered AI-driven job description generation and a batch creation workflow to streamline internal operations.",
+            "Migrated 400 APIs to RTK Query from createAsyncThunk, optimizing caching and global state management.",
+            "Cut LCP from 7.6s to 5.0s (34%) and CLS via route/tab-level code splitting, lazy imports, and skeleton loaders.",
+            "Optimized critical rendering path by deferring Datadog RUM and Sentry initializations until after the LCP element rendered.",
+            "Utilized Sentry, Datadog, and Microsoft Clarity to systematically monitor application health, optimize frontend performance, and resolve live production bugs.",
+            "Led legacy library migrations (Moment.js → Luxon, libphonenumber-js → google-libphonenumber, xlsx → exceljs) across 100+ endpoints.",
+            "Built a reusable React library vi-filter with infinite scroll, and list virtualization for heavy datasets.",
+            "Shipped UI components (React, RTK, MUI, TS), cutting code duplication and improving WCAG compliance.",
+            "Scheduled Node.js Cron jobs for automated email notifications to active interns and corporate partners."
         ]
     },
     {
-        role: "Full Stack Developer Intern",
         company: "Collably Network",
-        date: "Aug 2024 - Feb 2024",
         location: "Remote",
         logo: collablyLogo,
+        roles: [
+            {
+                title: "Software Engineer",
+                date: "Nov 2024 - Jan 2025"
+            },
+            {
+                title: "Software Engineer Intern",
+                date: "Aug 2024 - Oct 2024"
+            }
+        ],
         description: [
             "Developed Coincurt using React.js, Node.js, Express.js, and MongoDB, delivering real-time cryptocurrency data with a role-based admin panel.",
             "Built Bounty Tap using Telegram Bot API, enabling automated airdrop campaigns and task tracking.",
@@ -42,17 +61,34 @@ const ExperienceItem = ({ exp, isLatest }) => {
             onClick={() => setIsExpanded(!isExpanded)}
         >
             <div className="exp-main">
-                <div className="exp-left">
-                    <div className="exp-logo">
-                        <img src={exp.logo} alt={exp.company} className="exp-logo-img" />
-                    </div>
-                    <div className="exp-info">
+                <div className="exp-left-container">
+                    <div className="exp-company-row">
+                        <div className="exp-logo">
+                            <img src={exp.logo} alt={exp.company} className="exp-logo-img" />
+                        </div>
                         <h3 className="exp-company">{exp.company}</h3>
-                        <p className="exp-role">{exp.role}</p>
+                    </div>
+                    
+                    <div className="exp-roles-container">
+                        {exp.roles ? (
+                            exp.roles.map((r, idx) => (
+                                <div key={idx} className="exp-role-item">
+                                    <span className="exp-role-title">{r.title}</span>
+                                    <span className="exp-role-date-desktop">{r.date}</span>
+                                    <span className="exp-role-date-mobile">({r.date})</span>
+                                </div>
+                            ))
+                        ) : (
+                            <div className="exp-role-item">
+                                <span className="exp-role-title">{exp.role}</span>
+                                <span className="exp-role-date-desktop">{exp.date}</span>
+                                <span className="exp-role-date-mobile">({exp.date})</span>
+                            </div>
+                        )}
                     </div>
                 </div>
                 <div className="exp-right">
-                    <span className="exp-date">{exp.date}</span>
+                    {exp.date && <span className="exp-role-date-desktop">{exp.date}</span>}
                     <div className="exp-toggle">
                         <i className='bx bx-chevron-down'></i>
                     </div>

@@ -9,6 +9,7 @@ import WorkExperience from './WorkExperience'
 import SkillsNew from './SkillsNew'
 import TechQuotes from './components/TechQuotes'
 import ThemeToggle from './components/ThemeToggle'
+import Blogs from './Blogs'
 
 const Home = () => {
 
@@ -33,6 +34,7 @@ const Home = () => {
         <WorkExperience />
         <SkillsNew />
         <Projects />
+        <Blogs />
         <Contact />
         <TechQuotes />
         <Footer />
