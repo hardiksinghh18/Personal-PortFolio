@@ -262,7 +262,7 @@ code {
 
 
 .hero-resume-btn i {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     display: inline-block;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -280,9 +280,49 @@ code {
     transform: translateX(6px);
 }
 
+.hero-blog-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.7rem 2rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1.3rem;
+    font-weight: 500;
+    border: 1px dotted var(--border-subtle);
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    box-shadow: var(--card-shadow);
+}
+
+.hero-blog-btn i {
+    font-size: 1.5rem;
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-blog-btn:hover {
+    background-color: var(--second-bg-color);
+    border-color: var(--text-color);
+    color: var(--text-color);
+}
+
+.hero-blog-btn:hover i {
+    transform: translateX(6px);
+}
+
+.hero-desktop-action {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
 /* Visibility Control */
 .hero-desktop-only {
-    display: block;
+    display: flex;
 }
 
 .hero-mobile-only {
@@ -376,7 +416,8 @@ code {
     left: 1rem;
     top: 1rem;
     bottom: 1rem;
-    width: 2px; /* Slightly thicker line */
+    width: 2px;
+    /* Slightly thicker line */
     background: linear-gradient(to bottom,
             transparent 0%,
             var(--border-subtle) 10%,
@@ -701,8 +742,9 @@ code {
     padding: 2rem 2.5rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    border-radius: 12px 12px 0 0; /* Matches top corners of card */
+    align-items: flex-start;
+    border-radius: 12px 12px 0 0;
+    /* Matches top corners of card */
 }
 
 
@@ -757,11 +799,89 @@ code {
     margin: 0;
 }
 
+.exp-left-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    flex-grow: 1;
+    margin-right: 2rem;
+}
+
+.exp-company-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.exp-roles-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: auto;
+    margin-left: 6.5rem;
+}
+
+.exp-role-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    gap: 1rem;
+}
+
+.exp-role-title {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.exp-role-date-desktop {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+    display: inline;
+    font-weight: 500;
+}
+
+.exp-role-date-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .exp-left-container {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .exp-roles-container {
+        margin-left: 6.3rem;
+    }
+
+    .exp-role-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+    }
+
+    .exp-role-date-desktop {
+        display: none !important;
+    }
+
+    .exp-role-date-mobile {
+        display: inline !important;
+        font-size: 1.2rem;
+        color: var(--text-muted);
+        opacity: 0.8;
+        font-weight: 500;
+    }
+}
+
 
 .exp-right {
     display: flex;
     align-items: center;
     gap: 3rem;
+    margin-top: 1.2rem;
 }
 
 .exp-date {
@@ -797,7 +917,8 @@ code {
 .exp-card.active .exp-details {
     max-height: 2000px;
     border-top: 1px dotted var(--border-subtle);
-    border-radius: 0 0 12px 12px; /* Matches bottom corners of card */
+    border-radius: 0 0 12px 12px;
+    /* Matches bottom corners of card */
 }
 
 
@@ -900,11 +1021,13 @@ code {
         flex-direction: column;
         align-items: flex-start;
         gap: 1.2rem;
+        position: relative;
     }
 
     .exp-right {
-        width: 100%;
-        justify-content: space-between;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
     }
 
     .exp-bullets {
@@ -1019,8 +1142,8 @@ code {
     filter: invert(0);
 }
 
-.freelancer-pill { 
-    color: var(--text-color); 
-    font-weight: 700; 
-    font-size: 2.2rem; 
+.freelancer-pill {
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 2.2rem;
 }
