@@ -24,11 +24,7 @@ const SkillsNew = () => {
     return (
         <section className='skillMain' id='skillsNew'>
 
-            <div className='headingPosition'>
-                <h1 className='flexrow heading ' >&lt; Tech /&gt;</h1>
-                <h1 className='flexrow headingBottom  ' >Stack</h1>
-
-            </div>
+            <h2 className='section-heading-minimal'>Tech Stack.</h2>
 
             <div className='aboutSkills'>
                 <div>

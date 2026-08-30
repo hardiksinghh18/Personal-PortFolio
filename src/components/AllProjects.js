@@ -1,5 +1,6 @@
-import skillSync from '../images/projectThumbnail/skillSync.png'
+import synckro from '../images/projectThumbnail/synckro.png'
 import bloggify from '../images/projectThumbnail/bloggify.png'
+import nodePulse from '../images/projectThumbnail/nodePulse.png'
 import coincurt from '../images/projectThumbnail/coincurt.png'
 import huly from '../images/projectThumbnail/hulyIoClone.png'
 import hstore from '../images/projectThumbnail/hstore.png'
@@ -17,21 +18,30 @@ import zwigato from '../images/projectThumbnail/zwigato.png'
 export const allProjects = [
     {
         id: 1,
+        title: "SyncKro",
+        img: synckro,
+        desc: "SyncKro is a collaborative learning platform enabling users to build structured roadmaps and learning tracks. Users can follow structured paths and monitor peer progress for competitive motivation, with Gemini AI suggesting smart matches optimized via high-performance frontend and backend caching.",
+        tech: ["Reactjs", "Nodejs", "Expressjs", "PostgreSQL", " Gemini AI", "Tailwind CSS", "JWT", "Bcrypt"],
+        link: "https://synckro.vercel.app/",
+        github: "https://github.com/hardiksinghh18/mentorship-frontend"
+    },
+    {
+        id: 2,
         title: "Bloggify",
         img: bloggify,
         desc: "Bloggify is a responsive blogging website with user authentication, React Quill-powered posting/editing, Cloudinary integration, MongoDB CRUD operations, and Tailwind CSS styling.",
-        tech: ['Reactjs', 'Nodejs', 'Expressjs', 'MongoDB', 'Tailwind CSS'],
+        tech: ['Reactjs', 'Nodejs', 'Expressjs', 'MongoDB', 'Tailwind CSS', 'Bcrypt', 'JWT', 'Cloudinary'],
         link: "https://thebloggify.vercel.app/",
         github: "https://github.com/hardiksinghh18/bloggify-mern-blog"
     },
     {
-        id: 2,
-        title: "SkillSync",
-        img: skillSync,
-        desc: "SkillSync is a comprehensive mentorship platform designed to connect mentors and mentees seamlessly. The platform facilitates knowledge sharing and professional growth through a robust matching algorithm and intuitive interface.",
-        tech: ["Reactjs", "Nodejs", "Expressjs", "MySQL", "Tailwind CSS", "JWT"],
-        link: "https://skillssync.vercel.app/",
-        github: "https://github.com/hardiksinghh18/mentorship-frontend"
+        id: 3,
+        title: "Node.js Visualiser",
+        img: nodePulse,
+        desc: "Node-Js Visualiser is an interactive, client-side web application that parses raw JavaScript into an Abstract Syntax Tree (AST) and simulates the step-by-step execution flow of the Call Stack, Event Loop, Task Queues, and Memory Contexts.",
+        tech: ['Reactjs', 'Vite', 'Tailwind CSS', 'Monaco Editor', 'Acorn'],
+        // link: "https://node-js-visualiser.vercel.app/",
+        // github: "https://github.com/hardiksinghh18/Node.js-Visualizer"
     },
     {
         id: 3,

@@ -4,7 +4,6 @@ import HeroSection from './HeroSection'
 import Contact from './Contact'
 import Projects from './Projects'
 import Footer from './components/Footer'
-import LinkFlag from './components/LinkFlag'
 import WorkExperience from './WorkExperience'
 import SkillsNew from './SkillsNew'
 import TechQuotes from './components/TechQuotes'
@@ -28,7 +27,6 @@ const Home = () => {
     <div >
       <ThemeToggle />
       <Navbar />
-      <LinkFlag />
       <div className='homepage'>
         <HeroSection />
         <WorkExperience />

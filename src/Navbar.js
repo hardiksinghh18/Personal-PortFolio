@@ -1,38 +1,31 @@
-import React, { useState, useEffect } from 'react'
-import signature from './images/signature.png'
-import { useLenis } from 'lenis/react'
+import React, { useState, useEffect } from 'react';
+import { useLenis } from 'lenis/react';
 
 const Navbar = () => {
-
-  const [showNav, setShowNav] = useState(false)
-  const lenis = useLenis()
+  const [activeSection, setActiveSection] = useState('home');
+  const lenis = useLenis();
 
   useEffect(() => {
-    if (showNav) {
-      document.body.style.overflow = "hidden";
-      document.documentElement.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-      document.documentElement.style.overflow = "";
-    }
+    const handleScrollSpy = () => {
+      const sections = ['home', 'workExperience', 'skillsNew', 'projects', 'blogs'];
+      const scrollPosition = window.scrollY + 200;
 
-    const handleResize = () => {
-      if (window.innerWidth > 900 && showNav) {
-        setShowNav(false);
+      for (const section of sections) {
+        const el = document.getElementById(section);
+        if (el) {
+          const top = el.offsetTop;
+          const height = el.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            setActiveSection(section);
+            break;
+          }
+        }
       }
     };
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [showNav]);
-
-  const showNavBar = () => {
-    setShowNav(true)
-
-  }
-  const hideNavBar = () => {
-    setShowNav(false)
-  }
+    window.addEventListener('scroll', handleScrollSpy);
+    return () => window.removeEventListener('scroll', handleScrollSpy);
+  }, []);
 
   const handleScroll = (e, id) => {
     e.preventDefault();
@@ -41,39 +34,56 @@ const Navbar = () => {
       return;
     }
     if (lenis) {
-      lenis.scrollTo(id, { offset: -100 });
+      lenis.scrollTo(id, { offset: -70 });
     } else {
       const element = document.querySelector(id);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }
-    setShowNav(false);
+    setActiveSection(id.replace('#', ''));
   };
 
   return (
-    <div>
-      <header className="header" id='header'>
-        <a href="/#home" onClick={(e) => handleScroll(e, "#home")} className="logo">
-          <img src={signature} alt="Hardik" className="nav-logo-img" />
+    <header className="header" id="header">
+      <div className="header-inner">
+        <a href="/#home" onClick={(e) => handleScroll(e, "#home")} className="logo-text-link">
+          Hardik
         </a>
 
-        {!showNav && <i className='bx bx-menu menu-box' onClick={showNavBar}></i>}
-        {/* {!showNav&&   <i className='bx bx-grid-alt  menu-box' onClick={showNavBar}></i>} */}
-        {showNav && <i className='bx bx-x crossBar' onClick={hideNavBar}></i>}
-
-        {showNav && <div className="navOverlay" onClick={hideNavBar}></div>}
-
-        <nav className={showNav ? "navbar navbarActive" : "navbar"}>
-          <a href="#home" onClick={(e) => handleScroll(e, "#home")} className="active">Home</a>
-          <a href="#workExperience" onClick={(e) => handleScroll(e, "#workExperience")}>Experience</a>
-          <a href="#skillsNew" onClick={(e) => handleScroll(e, "#skillsNew")}>Skills</a>
-          <a href="#projects" onClick={(e) => handleScroll(e, "#projects")}>Projects</a>
-          <a href="#blogs" onClick={(e) => handleScroll(e, "#blogs")}>Blogs</a>
+        <nav className="navbar">
+          <a
+            href="#workExperience"
+            onClick={(e) => handleScroll(e, "#workExperience")}
+            className={`nav-link ${activeSection === 'workExperience' ? 'active' : ''}`}
+          >
+            Experience
+          </a>
+          <a
+            href="#skillsNew"
+            onClick={(e) => handleScroll(e, "#skillsNew")}
+            className={`nav-link ${activeSection === 'skillsNew' ? 'active' : ''}`}
+          >
+            Skills
+          </a>
+          <a
+            href="#projects"
+            onClick={(e) => handleScroll(e, "#projects")}
+            className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}
+          >
+            Projects
+          </a>
+          <a
+            href="#blogs"
+            onClick={(e) => handleScroll(e, "#blogs")}
+            className={`nav-link nav-link-desktop ${activeSection === 'blogs' ? 'active' : ''}`}
+          >
+            Blogs
+          </a>
         </nav>
-      </header>
-    </div>
-  )
-}
+      </div>
+    </header>
+  );
+};
 
-export default Navbar
+export default Navbar;
