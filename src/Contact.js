@@ -1,20 +1,17 @@
 import React from 'react';
-import newFace from './images/newFace.png';
+import profile from './images/profile.jpg'
 
 const Contact = () => {
     return (
-        <section className='contact flexcolumn' id='contact'>
-            <div className='headingPosition'>
-                <h1 className='flexrow heading'>&lt; Contact /&gt;</h1>
-                <h1 className='flexrow headingBottom'>Say Hello 👋</h1>
-            </div>
+        <section className='contact-section-new' id='contact'>
+            <h2 className='section-heading-minimal'>Say Hello.</h2>
 
             <div className="connect-container">
                 <p className="connect-text">If you've read this far, you might be interested in what I do.</p>
                 
                 <div className="connect-visual">
                     <div className="connect-avatar-circle">
-                        <img src={newFace} alt="Hardik" />
+                        <img src={profile} alt="Hardik" />
                     </div>
                     
                     {/* Squiggle SVG Bridge */}

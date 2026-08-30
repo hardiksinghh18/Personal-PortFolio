@@ -1,113 +1,88 @@
 import React, { useState } from 'react';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import viLogo from './images/viLogo.png';
 import collablyLogo from './images/collablyLogo.png';
 
 const experiences = [
     {
         company: "Virtual Internships",
-        location: "Remote",
         logo: viLogo,
-        roles: [
-            {
-                title: "Associate Software Engineer",
-                date: "Aug 2025 - Present"
-            },
-            {
-                title: "Full Stack Developer Intern",
-                date: "Feb 2025 - Jul 2025"
-            }
-        ],
+        role: "Associate Software Engineer",
+        date: "Aug 2025 - Present",
+        location: "London, England, Remote",
+        isCurrent: true,
         description: [
-            "Shipped AI resume parsing, boosting onboarding rates from 35% to 85% and cutting profile setup time by 70%.",
-            "Engineered AI-driven job description generation and a batch creation workflow to streamline internal operations.",
-            "Migrated 400 APIs to RTK Query from createAsyncThunk, optimizing caching and global state management.",
-            "Cut LCP from 7.6s to 5.0s (34%) and CLS via route/tab-level code splitting, lazy imports, and skeleton loaders.",
-            "Optimized critical rendering path by deferring Datadog RUM and Sentry initializations until after the LCP element rendered.",
-            "Utilized Sentry, Datadog, and Microsoft Clarity to systematically monitor application health, optimize frontend performance, and resolve live production bugs.",
-            "Led legacy library migrations (Moment.js → Luxon, libphonenumber-js → google-libphonenumber, xlsx → exceljs) across 100+ endpoints.",
-            "Built a reusable React library vi-filter with infinite scroll, and list virtualization for heavy datasets.",
-            "Shipped UI components (React, RTK, MUI, TS), cutting code duplication and improving WCAG compliance.",
-            "Scheduled Node.js Cron jobs for automated email notifications to active interns and corporate partners."
+            "Shipped <strong>AI resume parsing</strong>, boosting onboarding rates from <strong>35% to 85%</strong> and cutting profile setup time by <strong>70%</strong>.",
+            "Migrated <strong>400+ APIs</strong> from createAsyncThunk to <strong>RTK Query</strong>, reducing state boilerplate by <strong>45%</strong> and cutting redundant network requests by <strong>30%</strong> via automated caching and deduplication.",
+            "Drove <strong>Core Web Vitals</strong> improvements on high-traffic pages through route/tab-level code splitting, lazy loading, image optimization, and skeleton loaders; reduced <strong>LCP from 7.6s to 5.0s (34%)</strong> and improved CLS.",
+            "Developed a <strong>Node.js + TypeORM</strong> cron-driven email notification system with a normalized database schema and idempotent delivery to re-engage POCs for intern rehiring, increasing rehire follow-through by <strong>40%</strong>.",
+            "Engineered a concurrency-safe offer creation workflow using distributed <strong>Redis locks</strong> and database transactions, eliminating duplicate draft entries across horizontally scaled services."
+        ]
+    },
+    {
+        company: "Virtual Internships",
+        logo: viLogo,
+        role: "Full Stack Developer Intern",
+        date: "Feb 2025 - Jul 2025",
+        location: "London, England, Remote",
+        isCurrent: false,
+        description: [
+            "Led legacy dependency migrations including <strong>Moment.js to Luxon</strong>, <strong>libphonenumber-js to google-libphonenumber</strong>, and <strong>xlsx to ExcelJS</strong> across 100+ endpoints.",
+            "Built <strong>vi-filter</strong>, a reusable React filtering library with <strong>infinite scrolling</strong> and <strong>list virtualization</strong>, rendering <strong>10,000+ items</strong> seamlessly and reducing initial render time by <strong>60%</strong>.",
+            "Engineered accessible frontend interfaces adhering to <strong>WCAG 2.1 AA</strong> standards, enhancing keyboard navigation, screen reader compatibility, and color contrast."
         ]
     },
     {
         company: "Collably Network",
-        location: "Remote",
         logo: collablyLogo,
-        roles: [
-            {
-                title: "Software Engineer",
-                date: "Nov 2024 - Jan 2025"
-            },
-            {
-                title: "Software Engineer Intern",
-                date: "Aug 2024 - Oct 2024"
-            }
-        ],
+        role: "Software Engineer",
+        date: "Aug 2024 - Jan 2025",
+        location: "Remote",
+        isCurrent: false,
         description: [
-            "Developed Coincurt using React.js, Node.js, Express.js, and MongoDB, delivering real-time cryptocurrency data with a role-based admin panel.",
-            "Built Bounty Tap using Telegram Bot API, enabling automated airdrop campaigns and task tracking.",
-            "Implemented backend services for a Telegram Reminder Bot with scheduled notifications, improving multi-group communication efficiency by 60%."
+            "Built <strong>React</strong> interfaces with <strong>Zustand</strong> state management, delivering <strong>30+ reusable components</strong> for a crypto platform.",
+            "Developed backend services with <strong>GraphQL APIs</strong>, supporting <strong>20+ queries/mutations</strong> across core platform workflows.",
+            "Designed <strong>PostgreSQL</strong> schemas with <strong>Prisma ORM</strong> across <strong>10+ models</strong>, implementing relational queries, indexing, and transactional data workflows."
         ]
     }
 ];
 
 const ExperienceItem = ({ exp, isLatest }) => {
-    const [isExpanded, setIsExpanded] = useState(false);
+    const [isExpanded, setIsExpanded] = useState(isLatest);
 
     return (
-        <div 
-            className={`exp-card ${isExpanded ? 'active' : ''} ${isLatest ? 'latest' : ''}`} 
-            onClick={() => setIsExpanded(!isExpanded)}
-        >
-            <div className="exp-main">
-                <div className="exp-left-container">
-                    <div className="exp-company-row">
-                        <div className="exp-logo">
-                            <img src={exp.logo} alt={exp.company} className="exp-logo-img" />
+        <div className={`exp-item-new ${isExpanded ? 'expanded' : ''}`}>
+            <div className="exp-header-new" onClick={() => setIsExpanded(!isExpanded)}>
+                <div className="exp-header-left">
+                    <div className="exp-company-title-row">
+                        <div className="exp-logo-new">
+                            <img src={exp.logo} alt={exp.company} className="exp-logo-img-new" />
                         </div>
-                        <h3 className="exp-company">{exp.company}</h3>
+                        <span className="exp-company-name">{exp.company}</span>
+                        {exp.isCurrent && <span className="exp-green-dot"></span>}
+                        <span className="exp-chevron">
+                            {isExpanded ? <ExpandLessIcon className="chevron-icon" /> : <ExpandMoreIcon className="chevron-icon" />}
+                        </span>
                     </div>
-                    
-                    <div className="exp-roles-container">
-                        {exp.roles ? (
-                            exp.roles.map((r, idx) => (
-                                <div key={idx} className="exp-role-item">
-                                    <span className="exp-role-title">{r.title}</span>
-                                    <span className="exp-role-date-desktop">{r.date}</span>
-                                    <span className="exp-role-date-mobile">({r.date})</span>
-                                </div>
-                            ))
-                        ) : (
-                            <div className="exp-role-item">
-                                <span className="exp-role-title">{exp.role}</span>
-                                <span className="exp-role-date-desktop">{exp.date}</span>
-                                <span className="exp-role-date-mobile">({exp.date})</span>
-                            </div>
-                        )}
-                    </div>
+                    <span className="exp-role-subtitle">{exp.role}</span>
                 </div>
-                <div className="exp-right">
-                    {exp.date && <span className="exp-role-date-desktop">{exp.date}</span>}
-                    <div className="exp-toggle">
-                        <i className='bx bx-chevron-down'></i>
-                    </div>
+                
+                <div className="exp-header-right">
+                    <span className="exp-date-range">{exp.date}</span>
+                    <span className="exp-location">{exp.location}</span>
                 </div>
             </div>
             
-            <div 
-                className="exp-details"
-                style={{ maxHeight: isExpanded ? '2000px' : '0' }}
-            >
-
-                <ul className="exp-bullets">
-                    {exp.description.map((point, i) => (
-                        <li key={i} className="exp-point">
-                            <span className="bullet"></span>
-                            {point}
-                        </li>
-                    ))}
-                </ul>
+            <div className="exp-details-wrapper">
+                <div className="exp-details-new">
+                    <h4 className="exp-contributions-heading">Key Contributions</h4>
+                    <ul className="exp-bullets-new">
+                        {exp.description.map((point, i) => (
+                            <li key={i} className="exp-bullet-item" dangerouslySetInnerHTML={{ __html: point }}></li>
+                        ))}
+                    </ul>
+                </div>
             </div>
         </div>
     );
@@ -116,18 +91,13 @@ const ExperienceItem = ({ exp, isLatest }) => {
 const WorkExperience = () => {
     return (
         <section className="workExperienceMain" id="workExperience">
-            <div className="hero-main-container">
-                <div className="headingPosition">
-                    <h1 className="flexrow heading">&lt; My Work /&gt;</h1>
-                    <h1 className="flexrow headingBottom">Experience</h1>
-                </div>
+                <h2 className="section-heading-minimal">Experience.</h2>
 
-                <div className="exp-list">
+                <div className="exp-list-new">
                     {experiences.map((exp, index) => (
                         <ExperienceItem key={index} exp={exp} isLatest={index === 0} />
                     ))}
                 </div>
-            </div>
         </section>
     );
 };
