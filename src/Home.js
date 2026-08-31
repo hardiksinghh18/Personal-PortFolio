@@ -6,7 +6,7 @@ import Projects from './Projects'
 import Footer from './components/Footer'
 import WorkExperience from './WorkExperience'
 import SkillsNew from './SkillsNew'
-import TechQuotes from './components/TechQuotes'
+import Quotes from './components/Quotes'
 import ThemeToggle from './components/ThemeToggle'
 import Blogs from './Blogs'
 
@@ -34,7 +34,7 @@ const Home = () => {
         <Projects />
         <Blogs />
         <Contact />
-        <TechQuotes />
+        <Quotes />
         <Footer />
       </div>
 

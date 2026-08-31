@@ -1,6 +1,7 @@
 import React from 'react'
 import js from './images/icons/js.png'
 import ts from './images/icons/ts.png'
+import cpp from './images/icons/cpp.png'
 import html from './images/icons/html.png'
 import css from './images/icons/css.png'
 import express from './images/icons/express.png'
@@ -14,6 +15,8 @@ import react from './images/icons/react.png'
 import redux from './images/icons/redux.png'
 import sass from './images/icons/sass.png'
 import sql from './images/icons/sql.png'
+import postgreSQL from './images/icons/postgreSQL.png'
+import supabase from './images/icons/supabase.webp'
 import tailwind from './images/icons/tailwind.png'
 import figma from './images/icons/figma.svg'
 import vercel from './images/icons/vercel.png'
@@ -27,100 +30,98 @@ const SkillsNew = () => {
             <h2 className='section-heading-minimal'>Tech Stack.</h2>
 
             <div className='aboutSkills'>
-                <div>
-                    <h3 className='textGradient'>Frontend</h3>
-                    <div className='skillLogos'>
-                        <div>
-                            <img src={js} alt="" />
-                            <p>JS</p>
-                        </div>
-                        <div>
-                            <img src={ts} alt="" />
-                            <p>TS</p>
-                        </div>
-                        <div>
-                            <img src={react} alt="" />
-                            <p>React</p>
-                        </div>
-                        <div>
-                            <img src={redux} alt="" className="light-theme-invert" />
-                            <p>Redux</p>
-                        </div>
-                        <div>
-                            <img src={tailwind} alt="" />
-                            <p>Tailwind</p>
-                        </div>
-                        <div>
-                            <img src={sass} alt="" />
-                            <p>SCSS</p>
-                        </div>
-                        <div>
-                            <img src={nextjs} alt="" className="light-theme-invert" />
-                            <p>NextJs</p>
-                        </div>
-                        <div>
-                            <img src={html} alt="" />
-                            <p>HTML</p>
-                        </div>
-                        <div>
-                            <img src={css} alt="" />
-                            <p>CSS</p>
-                        </div>
+                <div className='skillLogos'>
+                    <div>
+                        <img src={ts} alt="TypeScript" />
+                        <p>TypeScript</p>
                     </div>
-                </div>
-                <div>
-                    <h3 className='textGradient'>Backend</h3>
-                    <div className='skillLogos'>
-                        <div>
-                            <img src={nodejs} alt="" />
-                            <p>NodeJs</p>
-                        </div>
-                        <div>
-                            <img src={express} alt="" className="light-theme-invert" />
-                            <p>ExpressJs</p>
-                        </div>
-                        <div>
-                            <img src={firebase} alt="" />
-                            <p>Firebase</p>
-                        </div>
-                        <div>
-                            <img src={mongo} alt="" />
-                            <p>MongoDB</p>
-                        </div>
-                        <div>
-                            <img src={sql} alt="" />
-                            <p>SQL</p>
-                        </div>
+                    <div>
+                        <img src={js} alt="JavaScript" />
+                        <p>JavaScript</p>
                     </div>
-                </div>
-                <div>
-                    <h3 className='textGradient'>Others</h3>
-                    <div className='skillLogos'>
-                        <div>
-                            <img src={git} alt="" />
-                            <p>Git</p>
-                        </div>
-                        <div>
-                            <img src={github} alt="" className="light-theme-invert" />
-                            <p>Github</p>
-                        </div>
-                        <div>
-                            <img src={figma} alt="" />
-                            <p>Figma</p>
-                        </div>
-                        <div>
-                            <img src={vercel} alt="" className="light-theme-invert" />
-                            <p>Vercel</p>
-                        </div>
-                        <div>
-                            <img src={docker} alt="" />
-                            <p>Docker</p>
-                        </div>
-                        <div>
-                            <img src={postman} alt="" />
-                            <p>Postman</p>
-                        </div>
-
+                    <div>
+                        <img src={cpp} alt="C/C++" />
+                        <p>C/C++</p>
+                    </div>
+                    <div>
+                        <img src={sql} alt="SQL" />
+                        <p>SQL</p>
+                    </div>
+                    <div>
+                        <img src={html} alt="HTML" />
+                        <p>HTML</p>
+                    </div>
+                    <div>
+                        <img src={css} alt="CSS" />
+                        <p>CSS</p>
+                    </div>
+                    <div>
+                        <img src={sass} alt="SCSS" />
+                        <p>SCSS</p>
+                    </div>
+                    <div>
+                        <img src={react} alt="React.js" />
+                        <p>React.js</p>
+                    </div>
+                    <div>
+                        <img src={redux} alt="Redux" className="light-theme-invert" />
+                        <p>Redux</p>
+                    </div>
+                    <div>
+                        <img src={nextjs} alt="Next.js" className="light-theme-invert" />
+                        <p>Next.js</p>
+                    </div>
+                    <div>
+                        <img src={tailwind} alt="Tailwind CSS" />
+                        <p>Tailwind CSS</p>
+                    </div>
+                    <div>
+                        <img src={nodejs} alt="Node.js" />
+                        <p>Node.js</p>
+                    </div>
+                    <div>
+                        <img src={express} alt="Express.js" className="light-theme-invert" />
+                        <p>Express.js</p>
+                    </div>
+                    <div>
+                        <img src={postgreSQL} alt="PostgreSQL" />
+                        <p>PostgreSQL</p>
+                    </div>
+                    <div>
+                        <img src={mongo} alt="MongoDB" />
+                        <p>MongoDB</p>
+                    </div>
+                    <div>
+                        <img src={firebase} alt="Firebase" />
+                        <p>Firebase</p>
+                    </div>
+                    <div>
+                        <img src={supabase} alt="Supabase" />
+                        <p>Supabase</p>
+                    </div>
+                    <div>
+                        <img src={git} alt="Git" />
+                        <p>Git</p>
+                    </div>
+                    <div>
+                        <img src={github} alt="GitHub" className="light-theme-invert" />
+                        <p>GitHub</p>
+                    </div>
+                    <div>
+                        <img src={docker} alt="Docker" />
+                        <p>Docker</p>
+                    </div>
+                    <div>
+                        <img src={postman} alt="Postman" />
+                        <p>Postman</p>
+                    </div>
+                    <div>
+                        <img src={vercel} alt="Vercel" className="light-theme-invert" />
+                        <p>Vercel</p>
+                    </div>
+                    <div>
+                        <img src={figma} alt="Figma" />
+                        <p>Figma</p>
                     </div>
                 </div>
             </div>

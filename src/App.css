@@ -1350,8 +1350,7 @@ textarea {
 }
 
 .footer-name {
-    color: #ff007a;
-    /* Vibrant pink from image */
+    color: var(--text-color);
     font-weight: 600;
 }
 
@@ -1495,39 +1494,41 @@ textarea {
 .aboutSkills .skillLogos {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 0.6rem 0.8rem;
 }
 
-
-
-
 .aboutSkills .skillLogos p {
-    font-size: 1rem;
-
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 0;
+    color: var(--text-color);
 }
 
 .aboutSkills .skillLogos>div {
-    background-color: var(--third-bg-color);
-    padding: 1.25rem 2rem;
+    padding: 0.5rem 0.8rem;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    gap: 0.75rem;
-    border-radius: 1rem;
-    width: 7.5rem;
-    height: 7.5rem;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    border: 1px dotted var(--border-subtle);
+    gap: 0.5rem;
+    border-radius: 8px;
+    width: auto;
+    height: auto;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #30363d;
+}
+
+.aboutSkills .skillLogos img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+:root.light .aboutSkills .skillLogos>div {
+    background-color: #f6f8fa;
+    border: 1px solid #d0d7de;
 }
 
 
-
-
-.aboutSkills .skillLogos>div:hover {
-    box-shadow: 0 4px 15px var(--glow-subtle);
-    transform: translateY(-5px);
-}
 
 :root.light .light-theme-invert {
     filter: invert(1);
@@ -1898,7 +1899,7 @@ textarea {
     height: 80px;
     border-radius: 50%;
     object-fit: cover;
-    background: radial-gradient(circle, rgba(255, 0, 0, 0.3) 0%, rgba(0, 0, 0, 1) 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 1) 70%);
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 3px;
     display: flex;
@@ -1994,7 +1995,7 @@ textarea {
     position: absolute;
     inset: -2px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 70, 0.4) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
     z-index: -1;
     animation: glowExpand 6s infinite ease-in-out;
     pointer-events: none;
@@ -2018,7 +2019,7 @@ textarea {
     animation-play-state: paused;
     transform: scale(1.5);
     opacity: 0.8;
-    background: radial-gradient(circle, rgba(255, 0, 70, 0.6) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.35) 0%, transparent 70%);
 }
 
 @media screen and (max-width: 768px) {
@@ -2064,23 +2065,32 @@ textarea {
     max-width: 800px;
 }
 
-.quote-text {
+.quote-shloka {
     font-size: 2.2rem;
-    font-style: italic;
+    font-weight: 500;
     color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    white-space: pre-line;
+    text-align: center;
+}
+
+.quote-text {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: var(--text-muted);
     line-height: 1.6;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     opacity: 0.9;
     font-family: 'Poppins', sans-serif;
 }
 
-.quote-author {
-    font-size: 1.8rem;
+.quote-source {
+    font-size: 1.3rem;
     color: var(--text-muted);
     font-weight: 600;
     font-style: italic;
 }
-
 
 .quote-separator {
     width: 100%;
@@ -2090,14 +2100,18 @@ textarea {
     margin-bottom: 4rem;
 }
 
-
 @media (max-width: 768px) {
-    .quote-text {
+    .quote-shloka {
         font-size: 1.6rem;
+        line-height: 1.6;
     }
 
-    .quote-author {
-        font-size: 1.2rem;
+    .quote-text {
+        font-size: 1.3rem;
+    }
+
+    .quote-source {
+        font-size: 1.1rem;
     }
 
     .tech-quotes-section {
@@ -2182,16 +2196,42 @@ textarea {
 }
 
 .theme-toggle-canvas {
-    pointer-events: auto;
+    pointer-events: none;
     width: 100%;
     height: 100%;
     display: block;
-    cursor: grab;
     touch-action: none;
 }
 
-.theme-toggle-canvas:active {
+.theme-toggle-handle {
+    position: absolute;
+    left: 60px;
+    top: 95px;
+    width: 40px;
+    height: 55px;
+    cursor: grab;
+    touch-action: none;
+    z-index: 1101;
+    pointer-events: auto;
+    background: transparent;
+}
+
+.theme-toggle-handle:active {
     cursor: grabbing;
+}
+
+/* Light mode overrides for connection graphics */
+:root.light .connect-avatar-circle,
+:root.light .connect-person-circle {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.06) 0%, #ebebeb 70%);
+}
+
+:root.light .connect-person-circle::after {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.08) 0%, transparent 70%);
+}
+
+:root.light .connect-person-link:hover .connect-person-circle::after {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.15) 0%, transparent 70%);
 }
 
 /* Canvas toggle overrides or end of file */
