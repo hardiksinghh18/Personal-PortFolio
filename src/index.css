@@ -2164,3 +2164,98 @@ code {
     margin: 2.5rem auto;
     padding: 0 1.5rem;
 }
+
+/* Github Section */
+.github-section-new {
+    max-width: 900px;
+    margin: 5rem auto;
+    padding: 0 1.5rem;
+}
+
+.github-section-title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: 2.5rem;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    padding-left: 1.2rem;
+    border-left: 4px solid var(--text-color);
+}
+
+.github-subheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-family: monospace;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    border-bottom: 1px dotted var(--border-subtle);
+    padding-bottom: 0.8rem;
+}
+
+.github-sub-right {
+    display: flex;
+    align-items: center;
+}
+
+.github-profile-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.github-profile-link:hover {
+    color: var(--text-color);
+}
+
+.github-divider {
+    margin: 0 0.6rem;
+    color: var(--border-subtle);
+}
+
+.github-calendar-wrapper {
+    overflow-x: auto;
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+/* Custom scrollbar for horizontal calendar scrolling on mobile */
+.github-calendar-wrapper::-webkit-scrollbar {
+    height: 6px;
+}
+
+.github-calendar-wrapper::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.github-calendar-wrapper::-webkit-scrollbar-thumb {
+    background: var(--border-subtle);
+    border-radius: 3px;
+}
+
+.github-calendar-wrapper::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+    .github-subheader {
+        font-size: 1rem;
+    }
+
+    .github-calendar-wrapper {
+        overflow-x: hidden !important;
+    }
+
+    .github-calendar-wrapper .react-activity-calendar {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .github-calendar-wrapper svg {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
