@@ -9,6 +9,7 @@ import SkillsNew from './SkillsNew'
 import Quotes from './components/Quotes'
 import ThemeToggle from './components/ThemeToggle'
 import Blogs from './Blogs'
+import GithubContributions from './components/GithubContributions'
 
 const Home = () => {
 
@@ -30,8 +31,9 @@ const Home = () => {
       <div className='homepage'>
         <HeroSection />
         <WorkExperience />
-        <SkillsNew />
+        <GithubContributions />
         <Projects />
+        <SkillsNew />
         <Blogs />
         <Contact />
         <Quotes />

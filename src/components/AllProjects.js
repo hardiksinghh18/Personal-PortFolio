@@ -40,8 +40,8 @@ export const allProjects = [
         img: nodePulse,
         desc: "Node-Js Visualiser is an interactive, client-side web application that parses raw JavaScript into an Abstract Syntax Tree (AST) and simulates the step-by-step execution flow of the Call Stack, Event Loop, Task Queues, and Memory Contexts.",
         tech: ['Reactjs', 'Vite', 'Tailwind CSS', 'Monaco Editor', 'Acorn'],
-        // link: "https://node-js-visualiser.vercel.app/",
-        // github: "https://github.com/hardiksinghh18/Node.js-Visualizer"
+        link: "https://nodejs-visualiser.vercel.app/",
+        github: "https://github.com/hardiksinghh18/node.js-visualiser"
     },
     {
         id: 3,
