@@ -4,10 +4,10 @@ import profile from './images/profile.jpg'
 const Contact = () => {
     return (
         <section className='contact-section-new' id='contact'>
-            <h2 className='section-heading-minimal'>Say Hello.</h2>
+            {/* <h2 className='section-heading-minimal'>Say Hello.</h2> */}
 
             <div className="connect-container">
-                <p className="connect-text">If you've read this far, you might be interested in what I do.</p>
+                <p className="connect-text">If you've read this far, click on the profile icon to connect.</p>
                 
                 <div className="connect-visual">
                     <div className="connect-avatar-circle">
@@ -29,14 +29,14 @@ const Contact = () => {
                                 d="M 0 30 C 20 45 40 45 60 20 C 80 -10 100 -10 120 30 C 140 50 170 30 200 25" 
                                 className="bridge-pulse-path"
                                 fill="none" 
-                                stroke="url(#pinkGradient)" 
+                                stroke="url(#themeGradient)" 
                                 strokeWidth="3.5"
                                 strokeLinecap="round"
                             />
                             <defs>
-                                <linearGradient id="pinkGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <linearGradient id="themeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                                     <stop offset="0%" stopColor="transparent" />
-                                    <stop offset="50%" stopColor="#ff007a" />
+                                    <stop offset="50%" stopColor="var(--text-color)" />
                                     <stop offset="100%" stopColor="transparent" />
                                 </linearGradient>
                             </defs>

@@ -11,9 +11,8 @@ const Projects = () => {
       <h2 className="section-heading-minimal">Projects.</h2>
 
       <div className="projects-grid-new">
-        <div className="grid-divider-h"></div>
         <div className="grid-divider-v"></div>
-        {allProjects.slice(0, 4).map((element) => (
+        {allProjects.slice(0, 2).map((element) => (
           <WorkSection key={element.id} data={element}></WorkSection>
         ))}
       </div>

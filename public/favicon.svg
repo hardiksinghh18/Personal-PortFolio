@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&amp;display=swap');
+      .logo-text {
+        font-family: 'Homemade Apple', cursive;
+        font-size: 55px;
+        fill: #1a1a1a;
+        text-anchor: middle;
+        dominant-baseline: central;
+      }
+      @media (prefers-color-scheme: dark) {
+        .logo-text {
+          fill: #f5f5f5;
+        }
+      }
+    </style>
+  </defs>
+  <text x="50" y="50" class="logo-text">HS</text>
+</svg>

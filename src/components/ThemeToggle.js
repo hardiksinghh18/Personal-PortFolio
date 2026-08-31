@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 const ThemeToggle = () => {
   const canvasRef = useRef(null);
+  const handleRef = useRef(null);
   const [ , setIsDark] = useState(true);
   const isDarkRef = useRef(true);
   const points = useRef([]);
@@ -121,7 +122,9 @@ const ThemeToggle = () => {
       if (withinBody || nearestDist < 24) {
         mouse.current.down = true;
         mouse.current.target = withinBody ? endPoint : nearest;
-        // if (e.cancelable) e.preventDefault();
+        document.body.style.userSelect = "none";
+        document.body.style.webkitUserSelect = "none";
+        if (e.cancelable) e.preventDefault();
       }
     };
 
@@ -144,20 +147,23 @@ const ThemeToggle = () => {
       }
       mouse.current.down = false;
       mouse.current.target = null;
-      // if (e?.cancelable) e.preventDefault();
+      document.body.style.userSelect = "";
+      document.body.style.webkitUserSelect = "";
+      if (e?.cancelable) e.preventDefault();
     };
 
     const supportsPointer = "PointerEvent" in window;
+    const handle = handleRef.current;
     if (supportsPointer) {
-      canvas.addEventListener("pointerdown", onPointerDown, { passive: false });
+      if (handle) handle.addEventListener("pointerdown", onPointerDown, { passive: false });
       window.addEventListener("pointermove", onPointerMove, { passive: false });
       window.addEventListener("pointerup", onPointerUp, { passive: false });
       window.addEventListener("pointercancel", onPointerUp, { passive: false });
     } else {
-      canvas.addEventListener("touchstart", onPointerDown, { passive: false });
+      if (handle) handle.addEventListener("touchstart", onPointerDown, { passive: false });
       window.addEventListener("touchmove", onPointerMove, { passive: false });
       window.addEventListener("touchend", onPointerUp, { passive: false });
-      window.addEventListener("mousedown", onPointerDown);
+      if (handle) handle.addEventListener("mousedown", onPointerDown);
       window.addEventListener("mousemove", onPointerMove);
       window.addEventListener("mouseup", onPointerUp);
     }
@@ -287,17 +293,16 @@ const ThemeToggle = () => {
     render();
     return () => {
       cancelAnimationFrame(animationId);
-
       if (supportsPointer) {
-        canvas.removeEventListener("pointerdown", onPointerDown);
+        if (handle) handle.removeEventListener("pointerdown", onPointerDown);
         window.removeEventListener("pointermove", onPointerMove);
         window.removeEventListener("pointerup", onPointerUp);
         window.removeEventListener("pointercancel", onPointerUp);
       } else {
-        canvas.removeEventListener("touchstart", onPointerDown);
+        if (handle) handle.removeEventListener("touchstart", onPointerDown);
         window.removeEventListener("touchmove", onPointerMove);
         window.removeEventListener("touchend", onPointerUp);
-        window.removeEventListener("mousedown", onPointerDown);
+        if (handle) handle.removeEventListener("mousedown", onPointerDown);
         window.removeEventListener("mousemove", onPointerMove);
         window.removeEventListener("mouseup", onPointerUp);
       }
@@ -310,6 +315,7 @@ const ThemeToggle = () => {
         ref={canvasRef}
         className="theme-toggle-canvas"
       />
+      <div ref={handleRef} className="theme-toggle-handle" />
     </div>
   );
 };

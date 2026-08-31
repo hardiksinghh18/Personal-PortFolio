@@ -77,7 +77,7 @@ const HeroSection = () => {
         const timer = setTimeout(() => {
             setIsHovered(false);
             setHasLoaded(true);
-        }, 2500); 
+        }, 2500);
         return () => clearTimeout(timer);
     }, []);
 
@@ -110,7 +110,7 @@ const HeroSection = () => {
                     <img src={blackhole} alt="Banner" className="hero-banner-img" />
                 </div>
                 <div className="hero-top-row">
-                    <div 
+                    <div
                         className="hero-avatar-area"
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={() => setIsHovered(false)}
@@ -130,37 +130,32 @@ const HeroSection = () => {
                         <h2 className="hero-name">
                             Hardik Singh
                             <svg className="verified-tick" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.67-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.81c.67 1.31 1.91 2.19 3.34 2.19s2.67-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34z" fill="#1D9BF0"/>
-                                <path d="M10.54 16.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z" fill="#ffffff"/>
+                                <path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.67-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.81c.67 1.31 1.91 2.19 3.34 2.19s2.67-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34z" fill="#1D9BF0" />
+                                <path d="M10.54 16.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z" fill="#ffffff" />
                             </svg>
                         </h2>
-                        <p className="hero-title animate-flip" key={titleIndex}>
-                            {titles[titleIndex]}
-                        </p>
+                        <div className="hero-title-row">
+                            <p className="hero-title animate-flip" key={titleIndex}>
+                                {titles[titleIndex]}
+                            </p>
+                            {currentTime && (
+                                <div className="hero-location-time">
+                                    <PlaceOutlinedIcon className="loc-icon-svg" />
+                                    <span>India</span>
+                                    <span className="location-dot">•</span>
+                                    <span>{currentTime}</span>
+                                </div>
+                            )}
+                        </div>
                     </div>
-
+ 
                     <div className="hero-links-container">
                         <div className="hero-banner-links">
                             <Tooltip title="Resume" arrow placement="bottom">
                                 <a href="https://drive.google.com/file/d/13VNxEr2QN2Yiy6C-XQgP2CsGYGGQzxmp/view" target='_blank' rel='noreferrer'>
                                     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                                        <polyline points="7 10 12 15 17 10" />
-                                        <line x1="12" y1="15" x2="12" y2="3" />
-                                    </svg>
-                                </a>
-                            </Tooltip>
-                            <Tooltip title="Twitter / X" arrow placement="bottom">
-                                <a href="https://twitter.com/hardiksingh18_" target='_blank' rel='noreferrer'>
-                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                                    </svg>
-                                </a>
-                            </Tooltip>
-                            <Tooltip title="GitHub" arrow placement="bottom">
-                                <a href="https://github.com/hardiksinghh18" target='_blank' rel='noreferrer'>
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                        <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                                        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+                                        <path d="M14 2v4a2 2 0 0 0 2 2h4" />
                                     </svg>
                                 </a>
                             </Tooltip>
@@ -168,6 +163,13 @@ const HeroSection = () => {
                                 <a href="https://www.linkedin.com/in/hardiksingh18" target='_blank' rel='noreferrer'>
                                     <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                                    </svg>
+                                </a>
+                            </Tooltip>
+                            <Tooltip title="GitHub" arrow placement="bottom">
+                                <a href="https://github.com/hardiksinghh18" target='_blank' rel='noreferrer'>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
                                     </svg>
                                 </a>
                             </Tooltip>
@@ -179,15 +181,14 @@ const HeroSection = () => {
                                     </svg>
                                 </a>
                             </Tooltip>
+                            <Tooltip title="Twitter / X" arrow placement="bottom">
+                                <a href="https://twitter.com/hardiksingh18_" target='_blank' rel='noreferrer'>
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                    </svg>
+                                </a>
+                            </Tooltip>
                         </div>
-                        {currentTime && (
-                            <div className="hero-location-time">
-                                <PlaceOutlinedIcon className="loc-icon-svg" />
-                                <span>India</span>
-                                <span className="location-dot">•</span>
-                                <span>{currentTime}</span>
-                            </div>
-                        )}
                     </div>
                 </div>
 
