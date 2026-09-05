@@ -6,8 +6,8 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
 
-import blackhole from './images/blackhole.png'
-import profile from './images/profile.jpg'
+import blackhole from './images/blackhole.webp'
+import profile from './images/profile.webp'
 
 const HeroSection = () => {
     const [isHovered, setIsHovered] = useState(false);
@@ -148,7 +148,7 @@ const HeroSection = () => {
                             )}
                         </div>
                     </div>
- 
+
                     <div className="hero-links-container">
                         <div className="hero-banner-links">
                             <Tooltip title="Resume" arrow placement="bottom">
