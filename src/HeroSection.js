@@ -197,10 +197,10 @@ const HeroSection = () => {
                 <div className="hero-bottom-row">
                     <div className="hero-bio-block">
                         <p className="bio-text">
-                            I think in <strong>systems, not just syntax</strong>. I build high-performance web applications using <span className="tech-highlight">React</span>, <span className="tech-highlight">Next.js</span>, <span className="tech-highlight">Node.js</span>, and <span className="tech-highlight">TypeScript</span>—choosing tools that let me <strong>ship fast</strong> and <strong>scale harder</strong>.
+                            I think in <strong>systems, not just syntax</strong>. I build high-performance web applications using <span className="tech-highlight">React.js</span>, <span className="tech-highlight">Next.js</span>, <span className="tech-highlight">Node.js</span>, and <span className="tech-highlight">TypeScript</span>—choosing tools that let me <strong>ship fast</strong> and <strong>scale harder</strong>.
                         </p>
                         <p className="bio-text">
-                            With <strong>2+ years of experience</strong>, I specialize in shipping <strong>AI integrations</strong>, building with <strong>Agentic AI</strong>, engineering <strong>scalable backend services</strong>, and turning ambitious ideas into <strong>lean, resilient MVPs</strong>.
+                            With <strong>2+ years of experience</strong>, I specialize in shipping <strong>AI integrations</strong>, building with <strong>Agentic AI</strong>, engineering <strong>scalable backend services</strong>, and turning ambitious ideas into <strong>high-impact, production-ready products</strong>.
                         </p>
                         <p className="bio-reachout">
                             Reach out to <strong>build what matters</strong> —{" "}
