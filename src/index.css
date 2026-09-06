@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&display=swap');
+
 body {
     margin: 0;
     font-family: "instagramSans";
@@ -152,17 +154,28 @@ code {
 }
 
 .greeting-bubble {
-    background: rgba(10, 18, 30, 0.88);
+    background: rgba(10, 18, 30, 0.92);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     color: #c8def0;
-    padding: 0.55rem 1.4rem;
+    padding: 0.5rem 1.4rem;
     border-radius: 30px;
-    font-weight: 600;
-    font-size: 1.15rem;
-    font-style: italic;
-    border: 1px solid rgba(140, 200, 240, 0.2);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 20px rgba(100, 180, 240, 0.08), inset 0 0 15px rgba(140, 200, 240, 0.03);
+    font-family: 'Cinzel', 'Trajan Pro', 'Georgia', serif;
+    font-weight: 700;
+    font-size: 0.92rem;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+
+    /* Game of Thrones Style Inset Frame Border */
+    border: 1px solid rgba(140, 200, 240, 0.45);
+    outline: 1px solid rgba(140, 200, 240, 0.2);
+    outline-offset: -4px;
+    box-shadow:
+        0 4px 22px rgba(0, 0, 0, 0.65),
+        0 0 16px rgba(100, 180, 240, 0.15),
+        inset 0 0 12px rgba(140, 200, 240, 0.05);
+
     animation: bubblePop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s forwards;
     opacity: 0;
     transform: scale(0);
@@ -170,10 +183,10 @@ code {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    letter-spacing: 0.3px;
+    gap: 0.55rem;
     position: relative;
     overflow: hidden;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
 }
 
 /* Snow particles inside bubble */
@@ -2258,4 +2271,567 @@ code {
         width: 100% !important;
         height: auto !important;
     }
+}
+
+/* Hero Cmd Badge Beside Time Section */
+.hero-cmd-badge {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 2px 8px;
+    color: var(--text-muted, #8b949e);
+    font-size: 0.76rem;
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5rem;
+}
+
+.hero-cmd-badge:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+:root.light .hero-cmd-badge {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.12);
+    color: #57606a;
+}
+
+:root.light .hero-cmd-badge:hover {
+    background: rgba(0, 0, 0, 0.08);
+    color: #1f2328;
+}
+
+/* Cmd + K Command Palette Styles (Exact Athrix.me Pixel-Perfect Theme) */
+.cmd-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 12vh;
+    animation: cmdFadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    overscroll-behavior: contain;
+}
+
+@keyframes cmdFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.cmd-modal,
+.cmd-modal * {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+    box-sizing: border-box;
+}
+
+.cmd-modal {
+    width: 92%;
+    max-width: 560px;
+    background: #161618;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    overscroll-behavior: contain;
+}
+
+.cmd-top-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    background: #161618;
+}
+
+.cmd-title-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cmd-app-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888888;
+    flex-shrink: 0;
+}
+
+.cmd-header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.cmd-header-title {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.01em;
+}
+
+.cmd-header-desc {
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    color: #777777 !important;
+    line-height: 1.2 !important;
+    margin-top: 3px;
+}
+
+.cmd-close-btn {
+    background: transparent;
+    border: none;
+    color: #666666;
+    font-size: 14px !important;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: all 0.15s ease;
+    line-height: 1;
+}
+
+.cmd-close-btn:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+}
+
+.cmd-search-bar {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    gap: 10px;
+    background: #161618;
+}
+
+.cmd-search-svg {
+    color: #666666;
+    flex-shrink: 0;
+}
+
+.cmd-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #e5e5e5 !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+}
+
+.cmd-input::placeholder {
+    color: #555555 !important;
+}
+
+.cmd-toast {
+    background: rgba(35, 134, 54, 0.9);
+    color: #ffffff;
+    padding: 8px 16px;
+    font-size: 13px !important;
+    text-align: center;
+    font-weight: 500 !important;
+    animation: toastPop 0.2s ease;
+}
+
+@keyframes toastPop {
+    from {
+        transform: translateY(-5px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.cmd-list {
+    max-height: 330px;
+    overflow-y: auto;
+    padding: 6px 8px;
+    background: #161618;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.16) transparent;
+    overscroll-behavior: contain;
+}
+
+.cmd-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.cmd-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.cmd-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 4px;
+}
+
+.cmd-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.32);
+}
+
+.cmd-group-block {
+    padding: 4px 0;
+}
+
+.cmd-group-label {
+    padding: 8px 12px 4px 12px;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    color: #666666 !important;
+    letter-spacing: 0;
+    text-transform: none !important;
+}
+
+.cmd-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.12s ease;
+    border: 1px solid transparent;
+    margin-bottom: 2px;
+}
+
+.cmd-item.selected {
+    background: #242424;
+}
+
+.cmd-item-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cmd-item-icon-box {
+    color: #aaaaaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+}
+
+.cmd-item.selected .cmd-item-icon-box {
+    color: #ffffff;
+}
+
+.cmd-item-title {
+    color: #cccccc !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0;
+}
+
+.cmd-item.selected .cmd-item-title {
+    color: #ffffff !important;
+}
+
+.cmd-item-shortcut {
+    font-size: 11px !important;
+    color: #777777 !important;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 2px 7px;
+    border-radius: 5px;
+    font-family: ui-monospace, SFMono-Regular, SF Pro Text, Menlo, Monaco, Consolas, monospace !important;
+    font-weight: 400 !important;
+}
+
+.cmd-empty {
+    padding: 32px;
+    text-align: center;
+    color: #666666 !important;
+    font-size: 14px !important;
+}
+
+.cmd-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    background: #121212;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 11px !important;
+    color: #666666 !important;
+}
+
+.cmd-footer-hints {
+    display: flex;
+    gap: 16px;
+}
+
+.cmd-footer-hints kbd,
+.cmd-footer-esc kbd {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    padding: 1px 5px;
+    margin-right: 4px;
+    font-family: ui-monospace, SFMono-Regular, SF Pro Text, Menlo, Monaco, Consolas, monospace !important;
+    font-size: 10px !important;
+    color: #888888 !important;
+}
+
+/* Light Theme support */
+:root.light .cmd-backdrop {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+:root.light .cmd-modal {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.12);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+:root.light .cmd-top-banner,
+:root.light .cmd-search-bar,
+:root.light .cmd-list {
+    background: #ffffff;
+    border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+:root.light .cmd-list {
+    scrollbar-color: rgba(0, 0, 0, 0.25) transparent;
+}
+
+:root.light .cmd-list::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+:root.light .cmd-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+:root.light .cmd-app-icon {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.1);
+    color: #555555;
+}
+
+:root.light .cmd-header-title {
+    color: #111111 !important;
+}
+
+:root.light .cmd-header-desc {
+    color: #666666 !important;
+}
+
+:root.light .cmd-close-btn {
+    color: #666666;
+}
+
+:root.light .cmd-close-btn:hover {
+    background: rgba(0, 0, 0, 0.06);
+    color: #111111;
+}
+
+:root.light .cmd-search-svg {
+    color: #666666;
+}
+
+:root.light .cmd-input {
+    color: #111111 !important;
+}
+
+:root.light .cmd-input::placeholder {
+    color: #888888 !important;
+}
+
+:root.light .cmd-group-label {
+    color: #666666 !important;
+}
+
+:root.light .cmd-item-icon-box {
+    color: #555555;
+}
+
+:root.light .cmd-item-title {
+    color: #333333 !important;
+}
+
+:root.light .cmd-item.selected {
+    background: #f0f0f2;
+}
+
+:root.light .cmd-item.selected .cmd-item-icon-box,
+:root.light .cmd-item.selected .cmd-item-title {
+    color: #000000 !important;
+}
+
+:root.light .cmd-item-shortcut {
+    color: #666666 !important;
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+:root.light .cmd-footer {
+    background: #f5f5f7;
+    border-top-color: rgba(0, 0, 0, 0.08);
+    color: #666666 !important;
+}
+
+:root.light .cmd-footer-hints kbd,
+:root.light .cmd-footer-esc kbd {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+    color: #555555 !important;
+}
+
+/* Floating Trigger Button */
+.cmd-trigger-btn {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: rgba(22, 22, 24, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 30px;
+    color: #e5e5e5;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    outline: none;
+}
+
+.cmd-trigger-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    background: rgba(30, 30, 34, 0.95);
+    border-color: rgba(255, 255, 255, 0.28);
+    color: #ffffff;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.65), 0 0 18px rgba(255, 255, 255, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.cmd-trigger-btn:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+@media (max-width: 768px) {
+    .cmd-trigger-btn {
+        display: none !important;
+    }
+}
+
+.cmd-trigger-btn svg {
+    color: #888888;
+    transition: color 0.2s ease;
+}
+
+.cmd-trigger-btn:hover svg {
+    color: #ffffff;
+}
+
+.cmd-trigger-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #dddddd;
+    letter-spacing: -0.01em;
+}
+
+.cmd-trigger-badge {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.cmd-trigger-badge kbd {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 5px;
+    padding: 2.5px 5.5px;
+    font-size: 11px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+    font-weight: 600;
+    color: #aaaaaa;
+    line-height: 1;
+    transition: all 0.2s ease;
+}
+
+.cmd-trigger-btn:hover .cmd-trigger-badge kbd {
+    background: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.28);
+}
+
+:root.light .cmd-trigger-btn {
+    background: rgba(255, 255, 255, 0.9);
+    color: #111111;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+:root.light .cmd-trigger-btn:hover {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.16), 0 0 18px rgba(0, 0, 0, 0.05);
+}
+
+:root.light .cmd-trigger-btn svg {
+    color: #666666;
+}
+
+:root.light .cmd-trigger-btn:hover svg {
+    color: #111111;
+}
+
+:root.light .cmd-trigger-label {
+    color: #222222;
+}
+
+:root.light .cmd-trigger-badge kbd {
+    background: rgba(0, 0, 0, 0.06);
+    border-color: rgba(0, 0, 0, 0.12);
+    color: #555555;
+}
+
+:root.light .cmd-trigger-btn:hover .cmd-trigger-badge kbd {
+    background: rgba(0, 0, 0, 0.12);
+    color: #111111;
+    border-color: rgba(0, 0, 0, 0.2);
 }

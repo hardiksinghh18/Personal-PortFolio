@@ -152,6 +152,18 @@ const ThemeToggle = () => {
       if (e?.cancelable) e.preventDefault();
     };
 
+    const handleExternalToggle = () => {
+      setIsDark((prev) => {
+        const next = !prev;
+        isDarkRef.current = next;
+        document.documentElement.classList.toggle("light", !next);
+        localStorage.setItem("theme", next ? "dark" : "light");
+        return next;
+      });
+    };
+
+    window.addEventListener("toggle-theme", handleExternalToggle);
+
     const supportsPointer = "PointerEvent" in window;
     const handle = handleRef.current;
     if (supportsPointer) {
@@ -293,6 +305,7 @@ const ThemeToggle = () => {
     render();
     return () => {
       cancelAnimationFrame(animationId);
+      window.removeEventListener("toggle-theme", handleExternalToggle);
       if (supportsPointer) {
         if (handle) handle.removeEventListener("pointerdown", onPointerDown);
         window.removeEventListener("pointermove", onPointerMove);

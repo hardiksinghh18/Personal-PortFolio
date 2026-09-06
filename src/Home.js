@@ -12,7 +12,6 @@ import Blogs from './Blogs'
 import GithubContributions from './components/GithubContributions'
 
 const Home = () => {
-
   var prevScrollpos = window.pageYOffset;
   window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
@@ -24,8 +23,9 @@ const Home = () => {
     }
     prevScrollpos = currentScrollPos;
   }
+
   return (
-    <div >
+    <div>
       <ThemeToggle />
       <Navbar />
       <div className='homepage'>
@@ -39,9 +39,8 @@ const Home = () => {
         <Quotes />
         <Footer />
       </div>
-
     </div>
   )
 }
 
-export default Home
+export default Home;
