@@ -181,13 +181,13 @@ const HeroSection = () => {
                                     </svg>
                                 </a>
                             </Tooltip>
-                            <Tooltip title="Twitter / X" arrow placement="bottom">
+                            {/* <Tooltip title="Twitter / X" arrow placement="bottom">
                                 <a href="https://twitter.com/hardiksingh18_" target='_blank' rel='noreferrer'>
                                     <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                                     </svg>
                                 </a>
-                            </Tooltip>
+                            </Tooltip> */}
                         </div>
                     </div>
                 </div>
@@ -197,7 +197,7 @@ const HeroSection = () => {
                 <div className="hero-bottom-row">
                     <div className="hero-bio-block">
                         <p className="bio-text">
-                            I think in <strong>systems, not just syntax</strong>. I build high-performance web applications using <span className="tech-highlight">React.js</span>, <span className="tech-highlight">Next.js</span>, <span className="tech-highlight">Node.js</span>, and <span className="tech-highlight">TypeScript</span>—choosing tools that let me <strong>ship fast</strong> and <strong>scale harder</strong>.
+                            I think in <strong>systems, not just syntax</strong>. I build high-performance web applications using <span className="tech-highlight">React.js</span>, <span className="tech-highlight">Next.js</span>, <span className="tech-highlight">Node.js</span>, and <span className="tech-highlight">TypeScript</span>—choosing tools that let me <strong>ship fast</strong> and <strong>scale better</strong>.
                         </p>
                         <p className="bio-text">
                             With <strong>2+ years of experience</strong>, I specialize in shipping <strong>AI integrations</strong>, building with <strong>Agentic AI</strong>, engineering <strong>scalable backend services</strong>, and turning ambitious ideas into <strong>high-impact, production-ready products</strong>.

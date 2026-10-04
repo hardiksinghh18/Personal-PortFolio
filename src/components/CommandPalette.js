@@ -145,7 +145,7 @@ const CommandPalette = ({ isOpen, setIsOpen }) => {
                     ),
                     action: () => window.open('https://www.linkedin.com/in/hardiksingh18', '_blank')
                 },
-                {
+                /* {
                     id: 'soc-twitter',
                     title: 'Twitter / X',
                     shortcut: 'shift + X',
@@ -155,7 +155,7 @@ const CommandPalette = ({ isOpen, setIsOpen }) => {
                         </svg>
                     ),
                     action: () => window.open('https://twitter.com/hardiksingh18_', '_blank')
-                },
+                }, */
                 {
                     id: 'soc-leetcode',
                     title: 'LeetCode',
