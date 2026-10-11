@@ -1659,11 +1659,21 @@ code {
     border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
+.exp-logo-new.full-cover,
+:root.light .exp-logo-new.full-cover {
+    padding: 0;
+    background-color: transparent;
+}
+
 .exp-logo-img-new {
     width: 100%;
     height: 100%;
     object-fit: contain;
     display: block;
+}
+
+.exp-logo-img-new.full-cover {
+    object-fit: cover;
 }
 
 .exp-company-name {

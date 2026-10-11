@@ -1,17 +1,32 @@
 import React, { useState } from 'react';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import locofastLogo from './images/locofastLogo.webp';
 import viLogo from './images/viLogo.png';
 import collablyLogo from './images/collablyLogo.png';
 
 const experiences = [
     {
+        company: "Locofast",
+        logo: locofastLogo,
+        fullCover: true,
+        role: "Software Developer Engineer",
+        date: "Sept 2026 - Present",
+        location: "Delhi, India",
+        isCurrent: true,
+        description: [
+            "Engineering core platform features for <strong>India's largest B2B textile marketplace</strong>, digitizing fabric procurement and supply chain workflows connecting <strong>700+ apparel brands</strong> with <strong>500+ verified mills</strong>.",
+            "Building real-time <strong>digital order tracking</strong>, automated demand-routing, and supplier portal services, accelerating sample turnaround and procurement fulfillment pipelines.",
+            "Architecting scalable <strong>backend services and APIs</strong> with transaction safety, robust data modeling, and performance optimizations across high-volume marketplace orders.",
+        ]
+    },
+    {
         company: "Virtual Internships",
         logo: viLogo,
         role: "Associate Software Engineer",
-        date: "Aug 2025 - Present",
+        date: "Aug 2025 - Jul 2026",
         location: "London, England, Remote",
-        isCurrent: true,
+        isCurrent: false,
         description: [
             "Shipped <strong>AI resume parsing</strong>, boosting onboarding rates from <strong>35% to 85%</strong> and cutting profile setup time by <strong>70%</strong>.",
             "Migrated <strong>400+ APIs</strong> from createAsyncThunk to <strong>RTK Query</strong>, reducing state boilerplate by <strong>45%</strong> and cutting redundant network requests by <strong>30%</strong> via automated caching and deduplication.",
@@ -56,8 +71,8 @@ const ExperienceItem = ({ exp, isLatest }) => {
             <div className="exp-header-new" onClick={() => setIsExpanded(!isExpanded)}>
                 <div className="exp-header-left">
                     <div className="exp-company-title-row">
-                        <div className="exp-logo-new">
-                            <img src={exp.logo} alt={exp.company} className="exp-logo-img-new" />
+                        <div className={`exp-logo-new ${exp.fullCover ? 'full-cover' : ''}`}>
+                            <img src={exp.logo} alt={exp.company} className={`exp-logo-img-new ${exp.fullCover ? 'full-cover' : ''}`} />
                         </div>
                         <span className="exp-company-name">{exp.company}</span>
                         {exp.isCurrent && <span className="exp-green-dot"></span>}
